@@ -15,7 +15,9 @@ More specifically, this bunddle seeks to address in the simplest of ways possibl
 
 ## Configuration
 
-1. Add citetools to the YAML header.
+1. Install the extension in your project's folder using: `quarto install extension bcdavasconcelos/citetools`
+
+2. Add citetools to the YAML header.
 
 ```yaml
 ---
@@ -24,7 +26,7 @@ filters:
 ---
 ```
 
-2. Set up the bibliography files.
+3. Set up the bibliography files.
 
 
 ```yaml
@@ -34,7 +36,7 @@ bibliography_secondary: refs/secondary.json
 ---
 ```
 
-3. Then, place the bibliographies placeholders in the document where you want the bibliographies to appear.
+4. Then, place the bibliographies placeholders in the document where you want the bibliographies to appear.
 
 ``` markdown
 # References
