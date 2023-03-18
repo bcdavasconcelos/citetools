@@ -70,15 +70,15 @@ be used with many publishing systems that are based on pandoc.
 Pass the filter to pandoc via the `--lua-filter` (or `-L`) command
 line option.
 
-    pandoc --lua-filter citefield.lua ...
+    pandoc --lua-filter citetools.lua ...
 
 ### Quarto
 
 Users of Quarto can install this filter as an extension with
 
-    quarto install extension pandoc-ext/citefield
+    quarto install extension pandoc-ext/citetools
 
-and use it by adding `citefield` to the `filters` entry
+and use it by adding `citetools` to the `filters` entry
 in their YAML header.
 
 ``` yaml
