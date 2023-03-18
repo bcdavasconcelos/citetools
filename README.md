@@ -1,19 +1,17 @@
-# citetools
+# Cite Tools for Pandoc and Quarto
 
-[![GitHub build status][CI badge]][CI workflow]
+<!-- [![GitHub build status][CI badge]][CI workflow] -->
 
-# TL;DR
+This extension bundles three Quarto/Pandoc filters (`multiple-bibliographies`, `citation-backlinks`, and `citefield`) to create a favorable environment for dealing with complex bibliography demands, producing output that works in any format supported by Pandoc (such as `HTML`, `DOCX` and `LaTeX`). 
 
-This extension bundles three Quarto/Pandoc filters (`multiple-bibliographies`, `citation-backlinks`, and `citefield`) to create a favorable environment for dealing with complex bibliography demands, producing output that works in any format supported by Pandoc (such as `HTML` and `LaTeX`). 
+## Features
 
-## What it seeks to address
+More specifically, this bunddle seeks to address in the simplest of ways possible the following demands:
 
-Examples of such demands are:
-
-- The need for multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`).
-- The need to evoke arbitrary information from the references, such as `author`, `editor`, or `translator` names and `title` / `original-title` of works.
-- The need to turn the bibliography into a linked index of cited references, with links from the entries back to each of its multiple occurences in the body of the text (*e.g.* in PDF/DOCX: `[p. 1, p. 4, p. 10]`) (and with the ability to turn these off globally or in an *ad hoc* fashion).
-
+1. The need for multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`).
+2. The need to evoke arbitrary information from the references, such as `author`, `editor`, or `translator` names and `title` / `original-title` of works.
+3. The need to turn the bibliography into a linked index of cited references, with links from the entries back to each of its multiple occurences in the body of the text (*e.g.* in PDF/DOCX: `[p. 1, p. 4, p. 10]`) (and with the ability to turn these off globally or in an *ad hoc* fashion).
+- *Optionally*, the need to split the bibliography into sections, printing the bibliography for each chapter/section/part. (For this, you must uncomment the apropriate line in the `_extension.yaml` file.)
 
 ## Configuration
 
@@ -73,18 +71,11 @@ Usage
 The filter modifies the internal document representation; it can
 be used with many publishing systems that are based on pandoc.
 
-### Plain pandoc
-
-Pass the filter to pandoc via the `--lua-filter` (or `-L`) command
-line option.
-
-    pandoc --lua-filter citetools.lua ...
-
-### Quarto
+## Quarto
 
 Users of Quarto can install this filter as an extension with
 
-    quarto install extension pandoc-ext/citetools
+    quarto install extension bcdavasconcelos/citetools
 
 and use it by adding `citetools` to the `filters` entry
 in their YAML header.
@@ -106,7 +97,7 @@ for details.
 ---
 output:
   word_document:
-    pandoc_args: ['--lua-filter=citetools.lua']
+    pandoc_args: ['--lua-filter=citetools']
 ---
 ```
 
