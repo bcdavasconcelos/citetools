@@ -4,7 +4,7 @@
 
 # TL;DR
 
-This extension bundles three Quarto/Pandoc filters (`multiple-bibliographies`, `citation-backlinks`, and `citefield`) to create a favorable environment for dealing with complex bibliography demands, producing output that works both any format supported by Pandoc (such as `HTML` and `LaTeX`). 
+This extension bundles three Quarto/Pandoc filters (`multiple-bibliographies`, `citation-backlinks`, and `citefield`) to create a favorable environment for dealing with complex bibliography demands, producing output that works in any format supported by Pandoc (such as `HTML` and `LaTeX`). 
 
 ## What it seeks to address
 
