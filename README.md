@@ -15,10 +15,6 @@ Examples of such demands are:
 - The ability to turn off these links and backlinks globally or in an *ad hoc* fashion.
 
 
-<img width="665" alt="image" src="https://user-images.githubusercontent.com/35749099/226091195-7b27f8a7-c802-4cbb-bac9-81265b7aed45.png">
-
-
-
 ## Configurations
 
 Set up the bibliography files in the YAML header of your document.
@@ -106,9 +102,16 @@ output:
 ---
 ```
 
+
+<img width="665" alt="image" src="https://user-images.githubusercontent.com/35749099/226091195-7b27f8a7-c802-4cbb-bac9-81265b7aed45.png">
+
+
 License
 ------------------------------------------------------------------
 The filters bundled in this extension were published under the MIT license by Albert Krewinkel (a.k.a. `tarleb`) and modified by Bernardo CDA Vasconcelos (a.k.a. `bcdavasconcelos`).
 
 These pandoc Lua filter are published under the MIT license, see
 file `LICENSE` for details.
+
+
+
