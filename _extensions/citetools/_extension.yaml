@@ -1,0 +1,16 @@
+name: citetools
+author: Albert Krewinkel & Bernardo CDA Vasconcelos
+version: 1.0.1
+contributes:
+  filters:
+    - citeproc.lua
+    - multiple-bibliographies.lua
+#    - section-bibliographies.lua
+    - citefield.lua
+    - citation-backlinks.lua
+  format:
+    common:
+      verbosity: ERROR
+      citeproc: false
+      link-citations: true
+      validate-yaml: false

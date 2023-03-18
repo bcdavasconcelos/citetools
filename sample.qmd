@@ -1,0 +1,69 @@
+---
+title: Example of Citetools in action
+author: Bernardo César Diniz Athayde Vasconcelos
+bibliography_primary: refs/primary.json
+bibliography_secondary: refs/secondary.json
+filters:
+  - citetools
+verbosity: ERROR
+#bibliography: # for multibib filter
+#  primary: refs/primary.json
+#  secondary: refs/secondary.json
+#section-bibs-level: 1 # for section-bibliographies
+#reference-section-title: References # for section-bibliographies
+#csl: https://raw.githubusercontent.com/bcdavasconcelos/ABNT-Phi/main/abnt-phi-sc.csl
+mainfont: Alegreya
+---
+
+# Introduction {.unnumbered}
+
+This very concise sample ilustrates the use of `multiple-bibliographies` to separate primary (`refs/primary.json`) and secondary (`refs/secondary.json`) sources for the document; the use of `citation-backlinks` to turn  the bibliography into an index of citations with links back to the text; and the use of `citefield` to print in the body of the text useful information from the bibliographic references.
+
+*Optionally*, `section-bibliographies` can be used to separate the bibliography into sections. For this, you must uncomment the apropriate line in the `_extension.yaml` file.
+
+
+
+# The Works of Aristotle
+
+This is an example of complex use of bibliographic references. We are relying on the bibliography to print in the text the correct names of the authors, editors, and translators & title of the works.
+
+The works of [@AristOp]{.author.} were first edited by
+[@AristOp]{.editor.} in [@AristOp]{.issued}. 
+
+```markdown
+The works of [@AristOp]{.author.} were first edited 
+by [@AristOp]{.editor.} in [@AristOp]{.issued}. 
+```
+
+Later, the [@DA]{.title.} was edited by [@DABiehl1896]{.editor.} in [@DABiehl1896]{.issued} [repr. in [@DATheiler]{.translator.}'s [@DATheiler]{.issued} translation]; by [@DAForster]{.editor.} in [@DAForster]{.issued}; and by [@DARoss]{.editor.} in [@DARoss]{.issued}. 
+
+```markdown
+Later, the [@DA]{.title.} was edited by [@DABiehl1896]{.editor.}
+in [@DABiehl1896]{.issued} [repr. in [@DATheiler]{.translator.}'s
+[@DATheiler]{.issued} translation]; by [@DAForster]{.editor.} in
+[@DAForster]{.issued}; and by [@DARoss]{.editor.} in [@DARoss]{.issued}.
+```
+
+The [@EN]{.title.} likewise was re-edited by [@ENBywater]{.editor.} in [@ENBywater]{.issued}; by [@ENBurnet]{.editor.} in [@ENBurnet]{.issued}; by [@ENSusemihlApelt1903]{.editor_first.} and [@ENSusemihlApelt1903]{.editor_second.} in [@ENSusemihlApelt1903]{.issued} [repr. in [@ENNatali]{.translator.}'s [@ENNatali]{.issued} translation].
+
+```markdown
+The [@EN]{.title.} likewise was re-edited by [@ENBywater]{.editor.}
+in [@ENBywater]{.issued}; by [@ENBurnet]{.editor.} in 
+[@ENBurnet]{.issued}; by [@ENSusemihlApelt1903]{.editor_first.} and
+[@ENSusemihlApelt1903]{.editor_second.} in [@ENSusemihlApelt1903]{.issued}
+[repr. in [@ENNatali]{.translator.}'s [@ENNatali]{.issued} translation].
+```
+
+
+# Primary Sources {.appendix}
+
+::: {#refs_primary}
+:::
+
+
+# Secondary Sources {.appendix}
+
+::: {#refs_secondary}
+:::
+
+

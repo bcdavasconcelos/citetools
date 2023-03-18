@@ -1,0 +1,8 @@
+{
+  "[markdown]": {
+    "editor.cursorSurroundingLines": 0
+  },
+  "emmylua.source.roots": [
+  ],
+  "JAVA_HOME": "/usr/bin/java",
+}

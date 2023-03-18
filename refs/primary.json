@@ -1,0 +1,241 @@
+[
+  {
+    "author": [
+      {
+        "family": "Aristotle"
+      }
+    ],
+    "editor": [
+      {
+        "family": "Bywater",
+        "given": "Ingram"
+      }
+    ],
+    "id": "ENBywater",
+    "issued": {
+      "date-parts": [
+        [
+          1894
+        ]
+      ]
+    },
+    "page": "1-224 (1094a1",
+    "publisher": "Clarendon",
+    "publisher-place": "Oxford",
+    "title": "Ethica nicomachea",
+    "type": "book",
+    "volume": "Aristotelis ethica Nicomachea"
+  },
+  {
+    "author": [
+      {
+        "family": "Aristotle"
+      }
+    ],
+    "container-title": "Aristotelis opera",
+    "editor": [
+      {
+        "family": "Bekker",
+        "given": "Immanuel"
+      }
+    ],
+    "id": "DA",
+    "issued": {
+      "date-parts": [
+        [
+          1831
+        ]
+      ]
+    },
+    "original-title": "Περὶ ψυχῆς",
+    "page": "402a01-435b25",
+    "publisher": "Reimer",
+    "publisher-place": "Berlim",
+    "title": "De anima",
+    "type": "chapter"
+  },
+  {
+    "author": [
+      {
+        "family": "Aristotle"
+      }
+    ],
+    "container-title": "Aristotelis opera",
+    "editor": [
+      {
+        "family": "Bekker",
+        "given": "Immanuel"
+      }
+    ],
+    "id": "EN",
+    "issued": {
+      "date-parts": [
+        [
+          1831
+        ]
+      ]
+    },
+    "original-title": "Ἠθικὰ νικομάχεια",
+    "page": "1094a01-1181b23",
+    "publisher": "Reimer",
+    "publisher-place": "Berlim",
+    "title": "Ethica nicomachea",
+    "type": "chapter"
+  },
+  {
+    "author": [
+      {
+        "family": "Aristotle"
+      }
+    ],
+    "editor": [
+      {
+        "family": "Ross",
+        "given": "William David"
+      }
+    ],
+    "id": "DARoss",
+    "issued": {
+      "date-parts": [
+        [
+          1961
+        ]
+      ]
+    },
+    "page": "402a1-435b25",
+    "publisher": "Clarendon",
+    "publisher-place": "Oxford",
+    "title": "De anima",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Aristotle"
+      }
+    ],
+    "editor": [
+      {
+        "family": "Burnet",
+        "given": "John"
+      }
+    ],
+    "id": "ENBurnet",
+    "issued": {
+      "date-parts": [
+        [
+          1900
+        ]
+      ]
+    },
+    "publisher": "Methuen",
+    "publisher-place": "Londres",
+    "title": "The ethics of aristotle",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Aristotle"
+      }
+    ],
+    "editor": [
+      {
+        "family": "Biehl",
+        "given": "Wilhelm"
+      }
+    ],
+    "id": "DABiehl1896",
+    "issued": {
+      "date-parts": [
+        [
+          1896
+        ]
+      ]
+    },
+    "publisher": "Teubner",
+    "publisher-place": "Leipzig",
+    "title": "De anima",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Aristotle"
+      }
+    ],
+    "editor": [
+      {
+        "family": "Susemihl",
+        "given": "Franz"
+      },
+      {
+        "family": "Apelt",
+        "given": "Otto"
+      }
+    ],
+    "id": "ENSusemihlApelt1903",
+    "issued": {
+      "date-parts": [
+        [
+          1903
+        ]
+      ]
+    },
+    "publisher": "Teubner",
+    "publisher-place": "Leipzig",
+    "title": "Ethica nicomachea",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Aristotle"
+      }
+    ],
+    "editor": [
+      {
+        "family": "Förster",
+        "given": "Aurél"
+      }
+    ],
+    "id": "DAForster",
+    "issued": {
+      "date-parts": [
+        [
+          1912
+        ]
+      ]
+    },
+    "publisher": "Hungarian Academy of Sciences",
+    "publisher-place": "Budapeste",
+    "title": "Aristotelis de anima libri III",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Aristotle"
+      }
+    ],
+    "editor": [
+      {
+        "family": "Bekker",
+        "given": "Immanuel"
+      }
+    ],
+    "id": "AristOp",
+    "issued": {
+      "date-parts": [
+        [
+          1831
+        ]
+      ]
+    },
+    "number-of-volumes": "4",
+    "publisher": "Reimer",
+    "publisher-place": "Berlim",
+    "title": "Aristotelis opera",
+    "type": "book"
+  }
+]

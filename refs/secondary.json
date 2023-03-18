@@ -1,0 +1,55 @@
+[{
+  "author": [
+    {
+      "family": "Aristotelis"
+    }
+  ],
+  "id": "DATheiler",
+  "issued": {
+    "date-parts": [
+      [
+        1995
+      ]
+    ]
+  },
+  "publisher": "Felix Meiner",
+  "publisher-place": "Hamburg",
+  "title": "De anima",
+  "translator": [
+    {
+      "family": "Seidl",
+      "given": "H."
+    },
+    {
+      "family": "Theiler",
+      "given": "W."
+    }
+  ],
+  "type": "book"
+},
+{
+  "author": [
+    {
+      "family": "Aristotele"
+    }
+  ],
+  "id": "ENNatali",
+  "issued": {
+    "date-parts": [
+      [
+        1999
+      ]
+    ]
+  },
+  "publisher": "Laterza",
+  "publisher-place": "Roma",
+  "title": "Etica nicomachea",
+  "translator": [
+    {
+      "family": "Natali",
+      "given": "Carlo"
+    }
+  ],
+  "type": "book"
+}
+]
