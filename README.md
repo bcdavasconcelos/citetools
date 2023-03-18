@@ -60,7 +60,6 @@ bib-file.
 
 Global meta data options:
 
-- `bibliography_NAME` (string): Path to the primary bibliography file.
 - `link-fields` (boolean): Whether to link fields to their respective bibliographic entry. Default: `true`.
 - `link-citations` (boolean): Whether to link citations to their respective bibliographic entry. Default: `true`.
 
