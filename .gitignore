@@ -1,1 +1,11 @@
 /.luarc.json
+.gitignore
+.DS_Store
+*~
+.ruby-version
+Core.bib
+Core.bib
+pandoclog.json
+.Rproj.user
+
+/.luarc.json
