@@ -7,8 +7,6 @@ This extension introduces advanced bibliography features to Pandoc and Quarto's 
 ## Features
 
 
-## Features
-
 More specifically, this bunddle seeks to address in the simplest of ways possible the following demands:
 
 **1. Multiple bibliographies**
