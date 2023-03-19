@@ -1,4 +1,4 @@
-# Cite Tools for Pandoc and Quarto
+# 📚 Cite Tools for Pandoc and Quarto
 
 <!-- [![GitHub build status][CI badge]][CI workflow] -->
 
