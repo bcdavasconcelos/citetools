@@ -1,24 +1,91 @@
-# citetools
+# Cite Tools for Pandoc and Quarto
 
-[![GitHub build status][CI badge]][CI workflow]
+<!-- [![GitHub build status][CI badge]][CI workflow] -->
 
-This extension bundles three Quarto/Pandoc filters to create a favorable environment for dealing with complex bibliography demands with *Citeproc* in order to work both for `HTML` and `LaTeX` output. The filters are called `multiple-bibliographies`, `citation-backlinks`, and `citefield`.
-
-
-Examples of such demands are:
-
-- The need for multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`).
-- The need for linked indices of cited references that work for `LaTeX` and `HTML`; that is, the ability to link citations to their respective bibliographic entry, and back from the entry to each citation in the text, like so: `[1, 2, 3]`.
-- The need to evoke arbitrary information from the references, such as `author`, `editor`, or `translator` names and `title` / `original-title` of works. 
-  - Do that linking the field content being displayed inline *to* the entry in the bibliography.
-  - And *back* from the entry to its multiple occurrences in the text.
-- The ability to turn off these links and backlinks globally or in an *ad hoc* fashion.
+This extension introduces advanced bibliography features to Pandoc and Quarto's Citeproc environment. It bundles several Lua filters ([*vide infra*](#license)) to address complex bibliography demands while keeping the output consistent across all formats (`LaTeX`, `DOCX`, `HTML`, and so on).
 
 
-## Configurations
 
-Set up the bibliography files in the YAML header of your document.
+## Features
 
+More specifically, this bunddle seeks to address in the simplest of ways possible the following demands:
+
+**1. Multiple bibliographies**
+
+The need for multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`).
+
+![](2023-03-18-22-02-26.png)
+
+**2. Cite fields**
+
+The need to evoke arbitrary information from the references, such as `author`, `editor`, or `translator` names and `title` / `original-title` of works.
+
+![](2023-03-18-22-24-10.png)
+
+<details>
+  <summary>`@AristOp` in `csljson`</summary>
+
+```json
+{
+    "author": [
+      {
+        "family": "Aristotle"
+      }
+    ],
+    "editor": [
+      {
+        "family": "Bekker",
+        "given": "Immanuel"
+      }
+    ],
+    "id": "AristOp",
+    "issued": {
+      "date-parts": [
+        [
+          1831
+        ]
+      ]
+    },
+    "number-of-volumes": "4",
+    "publisher": "Reimer",
+    "publisher-place": "Berlim",
+    "title": "Aristotelis opera",
+    "type": "book"
+  }
+```
+
+</details>
+
+**3. Citation backlinks**
+
+The need to turn the bibliography into a linked index of cited references, with links from the entries back to each of its multiple occurences in the body of the text (*e.g.* in `PDF`/`DOCX`: `[p. 1, p. 4, p. 10]`, in `HTML`: `[1, 2, 3]`) (and with the ability to turn these off globally or in an *ad hoc* fashion).
+
+![](2023-03-18-22-32-06.png)
+
+- *Optionally*, the need to split the bibliography into sections, printing the bibliography for each chapter/section/part. (For this, you must uncomment the apropriate line in the `_extension.yaml` file.)
+
+## Install
+
+Users of Quarto can install this extension with the following command
+
+```bash
+quarto install extension bcdavasconcelos/citetools
+```
+
+and use it by adding `citetools` to the `filters` entry in their YAML header.
+
+``` yaml
+---
+filters:
+  - citetools
+---
+```
+
+## Configuration
+
+### Multiple bibliographies
+
+Add bibliography files to the `refs` folder. Then, add the following metadata to the YAML header of your document in this way:
 
 ```yaml
 ---
@@ -30,81 +97,51 @@ bibliography_secondary: refs/secondary.json
 Then, place the bibliographies placeholders in the document where you want the bibliographies to appear.
 
 ``` markdown
-# References
+# Primary Sources
 
-::: {#refs-primary}
+::: {#refs_primary}
 :::
 
-# Software
+# Secondary Sources
 
-::: {#refs-secondary}
+::: {#refs_secondary}
 :::
 ```
 
-Each refs-*x* div should have a matching entry *x* in the
-metadata. These divs are filled with citations from the respective
-bib-file.
+These divs are filled with citations from the respective bib-file. Each refs-*x* div should have a matching entry *x* in the metadata.
 
-Important: make sure the bibliography names and the placeholder divs match. That is, if you have a bibliography named `bibliography_primary`, then the placeholder div should be `refs-primary`.
+**Make sure the bibliography name and the placeholder div id match.**
 
-## Usage
+That is, if you have a bibliography named `bibliography_primary`, the placeholder div should be `refs-primary` or `refs_primary`.
 
-Global meta data options:
+### Cite fields and citation backlinks global options
 
-- `bibliography_NAME` (string): Path to the primary bibliography file.
-- `link-fields` (boolean): Whether to link fields to their respective bibliographic entry. Default: `true`.
-- `link-citations` (boolean): Whether to link citations to their respective bibliographic entry. Default: `true`.
+- `link-fields` (boolean): Link inlines printed by `citefield` to their corresponding entry in the bibliography. Default: `true`.
+- `link-citations` (boolean): Link citations to their respective reference in the bibliography. Default: `true`. Note: if `link-citations` is set to `false`, `link-fields` is also set to `false`.
 
+---
 
 See sample document `sample.qmd` for a working example with explanations.
 
 
-Usage
-------------------------------------------------------------------
+<img width="665" alt="image" src="https://user-images.githubusercontent.com/35749099/226091195-7b27f8a7-c802-4cbb-bac9-81265b7aed45.png">
 
-The filter modifies the internal document representation; it can
-be used with many publishing systems that are based on pandoc.
-
-### Plain pandoc
-
-Pass the filter to pandoc via the `--lua-filter` (or `-L`) command
-line option.
-
-    pandoc --lua-filter citetools.lua ...
-
-### Quarto
-
-Users of Quarto can install this filter as an extension with
-
-    quarto install extension pandoc-ext/citetools
-
-and use it by adding `citetools` to the `filters` entry
-in their YAML header.
-
-``` yaml
----
-filters:
-  - citetools
----
-```
-
-### R Markdown
-
-Use `pandoc_args` to invoke the filter. See the [R Markdown
-Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/lua-filters.html)
-for details.
-
-``` yaml
----
-output:
-  word_document:
-    pandoc_args: ['--lua-filter=citetools.lua']
----
-```
 
 License
 ------------------------------------------------------------------
-The filters bundled in this extension were published under the MIT license by Albert Krewinkel (a.k.a. `tarleb`) and modified by Bernardo CDA Vasconcelos (a.k.a. `bcdavasconcelos`).
+Filters published under the MIT license by Albert Krewinkel (@tarleb).
 
-These pandoc Lua filter are published under the MIT license, see
+- [multibib](https://github.com/pandoc-ext/multibib)
+- [multiple-bibliographies](https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies)
+- [citation-backlinks](https://github.com/bcdavasconcelos/citation-backlinks)
+- [section-bibliographies](https://github.com/pandoc-ext/section-bibliographies)
+
+Filters published under the MIT license by Albert Krewinkel (@tarleb) & Bernardo Vasconcelos (@bcdavasconcelos).
+
+- [citefield](https://github.com/bcdavasconcelos/citefield)
+
+
+All Pandoc Lua filters in this extension are published under the MIT license, see
 file `LICENSE` for details.
+
+[Back to top](#cite-tools-for-pandoc-and-quarto)

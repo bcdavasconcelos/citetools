@@ -3,6 +3,7 @@ title: Example of Citetools in action
 author: Bernardo César Diniz Athayde Vasconcelos
 bibliography_primary: refs/primary.json
 bibliography_secondary: refs/secondary.json
+#link-fields: false
 filters:
   - citetools
 verbosity: ERROR
@@ -13,6 +14,14 @@ verbosity: ERROR
 #reference-section-title: References # for section-bibliographies
 #csl: https://raw.githubusercontent.com/bcdavasconcelos/ABNT-Phi/main/abnt-phi-sc.csl
 mainfont: Alegreya
+format:
+  html:
+    header-includes: |
+      <style>
+        code span.co {
+          font-style: normal!important;
+        }
+      </style>
 ---
 
 # Introduction {.unnumbered}
@@ -27,32 +36,23 @@ This very concise sample ilustrates the use of `multiple-bibliographies` to sepa
 
 This is an example of complex use of bibliographic references. We are relying on the bibliography to print in the text the correct names of the authors, editors, and translators & title of the works.
 
-The works of [@AristOp]{.author.} were first edited by
-[@AristOp]{.editor.} in [@AristOp]{.issued}. 
+```markdown
+The works of [@AristOp]{.author} were first edited by
+[@AristOp]{.editor} in [@AristOp]{.issued}.
+```
+The works of [@AristOp]{.author} were first edited by
+[@AristOp]{.editor.} in [@AristOp]{.issued}.
 
 ```markdown
-The works of [@AristOp]{.author.} were first edited 
-by [@AristOp]{.editor.} in [@AristOp]{.issued}. 
+Later, the [@DA]{.title} was edited by [@DABiehl1896]{.editor}
+in [@DABiehl1896]{.issued} [repr. in [@DATheiler]{.translator}'s
+[@DATheiler]{.issued} translation]; by [@DAForster]{.editor} in
+[@DAForster]{.issued} [repr. in [@DACorcilius]{.translator}'s
+[@DACorcilius]{.issued} translation]; and by [@DARoss]{.editor}
+in [@DARoss]{.issued}.
 ```
 
-Later, the [@DA]{.title.} was edited by [@DABiehl1896]{.editor.} in [@DABiehl1896]{.issued} [repr. in [@DATheiler]{.translator.}'s [@DATheiler]{.issued} translation]; by [@DAForster]{.editor.} in [@DAForster]{.issued}; and by [@DARoss]{.editor.} in [@DARoss]{.issued}. 
-
-```markdown
-Later, the [@DA]{.title.} was edited by [@DABiehl1896]{.editor.}
-in [@DABiehl1896]{.issued} [repr. in [@DATheiler]{.translator.}'s
-[@DATheiler]{.issued} translation]; by [@DAForster]{.editor.} in
-[@DAForster]{.issued}; and by [@DARoss]{.editor.} in [@DARoss]{.issued}.
-```
-
-The [@EN]{.title.} likewise was re-edited by [@ENBywater]{.editor.} in [@ENBywater]{.issued}; by [@ENBurnet]{.editor.} in [@ENBurnet]{.issued}; by [@ENSusemihlApelt1903]{.editor_first.} and [@ENSusemihlApelt1903]{.editor_second.} in [@ENSusemihlApelt1903]{.issued} [repr. in [@ENNatali]{.translator.}'s [@ENNatali]{.issued} translation].
-
-```markdown
-The [@EN]{.title.} likewise was re-edited by [@ENBywater]{.editor.}
-in [@ENBywater]{.issued}; by [@ENBurnet]{.editor.} in 
-[@ENBurnet]{.issued}; by [@ENSusemihlApelt1903]{.editor_first.} and
-[@ENSusemihlApelt1903]{.editor_second.} in [@ENSusemihlApelt1903]{.issued}
-[repr. in [@ENNatali]{.translator.}'s [@ENNatali]{.issued} translation].
-```
+Later, the [@DA]{.title} was edited by [@DABiehl1896]{.editor} in [@DABiehl1896]{.issued} [repr. in [@DATheiler]{.translator.}'s [@DATheiler]{.issued} translation]; by [@DAForster]{.editor} in [@DAForster]{.issued} [repr. in [@DACorcilius]{.translator}'s [@DACorcilius]{.issued} translation]; and by [@DARoss]{.editor} in [@DARoss]{.issued}.
 
 
 # Primary Sources {.appendix}
