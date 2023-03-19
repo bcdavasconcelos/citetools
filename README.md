@@ -93,7 +93,7 @@ bibliography_secondary: refs/secondary.json
 ---
 ```
 
-4. Then, place the bibliographies placeholders in the document where you want the bibliographies to appear.
+Then, place the bibliographies placeholders in the document where you want the bibliographies to appear.
 
 ``` markdown
 # Primary Sources
