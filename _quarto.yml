@@ -1,0 +1,64 @@
+project:
+  type: website
+
+execute:
+  cache: true
+  cache-dir: .quarto-cache
+  cache-include:
+    - "**/*.Rmd"
+    - "**/*.R"
+    - "**/*.md"
+    - "**/*.qmd"
+  auto-reload: true
+  render-on-save: true
+  render-on-open: true
+
+
+website:
+  page-navigation: true
+  title: "Cite Tools"
+  site-url: "https://bcdavasconcelos.github.io/citetools"
+  repo-url: https://github.com/bcdavasconcelos/citetools
+  repo-actions: [edit, issue]
+
+  page-footer:
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    left: "&copy; CC-By BCDAV, 2023"
+
+  sidebar:
+    logo: "images/greek-ship.png"
+    # logo: "images/ulysses.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: globe
+        href: index.qmd
+        text: "Cite Tools"
+      - icon: github
+        href: https://github.com/bcdavasconcelos/citetools
+        text: "Cite Tools GitHub"
+      - icon: twitter
+        href: https://twitter.com/bcdavasconcelos
+        text: "Twitter"
+
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents: auto
+
+
+format:
+  html:
+    theme:
+      light: [Pulse] # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
+      dark: [Morph]
+    code-copy: true
+    code-overflow: wrap
+    toc: true
+
+
+filters:
+  - include-files.lua
+  - quarto
+
+

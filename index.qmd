@@ -1,4 +1,12 @@
-# 📚 Cite Tools for Pandoc and Quarto
+---
+title: |
+  Cite Tools
+subtitle: |
+  Advanced bibliography for Pandoc and Quarto <img src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
+author: "Bernardo Vasconcelos"
+---
+
+<img src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
 
 <!-- [![GitHub build status][CI badge]][CI workflow] -->
 
