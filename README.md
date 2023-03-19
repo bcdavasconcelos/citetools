@@ -1,4 +1,6 @@
-# 📚 Cite Tools for Pandoc and Quarto
+# 📚 Cite Tools for Pandoc and Quarto 
+
+<div id="top"></div>
 
 <!-- [![GitHub build status][CI badge]][CI workflow] -->
 
@@ -143,4 +145,4 @@ Filters published under the MIT license by Albert Krewinkel ([tarleb](https://gi
 All Pandoc Lua filters in this extension are published under the MIT license, see
 file `LICENSE` for details.
 
-[Back to top](#cite-tools-for-pandoc-and-quarto)
+[Back to top](#top)
