@@ -4,6 +4,7 @@
 
 This extension introduces advanced bibliography features to Pandoc and Quarto's Citeproc environment. It bundles several Lua filters ([*vide infra*](#license)) to address complex bibliography demands while keeping the output consistent across all formats (`LaTeX`, `DOCX`, `HTML`, and so on).
 
+## Features
 
 
 ## Features
@@ -94,7 +95,7 @@ bibliography_secondary: refs/secondary.json
 ---
 ```
 
-Then, place the bibliographies placeholders in the document where you want the bibliographies to appear.
+4. Then, place the bibliographies placeholders in the document where you want the bibliographies to appear.
 
 ``` markdown
 # Primary Sources
