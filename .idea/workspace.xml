@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="63b6ca05-3d23-4037-9996-244197094b8a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/ABNT-FA.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/abnt.csl" beforeDir="false" afterPath="$PROJECT_DIR$/../../csl/abnt.csl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/ajps.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/american-sociological-association.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/annual-reviews-author-date.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/apa-ian-injournal.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/apa-ian.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/apa.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/apsa.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/bmc-neuroscience.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/cell.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/cerebral-cortex.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/chicago-author-date.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/chicago-syllabus.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/copeia.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/current-opinion.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/elife.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/elsevier-harvard.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/eneuro.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/european-journal-of-neuroscience.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/frontiers.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/nature-neuroscience.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/nature.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/neuron.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/pnas.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/the-journal-of-neuroscience.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/trends-journals.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../csl/vancouver.csl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/abntex.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/crossref.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/docx.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../defaults/docx.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/eisvogel-logo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../defaults/eisvogel-logo.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/eisvogel.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../defaults/eisvogel.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/html.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/latex.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/leaflet.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/letter.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/pdf-prince.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/pdf-xelatex.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/plain.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../defaults/refs.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../defaults/refs.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../filters/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/assimilateMetadata.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../../filters/assimilateMetadata.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/customParaStyle.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../../filters/customParaStyle.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/luatest.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../../filters/luatest.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/md-abreviacoes.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/md-advertencia.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/md-agradecimentos.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/md-contracapa.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/md-dedicatoria.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/md-epigrafe.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/md-titulo.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/modifyHeadings.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../../filters/modifyHeadings.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/removeEmphasis.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../../filters/removeEmphasis.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/removeSpacesBeforeCitations.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../../filters/removeSpacesBeforeCitations.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../filters/testFilter.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../../filters/testFilter.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../postprocessors/fixLaTeX.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../../postprocessors/fixLaTeX.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../preprocessors/convertEndnoteRefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../preprocessors/convertEndnoteRefs.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../preprocessors/criticmarkup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../preprocessors/criticmarkup-accept.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../preprocessors/criticmarkup-reject.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../preprocessors/criticmarkup.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../preprocessors/criticmarkup.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../preprocessors/fixCrossref" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../preprocessors/fixCrossref.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../preprocessors/removeAffiliations" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../preprocessors/removeAffiliations.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../preprocessors/removeImageDimensions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../preprocessors/removeImageDimensions.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../templates/LaTeX/.texpadtmp/Glossário Template.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../templates/LaTeX/.texpadtmp/Glossário Template.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../templates/LaTeX/Dissertação Latex - cópia/Sources/Introduction.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../templates/LaTeX/Dissertação Latex - cópia/Thesis.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../templates/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../templates/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../templates/abntex-o-matic.latex" beforeDir="false" afterPath="$PROJECT_DIR$/../../templates/abntex-o-matic.latex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../templates/custom-ian.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../templates/custom.latex" beforeDir="false" afterPath="$PROJECT_DIR$/../../templates/custom.latex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../templates/rmd-alegreya.docx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+    <option name="showPreview" value="true" />
+  </component>
+  <component name="ProjectId" id="2N231uiPcK8QkSuSxI43LAK0P0p" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bcdav/Dropbox/Application Support/pandoc/quarto/citetools&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="localhost:3913" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:3913/">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.localhost:3913" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63b6ca05-3d23-4037-9996-244197094b8a" name="Changes" comment="" />
+      <created>1678848138825</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678848138825</updated>
+      <workItem from="1678848142474" duration="190000" />
+      <workItem from="1678848350980" duration="38000" />
+      <workItem from="1678848404634" duration="322000" />
+      <workItem from="1678849075941" duration="173000" />
+      <workItem from="1678849264314" duration="739000" />
+      <workItem from="1678850169163" duration="1513000" />
+      <workItem from="1678853167622" duration="715000" />
+      <workItem from="1678909016971" duration="3242000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
