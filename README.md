@@ -135,7 +135,7 @@ Filters published under the MIT license by Albert Krewinkel ([tarleb](https://gi
 - [citation-backlinks](https://github.com/bcdavasconcelos/citation-backlinks)
 - [section-bibliographies](https://github.com/pandoc-ext/section-bibliographies)
 
-Filters published under the MIT license by Albert Krewinkel ([tarleb](https://github.com/tarleb) & Bernardo Vasconcelos ([bcdavasconcelos](https://github.com/bcdavasconcelos)).
+Filters published under the MIT license by Albert Krewinkel ([tarleb](https://github.com/tarleb)) & Bernardo Vasconcelos ([bcdavasconcelos](https://github.com/bcdavasconcelos)).
 
 - [citefield](https://github.com/bcdavasconcelos/citefield)
 
