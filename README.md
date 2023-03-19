@@ -128,14 +128,14 @@ See sample document `sample.qmd` for a working example with explanations.
 
 License
 ------------------------------------------------------------------
-Filters published under the MIT license by Albert Krewinkel (@tarleb).
+Filters published under the MIT license by Albert Krewinkel ([tarleb](https://github.com/tarleb)).
 
 - [multibib](https://github.com/pandoc-ext/multibib)
 - [multiple-bibliographies](https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies)
 - [citation-backlinks](https://github.com/bcdavasconcelos/citation-backlinks)
 - [section-bibliographies](https://github.com/pandoc-ext/section-bibliographies)
 
-Filters published under the MIT license by Albert Krewinkel (@tarleb) & Bernardo Vasconcelos (@bcdavasconcelos).
+Filters published under the MIT license by Albert Krewinkel ([tarleb](https://github.com/tarleb) & Bernardo Vasconcelos ([bcdavasconcelos](https://github.com/bcdavasconcelos)).
 
 - [citefield](https://github.com/bcdavasconcelos/citefield)
 
