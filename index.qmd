@@ -2,15 +2,51 @@
 title: |
   Cite Tools
 subtitle: |
-  Advanced bibliography for Pandoc and Quarto <img src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
+  Advanced bibliography for Pandoc and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
 author: "Bernardo Vasconcelos"
+date: "2021-09-01"
+format:
+  html:
+    header-includes: |
+      <style>
+        code span.co {
+          font-style: normal!important;
+        }
+      </style>
+listing:
+  id: sample-listings
+  contents: docs/citetools
+  type: table
+  sort: title
 ---
 
-<img src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
+# Introduction {.unnumbered}
 
-<!-- [![GitHub build status][CI badge]][CI workflow] -->
+The vanilla Pandoc and Quarto's Citeproc environment is powerful and its syntax is simple. It uses `[@Citekey]` for `Author (Date)` and `[-@Citekey]` for `(Date)`.^[In the case of `[-@Citekey]`, the `-` is being used switch on author suppresion. The page locator can always be appended using `[@Citekey, p. 1]` for `Author (Date, p. 1)` or `[-@Citekey, p. 1]` for `(Date, p. 1)`]
 
-This extension introduces advanced bibliography features to Pandoc and Quarto's Citeproc environment. It bundles several Lua filters ([*vide infra*](#license)) to address complex bibliography demands while keeping the output consistent across all formats (`LaTeX`, `DOCX`, `HTML`, and so on).
+
+::: {.callout-tip appearance="simple"}
+The advantage of this markup syntax lies in its simplicity and the compatibility with all formats supported by Pandoc, a universal document converter.
+:::
+
+This extension introduces advanced bibliography features by bundling up several Lua filters ([see below](#license)). It allows, among other things, the creation of multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`), the citation of arbitrary fields from the references, such as `author`, `editor`, or `translator` names and `title` / `original-title` of works, and last, but not least, the creation of linked indexes of citations.
+
+::: {#sample-listings}
+:::
+
+
+1. Create multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`).^[This is a feature that is common in other bibliography typesetting mechanisms, such as `BibLaTeX` and `BibTeX`, and that was sorely missing from Pandoc's Citeproc environment.]
+2. Cite arbitrary fields from the references, such as `author`, `editor`, or `translator` names and `title` / `original-title` of works.^[This is also a feature that is common `BibLaTeX` and `BibTeX` through commands such as `\citeauthor`, `\citetitle`, `\citefield`, and so on.]
+3. Turn the bibliography into a linked index of citations.
+
+[[Multiple bibliographies]]
+
+
+generate a bibliography in all formats supported by Pandoc (which totalize more than 30 formats, including `LaTeX`, `DOCX`, `HTML`, `EPUB`, `PDF`, and so on)
+
+ but it lacks some features that are common in other bibliography typesetting mechanisms, such as `BibLaTeX` and `BibTeX`. This extension aims to fill these gaps using only *Lua Filters*.
+
+
 
 ## Features
 
@@ -88,39 +124,6 @@ filters:
 ---
 ```
 
-## Configuration
-
-### Multiple bibliographies
-
-Add bibliography files to the `refs` folder. Then, add the following metadata to the YAML header of your document in this way:
-
-```yaml
----
-bibliography_primary: refs/primary.json
-bibliography_secondary: refs/secondary.json
----
-```
-
-Then, place the bibliographies placeholders in the document where you want the bibliographies to appear.
-
-``` markdown
-# Primary Sources
-
-::: {#refs_primary}
-:::
-
-# Secondary Sources
-
-::: {#refs_secondary}
-:::
-```
-
-These divs are filled with citations from the respective bib-file. Each refs-*x* div should have a matching entry *x* in the metadata.
-
-**Make sure the bibliography name and the placeholder div id match.**
-
-That is, if you have a bibliography named `bibliography_primary`, the placeholder div should be `refs-primary` or `refs_primary`.
-
 ### Cite fields and citation backlinks global options
 
 - `link-fields` (boolean): Link inlines printed by `citefield` to their corresponding entry in the bibliography. Default: `true`.
@@ -151,4 +154,4 @@ Filters published under the MIT license by Albert Krewinkel ([tarleb](https://gi
 All Pandoc Lua filters in this extension are published under the MIT license, see
 file `LICENSE` for details.
 
-[Back to top](#cite-tools-for-pandoc-and-quarto)
+[Back to top](#top)

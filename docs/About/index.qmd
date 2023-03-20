@@ -1,0 +1,24 @@
+---
+title: About
+---
+
+Logo image generated [Dall-E](https://labs.openai.com/e/wtQnvyvhZqwROpParcviKBWk) using `Enso-like round black and white painting with ancient greek war-ship with man tied to the mast` as prompt.
+
+License
+------------------------------------------------------------------
+Filters published under the MIT license by Albert Krewinkel ([tarleb](https://github.com/tarleb)).
+
+- [multibib](https://github.com/pandoc-ext/multibib)
+- [multiple-bibliographies](https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies)
+- [citation-backlinks](https://github.com/bcdavasconcelos/citation-backlinks)
+- [section-bibliographies](https://github.com/pandoc-ext/section-bibliographies)
+
+Filters published under the MIT license by Albert Krewinkel ([tarleb](https://github.com/tarleb)) & Bernardo Vasconcelos ([bcdavasconcelos](https://github.com/bcdavasconcelos)).
+
+- [citefield](https://github.com/bcdavasconcelos/citefield)
+
+
+All Pandoc Lua filters in this extension are published under the MIT license, see
+file `LICENSE` for details.
+
+[Back to top](#top)

@@ -1,4 +1,4 @@
-# 📚 Cite Tools for Pandoc and Quarto 
+# 📚 Cite Tools for Pandoc and Quarto
 
 <div id="top"></div>
 
@@ -128,21 +128,3 @@ See sample document `sample.qmd` for a working example with explanations.
 <img width="665" alt="image" src="https://user-images.githubusercontent.com/35749099/226091195-7b27f8a7-c802-4cbb-bac9-81265b7aed45.png">
 
 
-License
-------------------------------------------------------------------
-Filters published under the MIT license by Albert Krewinkel ([tarleb](https://github.com/tarleb)).
-
-- [multibib](https://github.com/pandoc-ext/multibib)
-- [multiple-bibliographies](https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies)
-- [citation-backlinks](https://github.com/bcdavasconcelos/citation-backlinks)
-- [section-bibliographies](https://github.com/pandoc-ext/section-bibliographies)
-
-Filters published under the MIT license by Albert Krewinkel ([tarleb](https://github.com/tarleb)) & Bernardo Vasconcelos ([bcdavasconcelos](https://github.com/bcdavasconcelos)).
-
-- [citefield](https://github.com/bcdavasconcelos/citefield)
-
-
-All Pandoc Lua filters in this extension are published under the MIT license, see
-file `LICENSE` for details.
-
-[Back to top](#top)

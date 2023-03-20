@@ -1,6 +1,7 @@
 ---
 title: Example of Citetools in action
 author: Bernardo César Diniz Athayde Vasconcelos
+#bibliography_primary: https://raw.githubusercontent.com/bcdavasconcelos/citetools/main/refs/primary.json
 bibliography_primary: refs/primary.json
 bibliography_secondary: refs/secondary.json
 #link-fields: false

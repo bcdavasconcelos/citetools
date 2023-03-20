@@ -3,16 +3,7 @@ project:
 
 execute:
   cache: true
-  cache-dir: .quarto-cache
-  cache-include:
-    - "**/*.Rmd"
-    - "**/*.R"
-    - "**/*.md"
-    - "**/*.qmd"
-  auto-reload: true
-  render-on-save: true
-  render-on-open: true
-
+  freeze: true
 
 website:
   page-navigation: true
@@ -40,18 +31,36 @@ website:
       - icon: twitter
         href: https://twitter.com/bcdavasconcelos
         text: "Twitter"
-
     style: "docked"
     search: true
     collapse-level: 1
-    contents: auto
-
-
+    contents:
+      - text: "Multiple Bibliographies"
+        href: docs/citetools/Multiple-Bibliographies/index.qmd
+        contents:
+          - text: "Prime Matter"
+            href: docs/citetools/Multiple-Bibliographies/1-Prime-Matter.qmd
+          - text: "How to set it up"
+            href: docs/citetools/Multiple-Bibliographies/2-How-to-set-it-up.qmd
+          - text: "Advanced"
+            href: docs/citetools/Multiple-Bibliographies/3-Advanced/index.qmd
+            contents:
+              - text: "Using Multiple Bibliographies in Scrivener"
+                href: docs/citetools/Multiple-Bibliographies/3-Advanced/1-Using-Multiple-Bibliographies-in-Scrivener.qmd
+      - text: "About"
+        href: docs/About/index.qmd
+        contents:
+          - text: "About Cite Tools"
+            href: docs/About/1-About-Cite-Tools.qmd
+          - text: "About Quarto"
+            href: docs/About/2-About-Quarto.qmd
+          - text: "About BCDAV"
+            href: docs/About/3-About-BCDAV.qmd
 format:
   html:
     theme:
-      light: [Pulse] # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
-      dark: [Morph]
+      light: [Zephyr] # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
+      dark: [Vapor]
     code-copy: true
     code-overflow: wrap
     toc: true
@@ -59,6 +68,7 @@ format:
 
 filters:
   - include-files.lua
+  # - include-code-files.lua
   - quarto
 
 

@@ -52,5 +52,29 @@
   ],
   "type": "book"
 },
-{"author":[{"family":"Aristoteles"}],"id":"DACorcilius","issued":{"date-parts":[[2017]]},"number-of-pages":"358","publisher":"Felix Meiner","publisher-place":"Hamburg","title":"Über die Seele. De anima","title-short":"","translator":[{"family":"Corcilius","given":"Klaus"}],"type":"book"}
+{
+  "author": [
+    {
+      "family": "Aristoteles"
+    }
+  ],
+  "id": "DACorcilius",
+  "issued": {
+    "date-parts": [
+      [2017]
+    ]
+  },
+  "number-of-pages": "358",
+  "publisher": "Felix Meiner",
+  "publisher-place": "Hamburg",
+  "title": "Über die Seele. De anima",
+  "title-short": "",
+  "translator": [
+    {
+      "family": "Corcilius",
+      "given": "Klaus"
+    }
+  ],
+  "type": "book"
+}
 ]

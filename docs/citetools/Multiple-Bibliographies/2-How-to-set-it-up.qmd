@@ -1,0 +1,35 @@
+---
+title: How to set it up
+filters:
+  - include-code-files
+---
+
+Add bibliography files to the `refs` folder. Then, add the following metadata to the YAML header of your document in this way:
+
+```yaml
+---
+bibliography_primary: refs/primary.json
+bibliography_secondary: refs/secondary.json
+---
+```
+
+The path should be relative to the project's root folder. The name of the bibliography should (but doesn't *have to*) be the same as the name of the file, without the extension.
+
+Then, place the bibliographies placeholders in the document where you want the bibliographies to appear.
+
+``` markdown
+# Primary Sources
+
+::: {#refs_primary}
+:::
+
+# Secondary Sources
+
+::: {#refs_secondary}
+:::
+```
+
+Each `refs_bib_name` `div` should have a matching entry `bibliography_bib_name` in the metadata. They will be filled with the citations from the respective bibliography files.
+
+**Make sure the bibliography name (`bibliography_`) and the placeholder div id (`refs_`) match, otherwise nothing will print.**^[That is, if you have a bibliography named `bibliography_primary`, the placeholder div should be `refs-primary` or `refs_primary`.]
+

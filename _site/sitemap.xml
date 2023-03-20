@@ -1,51 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/changelog.html</loc>
-    <lastmod>2023-03-19T21:22:06.077Z</lastmod>
+    <loc>https://bcdavasconcelos.github.io/citetools/changelog.html</loc>
+    <lastmod>2023-03-20T04:03:29.646Z</lastmod>
   </url>
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/index.html</loc>
-    <lastmod>2023-03-19T21:59:56.268Z</lastmod>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/Multiple-Bibliographies/3-Advanced/index.html</loc>
+    <lastmod>2023-03-20T04:03:30.038Z</lastmod>
   </url>
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/explore.html</loc>
-    <lastmod>2023-03-19T21:22:07.501Z</lastmod>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/Multiple-Bibliographies/3-Advanced/1-Using-Multiple-Bibliographies-in-Scrivener.html</loc>
+    <lastmod>2023-03-20T04:03:30.407Z</lastmod>
   </url>
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/sample.html</loc>
-    <lastmod>2023-03-19T21:22:09.205Z</lastmod>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/Multiple-Bibliographies/Multibib-in-Scrivener.html</loc>
+    <lastmod>2023-03-20T04:03:30.763Z</lastmod>
   </url>
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/quarto-workflows/browser.html</loc>
-    <lastmod>2023-03-19T21:22:10.462Z</lastmod>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/Multiple-Bibliographies/index.html</loc>
+    <lastmod>2023-03-20T04:28:30.777Z</lastmod>
   </url>
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/quarto-workflows/jupyter.html</loc>
-    <lastmod>2023-03-19T21:22:11.101Z</lastmod>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/Multiple-Bibliographies/2-How-to-set-it-up.html</loc>
+    <lastmod>2023-03-20T04:03:31.486Z</lastmod>
   </url>
   <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/quarto-workflows/index.html</loc>
-    <lastmod>2023-03-19T21:22:11.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/quarto-website-tutorial/quarto-workflows/rstudio.html</loc>
-    <lastmod>2023-03-19T21:22:12.185Z</lastmod>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/Multiple-Bibliographies/1-Prime-Matter.html</loc>
+    <lastmod>2023-03-20T04:03:31.852Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/index.html</loc>
-    <lastmod>2023-03-19T22:29:47.186Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcdavasconcelos.github.io/citetools/sample.html</loc>
-    <lastmod>2023-03-19T22:07:05.081Z</lastmod>
+    <lastmod>2023-03-20T04:50:15.016Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/explore.html</loc>
-    <lastmod>2023-03-19T22:06:12.249Z</lastmod>
+    <lastmod>2023-03-20T04:03:32.782Z</lastmod>
   </url>
   <url>
-    <loc>https://bcdavasconcelos.github.io/citetools/changelog.html</loc>
-    <lastmod>2023-03-19T22:06:35.032Z</lastmod>
+    <loc>https://bcdavasconcelos.github.io/citetools/sample.html</loc>
+    <lastmod>2023-03-20T04:03:35.017Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/quarto-workflows/browser.html</loc>
+    <lastmod>2023-03-20T04:03:37.068Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/quarto-workflows/jupyter.html</loc>
+    <lastmod>2023-03-20T04:03:37.539Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/quarto-workflows/index.html</loc>
+    <lastmod>2023-03-20T04:03:37.920Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/quarto-workflows/rstudio.html</loc>
+    <lastmod>2023-03-20T04:03:38.335Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/About.html</loc>
+    <lastmod>2023-03-20T04:25:57.110Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/About/index.html</loc>
+    <lastmod>2023-03-20T04:51:55.476Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/About/1-About-Cite-Tools.html</loc>
+    <lastmod>2023-03-20T04:51:58.902Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/About/2-About-Quarto.html</loc>
+    <lastmod>2023-03-20T04:52:00.832Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/About/3-About-BCDAV.html</loc>
+    <lastmod>2023-03-20T04:52:02.485Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/About/About.html</loc>
+    <lastmod>2023-03-20T04:38:13.881Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/citetools/Multiple-Bibliographies/3-Advanced/index.html</loc>
+    <lastmod>2023-03-20T04:42:11.972Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/citetools/Multiple-Bibliographies/3-Advanced/1-Using-Multiple-Bibliographies-in-Scrivener.html</loc>
+    <lastmod>2023-03-20T04:51:49.644Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/citetools/Multiple-Bibliographies/Multibib-in-Scrivener.html</loc>
+    <lastmod>2023-03-20T04:42:12.733Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/citetools/Multiple-Bibliographies/index.html</loc>
+    <lastmod>2023-03-20T04:50:58.738Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/citetools/Multiple-Bibliographies/2-How-to-set-it-up.html</loc>
+    <lastmod>2023-03-20T04:51:43.061Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs/citetools/Multiple-Bibliographies/1-Prime-Matter.html</loc>
+    <lastmod>2023-03-20T04:51:36.146Z</lastmod>
   </url>
 </urlset>

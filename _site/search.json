@@ -7,39 +7,60 @@
     "text": "Released 2023-03-18."
   },
   {
+    "objectID": "docs/Multiple-Bibliographies/3-Advanced/index.html",
+    "href": "docs/Multiple-Bibliographies/3-Advanced/index.html",
+    "title": "Multiple Bibliographies in Scrivener",
+    "section": "",
+    "text": "In Scrivener, you can add multiple bibliographies to your project using the strategy below. Once this is done, the only task to add new bibliography files to your project will be to paste the path to one of the files in the metadata of your document. This is a very simple task, and it can be done in a few seconds.\n\n\nFirst of all, create a new meta data field called path.\nCreate a Section Type called Multibib.\nCreate a new Section in your project, and set its Section Type to Multibib.\nPaste the path to the bibliography file in the path metadata field.\nIn the Compile formats Section Layout, add the following code to the Title Sufix of the Multibib Section:\n\n {.appendix}\n\n---\nbibliography_multibib<$linkID>: \"<$custom:Path>\"\n---\n\n::: {#refs_multibib<$linkID>}\n:::"
+  },
+  {
+    "objectID": "docs/Multiple-Bibliographies/3-Advanced/1-Using-Multiple-Bibliographies-in-Scrivener.html",
+    "href": "docs/Multiple-Bibliographies/3-Advanced/1-Using-Multiple-Bibliographies-in-Scrivener.html",
+    "title": "Multiple Bibliographies in Scrivener",
+    "section": "",
+    "text": "In Scrivener, you can add multiple bibliographies to your project using the strategy below. Once this is done, the only task to add new bibliography files to your project will be to paste the path to one of the files in the metadata of your document. This is a very simple task, and it can be done in a few seconds.\n\n\nFirst of all, create a new meta data field called path.\nCreate a Section Type called Multibib.\nCreate a new Section in your project, and set its Section Type to Multibib.\nPaste the path to the bibliography file in the path metadata field.\nIn the Compile formats Section Layout, add the following code to the Title Sufix of the Multibib Section:\n\n {.appendix}\n\n---\nbibliography_multibib<$linkID>: \"<$custom:Path>\"\n---\n\n::: {#refs_multibib<$linkID>}\n:::"
+  },
+  {
+    "objectID": "docs/Multiple-Bibliographies/Multibib-in-Scrivener.html",
+    "href": "docs/Multiple-Bibliographies/Multibib-in-Scrivener.html",
+    "title": "Multiple Bibliographies in Scrivener",
+    "section": "",
+    "text": "In Scrivener, you can add multiple bibliographies to your project using the strategy below. Once this is done, the only task to add new bibliography files to your project will be to paste the path to one of the files in the metadata of your document. This is a very simple task, and it can be done in a few seconds.\n\n\nFirst of all, create a new meta data field called path.\nCreate a Section Type called Multibib.\nCreate a new Section in your project, and set its Section Type to Multibib.\nPaste the path to the bibliography file in the path metadata field.\nIn the Compile formats Section Layout, add the following code to the Title Sufix of the Multibib Section:\n\n {.appendix}\n\n---\nbibliography_multibib<$linkID>: \"<$custom:Path>\"\n---\n\n::: {#refs_multibib<$linkID>}\n:::"
+  },
+  {
+    "objectID": "docs/Multiple-Bibliographies/index.html",
+    "href": "docs/Multiple-Bibliographies/index.html",
+    "title": "Multiple Bibliographies",
+    "section": "",
+    "text": "In this section, we will discuss how to use multiple bibliographies in your document. In many fields, this is conditio sine qua non for academic writing and publishing. In the humanities, for example, it is common to have a bibliography for primary sources and another for secondary sources. In philosophy, sometimes they can be very nuanced with sections dedicated to original sources, translations, commentaries, and so on."
+  },
+  {
+    "objectID": "docs/Multiple-Bibliographies/index.html#installation",
+    "href": "docs/Multiple-Bibliographies/index.html#installation",
+    "title": "Multiple Bibliographies",
+    "section": "Installation",
+    "text": "Installation\nThis extension is available on Github and can be installed using the following command:\nquarto install extension cite-tools"
+  },
+  {
+    "objectID": "docs/Multiple-Bibliographies/2-How-to-set-it-up.html",
+    "href": "docs/Multiple-Bibliographies/2-How-to-set-it-up.html",
+    "title": "How to set it up",
+    "section": "",
+    "text": "Add bibliography files to the refs folder. Then, add the following metadata to the YAML header of your document in this way:\n---\nbibliography_primary: refs/primary.json\nbibliography_secondary: refs/secondary.json\n---\nThe path should be relative to the project’s root folder. The name of the bibliography should (but doesn’t have to) be the same as the name of the file, without the extension.\nThen, place the bibliographies placeholders in the document where you want the bibliographies to appear.\n# Primary Sources\n\n::: {#refs_primary}\n:::\n\n# Secondary Sources\n\n::: {#refs_secondary}\n:::\nEach refs_bib_name div should have a matching entry bibliography_bib_name in the metadata. They will be filled with the citations from the respective bibliography files.\nMake sure the bibliography name (bibliography_) and the placeholder div id (refs_) match, otherwise nothing will print.1\n\n\n\n\nFootnotes\n\n\nThat is, if you have a bibliography named bibliography_primary, the placeholder div should be refs-primary or refs_primary.↩︎"
+  },
+  {
+    "objectID": "docs/Multiple-Bibliographies/1-Prime-Matter.html",
+    "href": "docs/Multiple-Bibliographies/1-Prime-Matter.html",
+    "title": "Prime Matter",
+    "section": "",
+    "text": "First of all, you will need to be able to provide a bibliography file in one of different possible formats. The most common ones are called BibLaTeX or BibTeX. However, you can also use CSL-JSON files, which is preferable since the latter faster and it is the format used by Citeproc internally to represent bibliographies.\nThere are many ways to provide a bibliography file. The most common ones are:\n\nKeeping a bibliography file yourself and updating it manually. (Viable only it small projects.)\nUsing a bibliography manager, such as Zotero, JabRef, Bookends, Bibdesk, Endnote; see also this comparison on Wikipedia. These programs allows you to edit your bibliography and export it in the desired format.\nUsing a shared bibliography on Github or a shared Zotero online library1.\n\nThe important detail here is that you need to be able to export your bibliography in one of the formats mentioned above and that you need to be able to create more than one bibliography file. Once you have this, you can proceed to the next step.\n\n\n\n\n\n\nrefs/primary.bib\n\n\n\nKeeping bibliography files inside /refs at the project’s root folder is not a requirement, but it is good pratice.\n\n\n\n\n\n\n\n\nCite Tools, not a bibliography manager\n\n\n\nThis extension is not a bibliography manager. It does not allow you to edit your bibliography. It only allows you to use multiple bibliographies in your document.\n\n\n\n\n\n\nFootnotes\n\n\nZotero online libraries can be downloaded using https://api.zotero.org/groups/LibraryIDhere/items?format=bibtex&limit=150) where LibraryIDhere should be replaced by the 7-digit code in the middle of the library URL↩︎"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Cite Tools",
     "section": "",
-    "text": "This extension introduces advanced bibliography features to Pandoc and Quarto’s Citeproc environment. It bundles several Lua filters (vide infra) to address complex bibliography demands while keeping the output consistent across all formats (LaTeX, DOCX, HTML, and so on)."
-  },
-  {
-    "objectID": "index.html#features",
-    "href": "index.html#features",
-    "title": "Cite Tools",
-    "section": "Features",
-    "text": "Features\nMore specifically, this bunddle seeks to address in the simplest of ways possible the following demands:\n1. Multiple bibliographies\nThe need for multiple bibliographies (or bibliographies with multiple sections, such as primary sources and secondary sources).\n\n2. Cite fields\nThe need to evoke arbitrary information from the references, such as author, editor, or translator names and title / original-title of works.\n\n\n\n@AristOp in csljson\n\n{\n    \"author\": [\n      {\n        \"family\": \"Aristotle\"\n      }\n    ],\n    \"editor\": [\n      {\n        \"family\": \"Bekker\",\n        \"given\": \"Immanuel\"\n      }\n    ],\n    \"id\": \"AristOp\",\n    \"issued\": {\n      \"date-parts\": [\n        [\n          1831\n        ]\n      ]\n    },\n    \"number-of-volumes\": \"4\",\n    \"publisher\": \"Reimer\",\n    \"publisher-place\": \"Berlim\",\n    \"title\": \"Aristotelis opera\",\n    \"type\": \"book\"\n  }\n\n3. Citation backlinks\nThe need to turn the bibliography into a linked index of cited references, with links from the entries back to each of its multiple occurences in the body of the text (e.g. in PDF/DOCX: [p. 1, p. 4, p. 10], in HTML: [1, 2, 3]) (and with the ability to turn these off globally or in an ad hoc fashion).\n\n\nOptionally, the need to split the bibliography into sections, printing the bibliography for each chapter/section/part. (For this, you must uncomment the apropriate line in the _extension.yaml file.)"
-  },
-  {
-    "objectID": "index.html#install",
-    "href": "index.html#install",
-    "title": "Cite Tools",
-    "section": "Install",
-    "text": "Install\nUsers of Quarto can install this extension with the following command\nquarto install extension bcdavasconcelos/citetools\nand use it by adding citetools to the filters entry in their YAML header.\n---\nfilters:\n  - citetools\n---"
-  },
-  {
-    "objectID": "index.html#configuration",
-    "href": "index.html#configuration",
-    "title": "Cite Tools",
-    "section": "Configuration",
-    "text": "Configuration\n\nMultiple bibliographies\nAdd bibliography files to the refs folder. Then, add the following metadata to the YAML header of your document in this way:\n---\nbibliography_primary: refs/primary.json\nbibliography_secondary: refs/secondary.json\n---\nThen, place the bibliographies placeholders in the document where you want the bibliographies to appear.\n# Primary Sources\n\n::: {#refs_primary}\n:::\n\n# Secondary Sources\n\n::: {#refs_secondary}\n:::\nThese divs are filled with citations from the respective bib-file. Each refs-x div should have a matching entry x in the metadata.\nMake sure the bibliography name and the placeholder div id match.\nThat is, if you have a bibliography named bibliography_primary, the placeholder div should be refs-primary or refs_primary.\n\n\nCite fields and citation backlinks global options\n\nlink-fields (boolean): Link inlines printed by citefield to their corresponding entry in the bibliography. Default: true.\nlink-citations (boolean): Link citations to their respective reference in the bibliography. Default: true. Note: if link-citations is set to false, link-fields is also set to false.\n\n\nSee sample document sample.qmd for a working example with explanations."
-  },
-  {
-    "objectID": "index.html#license",
-    "href": "index.html#license",
-    "title": "Cite Tools",
-    "section": "License",
-    "text": "License\nFilters published under the MIT license by Albert Krewinkel (tarleb).\n\nmultibib\nmultiple-bibliographies\ncitation-backlinks\nsection-bibliographies\n\nFilters published under the MIT license by Albert Krewinkel (tarleb) & Bernardo Vasconcelos (bcdavasconcelos).\n\ncitefield\n\nAll Pandoc Lua filters in this extension are published under the MIT license, see file LICENSE for details.\nBack to top"
+    "text": "The vanilla Pandoc and Quarto’s Citeproc environment is powerful and its syntax is simple. It uses [@Citekey] for Author (Date) and [-@Citekey] for (Date).1\n\n\n\n\n\n\nThe advantage of this markup syntax lies in its simplicity and the compatibility with all formats supported by Pandoc, a universal document converter.\n\n\n\nThis extension introduces advanced bibliography features by bundling up several Lua filters (see below). It allows, among other things, the creation of multiple bibliographies (or bibliographies with multiple sections, such as primary sources and secondary sources), the citation of arbitrary fields from the references, such as author, editor, or translator names and title / original-title of works, and last, but not least, the creation of linked indexes of citations.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nAdvanced\n\n\n\n\n\n\nHow to set it up\n\n\n\n\n\n\nMultiple Bibliographies\n\n\n\n\n\n\nMultiple Bibliographies in Scrivener\n\n\n\n\n\n\nPrime Matter\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\nCreate multiple bibliographies (or bibliographies with multiple sections, such as primary sources and secondary sources).2\nCite arbitrary fields from the references, such as author, editor, or translator names and title / original-title of works.3\nTurn the bibliography into a linked index of citations.\n\n[[Multiple bibliographies]]\ngenerate a bibliography in all formats supported by Pandoc (which totalize more than 30 formats, including LaTeX, DOCX, HTML, EPUB, PDF, and so on)\nbut it lacks some features that are common in other bibliography typesetting mechanisms, such as BibLaTeX and BibTeX. This extension aims to fill these gaps using only Lua Filters.\n\n\nMore specifically, this bunddle seeks to address in the simplest of ways possible the following demands:\n1. Multiple bibliographies\nThe need for multiple bibliographies (or bibliographies with multiple sections, such as primary sources and secondary sources).\n\n2. Cite fields\nThe need to evoke arbitrary information from the references, such as author, editor, or translator names and title / original-title of works.\n\n\n\n@AristOp in csljson\n\n{\n    \"author\": [\n      {\n        \"family\": \"Aristotle\"\n      }\n    ],\n    \"editor\": [\n      {\n        \"family\": \"Bekker\",\n        \"given\": \"Immanuel\"\n      }\n    ],\n    \"id\": \"AristOp\",\n    \"issued\": {\n      \"date-parts\": [\n        [\n          1831\n        ]\n      ]\n    },\n    \"number-of-volumes\": \"4\",\n    \"publisher\": \"Reimer\",\n    \"publisher-place\": \"Berlim\",\n    \"title\": \"Aristotelis opera\",\n    \"type\": \"book\"\n  }\n\n3. Citation backlinks\nThe need to turn the bibliography into a linked index of cited references, with links from the entries back to each of its multiple occurences in the body of the text (e.g. in PDF/DOCX: [p. 1, p. 4, p. 10], in HTML: [1, 2, 3]) (and with the ability to turn these off globally or in an ad hoc fashion).\n\n\nOptionally, the need to split the bibliography into sections, printing the bibliography for each chapter/section/part. (For this, you must uncomment the apropriate line in the _extension.yaml file.)\n\n\n\n\nUsers of Quarto can install this extension with the following command\nquarto install extension bcdavasconcelos/citetools\nand use it by adding citetools to the filters entry in their YAML header.\n---\nfilters:\n  - citetools\n---\n\n\n\nlink-fields (boolean): Link inlines printed by citefield to their corresponding entry in the bibliography. Default: true.\nlink-citations (boolean): Link citations to their respective reference in the bibliography. Default: true. Note: if link-citations is set to false, link-fields is also set to false.\n\n\nSee sample document sample.qmd for a working example with explanations.\n\n\n\n\n\nFilters published under the MIT license by Albert Krewinkel (tarleb).\n\nmultibib\nmultiple-bibliographies\ncitation-backlinks\nsection-bibliographies\n\nFilters published under the MIT license by Albert Krewinkel (tarleb) & Bernardo Vasconcelos (bcdavasconcelos).\n\ncitefield\n\nAll Pandoc Lua filters in this extension are published under the MIT license, see file LICENSE for details.\nBack to top"
   },
   {
     "objectID": "explore.html",
@@ -278,5 +299,103 @@
     "title": "From RStudio",
     "section": "Troubleshooting",
     "text": "Troubleshooting\nIf you have trouble rendering your website after for example changing the extenstion of a file from .md to .qmd, refreshing your RStudio often helps. Do this by clicking the project name at the upper right of the RStudio window (in this case, quarto-website-tutorial), and underneath the “close project” section, click the same name of your project: quarto-website-tutorial. This will relaunch your whole project afresh."
+  },
+  {
+    "objectID": "About.html",
+    "href": "About.html",
+    "title": "About",
+    "section": "",
+    "text": "Logo image generated Dall-E using Enso-like round black and white painting with ancient greek war-ship with man tied to the mast as prompt."
+  },
+  {
+    "objectID": "About.html#license",
+    "href": "About.html#license",
+    "title": "About",
+    "section": "License",
+    "text": "License\nFilters published under the MIT license by Albert Krewinkel (tarleb).\n\nmultibib\nmultiple-bibliographies\ncitation-backlinks\nsection-bibliographies\n\nFilters published under the MIT license by Albert Krewinkel (tarleb) & Bernardo Vasconcelos (bcdavasconcelos).\n\ncitefield\n\nAll Pandoc Lua filters in this extension are published under the MIT license, see file LICENSE for details.\nBack to top"
+  },
+  {
+    "objectID": "docs/About/index.html",
+    "href": "docs/About/index.html",
+    "title": "About",
+    "section": "",
+    "text": "Logo image generated Dall-E using Enso-like round black and white painting with ancient greek war-ship with man tied to the mast as prompt."
+  },
+  {
+    "objectID": "docs/About/index.html#license",
+    "href": "docs/About/index.html#license",
+    "title": "About",
+    "section": "License",
+    "text": "License\nFilters published under the MIT license by Albert Krewinkel (tarleb).\n\nmultibib\nmultiple-bibliographies\ncitation-backlinks\nsection-bibliographies\n\nFilters published under the MIT license by Albert Krewinkel (tarleb) & Bernardo Vasconcelos (bcdavasconcelos).\n\ncitefield\n\nAll Pandoc Lua filters in this extension are published under the MIT license, see file LICENSE for details.\nBack to top"
+  },
+  {
+    "objectID": "docs/About/1-About-Cite-Tools.html",
+    "href": "docs/About/1-About-Cite-Tools.html",
+    "title": "About Cite Tools",
+    "section": "",
+    "text": "Logo image generated Dall-E using Enso-like round black and white painting with ancient greek war-ship with man tied to the mast as prompt."
+  },
+  {
+    "objectID": "docs/About/About.html",
+    "href": "docs/About/About.html",
+    "title": "About",
+    "section": "",
+    "text": "Logo image generated Dall-E using Enso-like round black and white painting with ancient greek war-ship with man tied to the mast as prompt."
+  },
+  {
+    "objectID": "docs/About/About.html#license",
+    "href": "docs/About/About.html#license",
+    "title": "About",
+    "section": "License",
+    "text": "License\nFilters published under the MIT license by Albert Krewinkel (tarleb).\n\nmultibib\nmultiple-bibliographies\ncitation-backlinks\nsection-bibliographies\n\nFilters published under the MIT license by Albert Krewinkel (tarleb) & Bernardo Vasconcelos (bcdavasconcelos).\n\ncitefield\n\nAll Pandoc Lua filters in this extension are published under the MIT license, see file LICENSE for details.\nBack to top"
+  },
+  {
+    "objectID": "docs/citetools/Multiple-Bibliographies/3-Advanced/index.html",
+    "href": "docs/citetools/Multiple-Bibliographies/3-Advanced/index.html",
+    "title": "Multiple Bibliographies in Scrivener",
+    "section": "",
+    "text": "In Scrivener, you can add multiple bibliographies to your project using the strategy below. Once this is done, the only task to add new bibliography files to your project will be to paste the path to one of the files in the metadata of your document. This is a very simple task, and it can be done in a few seconds.\n\n\nFirst of all, create a new meta data field called path.\nCreate a Section Type called Multibib.\nCreate a new Section in your project, and set its Section Type to Multibib.\nPaste the path to the bibliography file in the path metadata field.\nIn the Compile formats Section Layout, add the following code to the Title Sufix of the Multibib Section:\n\n {.appendix}\n\n---\nbibliography_multibib<$linkID>: \"<$custom:Path>\"\n---\n\n::: {#refs_multibib<$linkID>}\n:::"
+  },
+  {
+    "objectID": "docs/citetools/Multiple-Bibliographies/3-Advanced/1-Using-Multiple-Bibliographies-in-Scrivener.html",
+    "href": "docs/citetools/Multiple-Bibliographies/3-Advanced/1-Using-Multiple-Bibliographies-in-Scrivener.html",
+    "title": "Multiple Bibliographies in Scrivener",
+    "section": "",
+    "text": "In Scrivener, you can add multiple bibliographies to your project using the strategy below. Once this is done, the only task to add new bibliography files to your project will be to paste the path to one of the files in the metadata of your document. This is a very simple task, and it can be done in a few seconds.\n\n\nFirst of all, create a new meta data field called path.\nCreate a Section Type called Multibib.\nCreate a new Section in your project, and set its Section Type to Multibib.\nPaste the path to the bibliography file in the path metadata field.\nIn the Compile formats Section Layout, add the following code to the Title Sufix of the Multibib Section:\n\n {.appendix}\n\n---\nbibliography_multibib<$linkID>: \"<$custom:Path>\"\n---\n\n::: {#refs_multibib<$linkID>}\n:::"
+  },
+  {
+    "objectID": "docs/citetools/Multiple-Bibliographies/Multibib-in-Scrivener.html",
+    "href": "docs/citetools/Multiple-Bibliographies/Multibib-in-Scrivener.html",
+    "title": "Multiple Bibliographies in Scrivener",
+    "section": "",
+    "text": "In Scrivener, you can add multiple bibliographies to your project using the strategy below. Once this is done, the only task to add new bibliography files to your project will be to paste the path to one of the files in the metadata of your document. This is a very simple task, and it can be done in a few seconds.\n\n\nFirst of all, create a new meta data field called path.\nCreate a Section Type called Multibib.\nCreate a new Section in your project, and set its Section Type to Multibib.\nPaste the path to the bibliography file in the path metadata field.\nIn the Compile formats Section Layout, add the following code to the Title Sufix of the Multibib Section:\n\n {.appendix}\n\n---\nbibliography_multibib<$linkID>: \"<$custom:Path>\"\n---\n\n::: {#refs_multibib<$linkID>}\n:::"
+  },
+  {
+    "objectID": "docs/citetools/Multiple-Bibliographies/index.html",
+    "href": "docs/citetools/Multiple-Bibliographies/index.html",
+    "title": "Multiple Bibliographies",
+    "section": "",
+    "text": "In this section, we will discuss how to use multiple bibliographies in your document. In many fields, this is conditio sine qua non for academic writing and publishing. In the humanities, for example, it is common to have a bibliography for primary sources and another for secondary sources. In philosophy, sometimes they can be very nuanced with sections dedicated to original sources, translations, commentaries, and so on."
+  },
+  {
+    "objectID": "docs/citetools/Multiple-Bibliographies/index.html#installation",
+    "href": "docs/citetools/Multiple-Bibliographies/index.html#installation",
+    "title": "Multiple Bibliographies",
+    "section": "Installation",
+    "text": "Installation\nThis extension is available on Github and can be installed using the following command:\nquarto install extension cite-tools"
+  },
+  {
+    "objectID": "docs/citetools/Multiple-Bibliographies/2-How-to-set-it-up.html",
+    "href": "docs/citetools/Multiple-Bibliographies/2-How-to-set-it-up.html",
+    "title": "How to set it up",
+    "section": "",
+    "text": "Add bibliography files to the refs folder. Then, add the following metadata to the YAML header of your document in this way:\n---\nbibliography_primary: refs/primary.json\nbibliography_secondary: refs/secondary.json\n---\nThe path should be relative to the project’s root folder. The name of the bibliography should (but doesn’t have to) be the same as the name of the file, without the extension.\nThen, place the bibliographies placeholders in the document where you want the bibliographies to appear.\n# Primary Sources\n\n::: {#refs_primary}\n:::\n\n# Secondary Sources\n\n::: {#refs_secondary}\n:::\nEach refs_bib_name div should have a matching entry bibliography_bib_name in the metadata. They will be filled with the citations from the respective bibliography files.\nMake sure the bibliography name (bibliography_) and the placeholder div id (refs_) match, otherwise nothing will print.1\n\n\n\n\nFootnotes\n\n\nThat is, if you have a bibliography named bibliography_primary, the placeholder div should be refs-primary or refs_primary.↩︎"
+  },
+  {
+    "objectID": "docs/citetools/Multiple-Bibliographies/1-Prime-Matter.html",
+    "href": "docs/citetools/Multiple-Bibliographies/1-Prime-Matter.html",
+    "title": "Prime Matter",
+    "section": "",
+    "text": "First of all, you will need to be able to provide a bibliography file in one of different possible formats. The most common ones are called BibLaTeX or BibTeX. However, you can also use CSL-JSON files, which is preferable since the latter faster and it is the format used by Citeproc internally to represent bibliographies.\nThere are many ways to provide a bibliography file. The most common ones are:\n\nKeeping a bibliography file yourself and updating it manually. (Viable only it small projects.)\nUsing a bibliography manager, such as Zotero, JabRef, Bookends, Bibdesk, Endnote; see also this comparison on Wikipedia. These programs allows you to edit your bibliography and export it in the desired format.\nUsing a shared bibliography on Github or a shared Zotero online library1.\n\nThe important detail here is that you need to be able to export your bibliography in one of the formats mentioned above and that you need to be able to create more than one bibliography file. Once you have this, you can proceed to the next step.\n\n\n\n\n\n\nrefs/primary.bib\n\n\n\nKeeping bibliography files inside /refs at the project’s root folder is not a requirement, but it is good pratice.\n\n\n\n\n\n\n\n\nCite Tools, not a bibliography manager\n\n\n\nThis extension is not a bibliography manager. It does not allow you to edit your bibliography. It only allows you to use multiple bibliographies in your document.\n\n\n\n\n\n\nFootnotes\n\n\nZotero online libraries can be downloaded using https://api.zotero.org/groups/LibraryIDhere/items?format=bibtex&limit=150) where LibraryIDhere should be replaced by the 7-digit code in the middle of the library URL↩︎"
   }
 ]

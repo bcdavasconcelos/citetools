@@ -1,0 +1,26 @@
+---
+title: Multiple Bibliographies in Scrivener
+---
+
+In Scrivener, you can add multiple bibliographies to your project using the strategy below. Once this is done, the only task to add new bibliography files to your project will be to paste the path to one of the files in the metadata of your document. This is a very simple task, and it can be done in a few seconds.
+
+![](/2023-03-19-23-41-52.png)
+
+
+1. First of all, create a new meta data field called `path`.
+2. Create a Section Type called `Multibib`.
+3. Create a new Section in your project, and set its Section Type to `Multibib`.
+4. Paste the path to the bibliography file in the `path` metadata field.
+5. In the Compile formats Section Layout, add the following code to the `Title Sufix` of the `Multibib` Section:
+
+```markdown
+ {.appendix}
+
+---
+bibliography_multibib<$linkID>: "<$custom:Path>"
+---
+
+::: {#refs_multibib<$linkID>}
+:::
+
+```
