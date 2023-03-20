@@ -31,8 +31,13 @@ The advantage of this markup syntax lies in its simplicity and the compatibility
 
 This extension introduces advanced bibliography features by bundling up several Lua filters ([see below](#license)). It allows, among other things, the creation of multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`), the citation of arbitrary fields from the references, such as `author`, `editor`, or `translator` names and `title` / `original-title` of works, and last, but not least, the creation of linked indexes of citations.
 
-::: {#sample-listings}
-:::
+1. [Multiple bibliographies](docs/citetools/Multiple-Bibliographies/index.qmd)
+2. [Cite Field](docs/citetools/Cite-Field/index.qmd)
+3. [Citation backlinks](/docs/citetools/Citation-Backlinks/index.qmd)
+- [License](#license)
+
+
+
 
 
 1. Create multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`).^[This is a feature that is common in other bibliography typesetting mechanisms, such as `BibLaTeX` and `BibTeX`, and that was sorely missing from Pandoc's Citeproc environment.]
@@ -59,53 +64,7 @@ The need for multiple bibliographies (or bibliographies with multiple sections, 
 
 ![](img/2023-03-18-22-02-26.png)
 
-**2. Cite fields**
 
-The need to evoke arbitrary information from the references, such as `author`, `editor`, or `translator` names and `title` / `original-title` of works.
-
-![](img/2023-03-18-22-24-10.png)
-
-<details>
-  <summary>`@AristOp` in `csljson`</summary>
-
-```json
-{
-    "author": [
-      {
-        "family": "Aristotle"
-      }
-    ],
-    "editor": [
-      {
-        "family": "Bekker",
-        "given": "Immanuel"
-      }
-    ],
-    "id": "AristOp",
-    "issued": {
-      "date-parts": [
-        [
-          1831
-        ]
-      ]
-    },
-    "number-of-volumes": "4",
-    "publisher": "Reimer",
-    "publisher-place": "Berlim",
-    "title": "Aristotelis opera",
-    "type": "book"
-  }
-```
-
-</details>
-
-**3. Citation backlinks**
-
-The need to turn the bibliography into a linked index of cited references, with links from the entries back to each of its multiple occurences in the body of the text (*e.g.* in `PDF`/`DOCX`: `[p. 1, p. 4, p. 10]`, in `HTML`: `[1, 2, 3]`) (and with the ability to turn these off globally or in an *ad hoc* fashion).
-
-![](img/2023-03-18-22-32-06.png)
-
-- *Optionally*, the need to split the bibliography into sections, printing the bibliography for each chapter/section/part. (For this, you must uncomment the apropriate line in the `_extension.yaml` file.)
 
 ## Install
 

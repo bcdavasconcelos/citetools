@@ -1,9 +1,11 @@
 project:
   type: website
 
-execute:
-  cache: true
-  freeze: true
+cache: true
+freeze: auto
+editor: visual
+
+
 
 website:
   page-navigation: true
@@ -47,6 +49,10 @@ website:
             contents:
               - text: "Using Multiple Bibliographies in Scrivener"
                 href: docs/citetools/Multiple-Bibliographies/3-Advanced/1-Using-Multiple-Bibliographies-in-Scrivener.qmd
+      - text: "Citation Backlinks"
+        href: docs/citetools/Citation-Backlinks/index.qmd
+      - text: "Cite Field"
+        href: docs/citetools/Cite-Field/index.qmd
       - text: "About"
         href: docs/About/index.qmd
         contents:
@@ -56,19 +62,33 @@ website:
             href: docs/About/2-About-Quarto.qmd
           - text: "About BCDAV"
             href: docs/About/3-About-BCDAV.qmd
-format:
+format: # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
   html:
     theme:
-      light: [Zephyr] # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
-      dark: [Vapor]
+      # light: [Zephyr] # Cerulean, Cosmo, Flatly, Journal, Litera, Lumen, Lux, Materia, Minty, Morph, Pulse, Sandstone, Simplex, Sketchy, Spacelab, United, Yeti, Zephyr
+      dark: [Quartz] # Cyborg, Darkly, Quartz, Slate, Solar, Superhero, Vapor
+    # mainfont: Alegreya
+    mainfont: "Atkinson Hyperlegible"
+    header-includes: |
+      <style>
+        code span.co {
+          font-style: normal!important;
+        }
+      </style>
     code-copy: true
     code-overflow: wrap
     toc: true
 
 
 filters:
+  - citetools
   - include-files.lua
   # - include-code-files.lua
   - quarto
 
 
+# author: Bernardo César Diniz Athayde Vasconcelos
+bibliography_primary: refs/primary.json
+bibliography_secondary: refs/secondary.json
+verbosity: ERROR
+#csl: https://raw.githubusercontent.com/bcdavasconcelos/ABNT-Phi/main/abnt-phi-sc.csl

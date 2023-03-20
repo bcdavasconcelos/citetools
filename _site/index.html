@@ -106,7 +106,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -235,6 +235,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./docs/citetools/Citation-Backlinks/index.html" class="sidebar-item-text sidebar-link">Citation Backlinks</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./docs/citetools/Cite-Field/index.html" class="sidebar-item-text sidebar-link">Cite Field</a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./docs/About/index.html" class="sidebar-item-text sidebar-link">About</a>
@@ -328,7 +338,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>This extension introduces advanced bibliography features by bundling up several Lua filters (<a href="#license">see below</a>). It allows, among other things, the creation of multiple bibliographies (or bibliographies with multiple sections, such as <code>primary sources</code> and <code>secondary sources</code>), the citation of arbitrary fields from the references, such as <code>author</code>, <code>editor</code>, or <code>translator</code> names and <code>title</code> / <code>original-title</code> of works, and last, but not least, the creation of linked indexes of citations.</p>
-<div id="listing-sample-listings" class="quarto-listing quarto-listing-container-table">
+<ol type="1">
+<li><a href="./docs/citetools/Multiple-Bibliographies/index.html">Multiple bibliographies</a></li>
+<li><a href="./docs/citetools/Cite-Field/index.html">Cite Field</a></li>
+<li><a href="./docs/citetools/Citation-Backlinks/index.html">Citation backlinks</a></li>
+</ol>
+<ul>
+<li><a href="#license">License</a></li>
+</ul>
+<ol type="1">
+<li>Create multiple bibliographies (or bibliographies with multiple sections, such as <code>primary sources</code> and <code>secondary sources</code>).<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li>Cite arbitrary fields from the references, such as <code>author</code>, <code>editor</code>, or <code>translator</code> names and <code>title</code> / <code>original-title</code> of works.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
+<li>Turn the bibliography into a linked index of citations.</li>
+</ol>
+<p>[[Multiple bibliographies]]</p>
+<p>generate a bibliography in all formats supported by Pandoc (which totalize more than 30 formats, including <code>LaTeX</code>, <code>DOCX</code>, <code>HTML</code>, <code>EPUB</code>, <code>PDF</code>, and so on)</p>
+<p>but it lacks some features that are common in other bibliography typesetting mechanisms, such as <code>BibLaTeX</code> and <code>BibTeX</code>. This extension aims to fill these gaps using only <em>Lua Filters</em>.</p>
+<section id="features" class="level2">
+<h2 class="anchored" data-anchor-id="features">Features</h2>
+<p>More specifically, this bunddle seeks to address in the simplest of ways possible the following demands:</p>
+<p><strong>1. Multiple bibliographies</strong></p>
+<p>The need for multiple bibliographies (or bibliographies with multiple sections, such as <code>primary sources</code> and <code>secondary sources</code>).</p>
+<p><img src="img/2023-03-18-22-02-26.png" class="img-fluid"></p>
+</section>
+<section id="install" class="level2">
+<h2 class="anchored" data-anchor-id="install">Install</h2>
+<p>Users of Quarto can install this extension with the following command</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension bcdavasconcelos/citetools</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>and use it by adding <code>citetools</code> to the <code>filters</code> entry in their YAML header.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filters</span><span class="kw">:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> citetools</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="cite-fields-and-citation-backlinks-global-options" class="level3">
+<h3 class="anchored" data-anchor-id="cite-fields-and-citation-backlinks-global-options">Cite fields and citation backlinks global options</h3>
+<ul>
+<li><code>link-fields</code> (boolean): Link inlines printed by <code>citefield</code> to their corresponding entry in the bibliography. Default: <code>true</code>.</li>
+<li><code>link-citations</code> (boolean): Link citations to their respective reference in the bibliography. Default: <code>true</code>. Note: if <code>link-citations</code> is set to <code>false</code>, <code>link-fields</code> is also set to <code>false</code>.</li>
+</ul>
+<hr>
+<p>See sample document <code>sample.qmd</code> for a working example with explanations.</p>
+<p><img width="665" alt="image" src="https://user-images.githubusercontent.com/35749099/226091195-7b27f8a7-c802-4cbb-bac9-81265b7aed45.png"></p>
+</section>
+</section>
+<section id="license" class="level2">
+<h2 class="anchored" data-anchor-id="license">License</h2>
+<p>Filters published under the MIT license by Albert Krewinkel (<a href="https://github.com/tarleb">tarleb</a>).</p>
+<ul>
+<li><a href="https://github.com/pandoc-ext/multibib">multibib</a></li>
+<li><a href="https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies">multiple-bibliographies</a></li>
+<li><a href="https://github.com/bcdavasconcelos/citation-backlinks">citation-backlinks</a></li>
+<li><a href="https://github.com/pandoc-ext/section-bibliographies">section-bibliographies</a></li>
+</ul>
+<p>Filters published under the MIT license by Albert Krewinkel (<a href="https://github.com/tarleb">tarleb</a>) &amp; Bernardo Vasconcelos (<a href="https://github.com/bcdavasconcelos">bcdavasconcelos</a>).</p>
+<ul>
+<li><a href="https://github.com/bcdavasconcelos/citefield">citefield</a></li>
+</ul>
+<p>All Pandoc Lua filters in this extension are published under the MIT license, see file <code>LICENSE</code> for details.</p>
+<p><a href="#top">Back to top</a></p>
+
+
+
+</section>
+</section>
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-sample-listings">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
@@ -368,28 +443,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td class="listing-author">
 </td>
 </tr>
-<tr data-index="1" data-listing-file-modified-sort="1679279788000" data-listing-reading-time-sort="0.655" data-listing-title-sort="How to set it up" data-listing-filename-sort="2-How-to-set-it-up.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1679315290013" data-listing-reading-time-sort="0.435" data-listing-title-sort="Citation Backlinks" data-listing-filename-sort="index.qmd">
+<td class="listing-title">
+<a href="./docs/citetools/Citation-Backlinks/index.html" class="title">Citation Backlinks</a>
+</td>
+<td class="listing-author">
+</td>
+</tr>
+<tr data-index="2" data-listing-file-modified-sort="1679323059913" data-listing-reading-time-sort="2.75" data-listing-title-sort="Cite Field" data-listing-filename-sort="index.qmd">
+<td class="listing-title">
+<a href="./docs/citetools/Cite-Field/index.html" class="title">Cite Field</a>
+</td>
+<td class="listing-author">
+</td>
+</tr>
+<tr data-index="3" data-listing-file-modified-sort="1679279788000" data-listing-reading-time-sort="0.655" data-listing-title-sort="How to set it up" data-listing-filename-sort="2-How-to-set-it-up.qmd">
 <td class="listing-title">
 <a href="./docs/citetools/Multiple-Bibliographies/2-How-to-set-it-up.html" class="title">How to set it up</a>
 </td>
 <td class="listing-author">
 </td>
 </tr>
-<tr data-index="2" data-listing-file-modified-sort="1679287534845" data-listing-reading-time-sort="0.415" data-listing-title-sort="Multiple Bibliographies" data-listing-filename-sort="index.qmd">
+<tr data-index="4" data-listing-file-modified-sort="1679287534845" data-listing-reading-time-sort="0.415" data-listing-title-sort="Multiple Bibliographies" data-listing-filename-sort="index.qmd">
 <td class="listing-title">
 <a href="./docs/citetools/Multiple-Bibliographies/index.html" class="title">Multiple Bibliographies</a>
 </td>
 <td class="listing-author">
 </td>
 </tr>
-<tr data-index="3" data-listing-file-modified-sort="1679280575000" data-listing-reading-time-sort="0.62" data-listing-title-sort="Multiple Bibliographies in Scrivener" data-listing-filename-sort="1-Using-Multiple-Bibliographies-in-Scrivener.qmd">
+<tr data-index="5" data-listing-file-modified-sort="1679280575000" data-listing-reading-time-sort="0.62" data-listing-title-sort="Multiple Bibliographies in Scrivener" data-listing-filename-sort="1-Using-Multiple-Bibliographies-in-Scrivener.qmd">
 <td class="listing-title">
 <a href="./docs/citetools/Multiple-Bibliographies/3-Advanced/1-Using-Multiple-Bibliographies-in-Scrivener.html" class="title">Multiple Bibliographies in Scrivener</a>
 </td>
 <td class="listing-author">
 </td>
 </tr>
-<tr data-index="4" data-listing-file-modified-sort="1679276596000" data-listing-reading-time-sort="1.235" data-listing-title-sort="Prime Matter" data-listing-filename-sort="1-Prime-Matter.qmd">
+<tr data-index="6" data-listing-file-modified-sort="1679276596000" data-listing-reading-time-sort="1.235" data-listing-title-sort="Prime Matter" data-listing-filename-sort="1-Prime-Matter.qmd">
 <td class="listing-title">
 <a href="./docs/citetools/Multiple-Bibliographies/1-Prime-Matter.html" class="title">Prime Matter</a>
 </td>
@@ -402,105 +491,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div>
-<ol type="1">
-<li>Create multiple bibliographies (or bibliographies with multiple sections, such as <code>primary sources</code> and <code>secondary sources</code>).<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
-<li>Cite arbitrary fields from the references, such as <code>author</code>, <code>editor</code>, or <code>translator</code> names and <code>title</code> / <code>original-title</code> of works.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
-<li>Turn the bibliography into a linked index of citations.</li>
-</ol>
-<p>[[Multiple bibliographies]]</p>
-<p>generate a bibliography in all formats supported by Pandoc (which totalize more than 30 formats, including <code>LaTeX</code>, <code>DOCX</code>, <code>HTML</code>, <code>EPUB</code>, <code>PDF</code>, and so on)</p>
-<p>but it lacks some features that are common in other bibliography typesetting mechanisms, such as <code>BibLaTeX</code> and <code>BibTeX</code>. This extension aims to fill these gaps using only <em>Lua Filters</em>.</p>
-<section id="features" class="level2">
-<h2 class="anchored" data-anchor-id="features">Features</h2>
-<p>More specifically, this bunddle seeks to address in the simplest of ways possible the following demands:</p>
-<p><strong>1. Multiple bibliographies</strong></p>
-<p>The need for multiple bibliographies (or bibliographies with multiple sections, such as <code>primary sources</code> and <code>secondary sources</code>).</p>
-<p><img src="img/2023-03-18-22-02-26.png" class="img-fluid"></p>
-<p><strong>2. Cite fields</strong></p>
-<p>The need to evoke arbitrary information from the references, such as <code>author</code>, <code>editor</code>, or <code>translator</code> names and <code>title</code> / <code>original-title</code> of works.</p>
-<p><img src="img/2023-03-18-22-24-10.png" class="img-fluid"></p>
-<details>
-<summary>
-<code>@AristOp</code> in <code>csljson</code>
-</summary>
-<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"author"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"family"</span><span class="fu">:</span> <span class="st">"Aristotle"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"editor"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"family"</span><span class="fu">:</span> <span class="st">"Bekker"</span><span class="fu">,</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"given"</span><span class="fu">:</span> <span class="st">"Immanuel"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"AristOp"</span><span class="fu">,</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"issued"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"date-parts"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="ot">[</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>          <span class="dv">1831</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"number-of-volumes"</span><span class="fu">:</span> <span class="st">"4"</span><span class="fu">,</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"publisher"</span><span class="fu">:</span> <span class="st">"Reimer"</span><span class="fu">,</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"publisher-place"</span><span class="fu">:</span> <span class="st">"Berlim"</span><span class="fu">,</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"title"</span><span class="fu">:</span> <span class="st">"Aristotelis opera"</span><span class="fu">,</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"book"</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<p><strong>3. Citation backlinks</strong></p>
-<p>The need to turn the bibliography into a linked index of cited references, with links from the entries back to each of its multiple occurences in the body of the text (<em>e.g.</em> in <code>PDF</code>/<code>DOCX</code>: <code>[p. 1, p. 4, p. 10]</code>, in <code>HTML</code>: <code>[1, 2, 3]</code>) (and with the ability to turn these off globally or in an <em>ad hoc</em> fashion).</p>
-<p><img src="img/2023-03-18-22-32-06.png" class="img-fluid"></p>
-<ul>
-<li><em>Optionally</em>, the need to split the bibliography into sections, printing the bibliography for each chapter/section/part. (For this, you must uncomment the apropriate line in the <code>_extension.yaml</code> file.)</li>
-</ul>
-</section>
-<section id="install" class="level2">
-<h2 class="anchored" data-anchor-id="install">Install</h2>
-<p>Users of Quarto can install this extension with the following command</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension bcdavasconcelos/citetools</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>and use it by adding <code>citetools</code> to the <code>filters</code> entry in their YAML header.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filters</span><span class="kw">:</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> citetools</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="cite-fields-and-citation-backlinks-global-options" class="level3">
-<h3 class="anchored" data-anchor-id="cite-fields-and-citation-backlinks-global-options">Cite fields and citation backlinks global options</h3>
-<ul>
-<li><code>link-fields</code> (boolean): Link inlines printed by <code>citefield</code> to their corresponding entry in the bibliography. Default: <code>true</code>.</li>
-<li><code>link-citations</code> (boolean): Link citations to their respective reference in the bibliography. Default: <code>true</code>. Note: if <code>link-citations</code> is set to <code>false</code>, <code>link-fields</code> is also set to <code>false</code>.</li>
-</ul>
-<hr>
-<p>See sample document <code>sample.qmd</code> for a working example with explanations.</p>
-<p><img width="665" alt="image" src="https://user-images.githubusercontent.com/35749099/226091195-7b27f8a7-c802-4cbb-bac9-81265b7aed45.png"></p>
-</section>
-</section>
-<section id="license" class="level2">
-<h2 class="anchored" data-anchor-id="license">License</h2>
-<p>Filters published under the MIT license by Albert Krewinkel (<a href="https://github.com/tarleb">tarleb</a>).</p>
-<ul>
-<li><a href="https://github.com/pandoc-ext/multibib">multibib</a></li>
-<li><a href="https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies">multiple-bibliographies</a></li>
-<li><a href="https://github.com/bcdavasconcelos/citation-backlinks">citation-backlinks</a></li>
-<li><a href="https://github.com/pandoc-ext/section-bibliographies">section-bibliographies</a></li>
-</ul>
-<p>Filters published under the MIT license by Albert Krewinkel (<a href="https://github.com/tarleb">tarleb</a>) &amp; Bernardo Vasconcelos (<a href="https://github.com/bcdavasconcelos">bcdavasconcelos</a>).</p>
-<ul>
-<li><a href="https://github.com/bcdavasconcelos/citefield">citefield</a></li>
-</ul>
-<p>All Pandoc Lua filters in this extension are published under the MIT license, see file <code>LICENSE</code> for details.</p>
-<p><a href="#top">Back to top</a></p>
-
-
-
-</section>
-</section>
-
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+</div><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>In the case of <code>[-@Citekey]</code>, the <code>-</code> is being used switch on author suppresion. The page locator can always be appended using <code>[@Citekey, p. 1]</code> for <code>Author (Date, p. 1)</code> or <code>[-@Citekey, p. 1]</code> for <code>(Date, p. 1)</code><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -617,7 +608,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  let localAlternateSentinel = 'alternate';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
