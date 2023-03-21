@@ -4,10 +4,10 @@
 *~
 .ruby-version
 Core.bib
-Core.bib
 pandoclog.json
 .Rproj.user
-
+_site/
 /.luarc.json
-
 /.quarto/
+_extensions/include-code-files/
+_extensions/quarto-ext/
