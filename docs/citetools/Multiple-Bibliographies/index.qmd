@@ -1,10 +1,9 @@
 ---
-title: Multiple Bibliographies
+title: 1 Multiple Bibliographies
 ---
 
 In this section, we will discuss how to use multiple bibliographies in your document. In many fields, this is *conditio sine qua non* for academic writing and publishing. In the humanities, for example, it is common to have a bibliography for primary sources and another for secondary sources. In philosophy, sometimes they can be very nuanced with sections dedicated to original sources, translations, commentaries, and so on.
 
-![](/img/2023-03-18-22-02-26.png)
 
 
 ## Installation

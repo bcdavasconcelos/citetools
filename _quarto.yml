@@ -1,9 +1,10 @@
 project:
   type: website
 
-cache: true
-freeze: auto
+# cache: true
+# freeze: auto
 editor: visual
+format-links: [pdf,docx]
 
 
 
@@ -33,7 +34,7 @@ website:
       - icon: twitter
         href: https://twitter.com/bcdavasconcelos
         text: "Twitter"
-    style: "docked"
+    style: "floating" # docked floating
     search: true
     collapse-level: 1
     contents:
@@ -53,6 +54,9 @@ website:
         href: docs/citetools/Citation-Backlinks/index.qmd
       - text: "Cite Field"
         href: docs/citetools/Cite-Field/index.qmd
+        contents:
+          - text: "Field names"
+            href: docs/citetools/Cite-Field/field-names.qmd
       - text: "About"
         href: docs/About/index.qmd
         contents:
@@ -65,30 +69,33 @@ website:
 format: # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
   html:
     theme:
-      # light: [Zephyr] # Cerulean, Cosmo, Flatly, Journal, Litera, Lumen, Lux, Materia, Minty, Morph, Pulse, Sandstone, Simplex, Sketchy, Spacelab, United, Yeti, Zephyr
+      light: [Lumen] # Cerulean, Cosmo, Flatly, Journal, Litera, Lumen, Lux, Materia, Minty, Morph, Pulse, Sandstone, Simplex, Sketchy, Spacelab, United, Yeti, Zephyr
       dark: [Quartz] # Cyborg, Darkly, Quartz, Slate, Solar, Superhero, Vapor
     # mainfont: Alegreya
-    mainfont: "Atkinson Hyperlegible"
+    # mainfont: "Atkinson Hyperlegible"
     header-includes: |
       <style>
-        code span.co {
-          font-style: normal!important;
+        .callout-header {
+          background-color: transparent!important;
         }
       </style>
     code-copy: true
-    code-overflow: wrap
+    code-overflow: scroll # scroll, wrap, auto
     toc: true
+    reference-location: document # `block`, `section`, `margin`, `document`
 
 
 filters:
+  - fontawesome
   - citetools
-  - include-files.lua
+  # - include-files.lua
   # - include-code-files.lua
-  - quarto
+  # - quarto
 
 
 # author: Bernardo César Diniz Athayde Vasconcelos
+citeproc: false
 bibliography_primary: refs/primary.json
 bibliography_secondary: refs/secondary.json
 verbosity: ERROR
-#csl: https://raw.githubusercontent.com/bcdavasconcelos/ABNT-Phi/main/abnt-phi-sc.csl
+csl: https://raw.githubusercontent.com/bcdavasconcelos/ABNT-Phi/main/abnt-phi-sc.csl

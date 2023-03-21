@@ -1,12 +1,16 @@
 ---
-title: Cite Field
+title: 2 Cite Field
 ---
 
-The need to print arbitrary information from the references, such as `author`, `editor`, or `translator` names; as well as `title` or `original-title` of works.^[In fact, we can get any field from the reference, as long as it is defined in the [CSL](https://docs.citationstyles.org/en/stable/specification.html) schema. These include:
+In this section, we will deal with the need to print arbitrary information from the references.
+
+In areas with long standing traditions, we are frequently invited to comment upon different editions or translations of the same classical works. In these cases, it is convenient being able to cite the `author`, `editor`, or `translator` names; as well as `title` or `original-title` of works.^[In fact, we can get any field from the reference, as long as it is defined in the [CSL](https://docs.citationstyles.org/en/stable/specification.html) schema. These include:
   ```
   abstract accessed annote archive archive_collection archive_location archive-place author authority available-date call-number chair chapter-number citation-key citation-label citation-number collection-editor collection-number collection-title compiler composer container-author container-title container-title-short contributor curator dimensions director division DOI edition editor editor-translator editorial-director event event-date event-place event-title executive-producer first-reference-note-number genre guest host illustrator interviewer ISBN ISSN issue issued jurisdiction keyword language license locator medium narrator note notes number number-of-pages number-of-volumes organizer original-author original-date original-publisher original-publisher-place original-title page page-first part-number part-title performer PMCID PMID printing-number producer publisher publisher-place recipient references reviewed-author reviewed-genre reviewed-title scale script-writer section series-creator source status submitted supplement-number title title-short translator URL version volume volume-title year-suffix
   ```
-] To do this, we will use a small variation of Pandoc's vanilla syntax for citations.
+  ]
+
+To do this, we will use a small variation of Pandoc's vanilla syntax for citations.
 
 ::: {.callout-note appearance="simple"}
 The syntax is `[@AristOp]{.csl_field}`, where `AristOp` is the `id` of the reference, and `csl_field` is the field we want to evoke.
@@ -14,7 +18,7 @@ The syntax is `[@AristOp]{.csl_field}`, where `AristOp` is the `id` of the refer
 
 Let us see that in practice with the following reference:
 
-::: {.panel-tabset collapse="true"}
+::: {.panel-tabset}
 ## CSL-YAML
 ```yaml
 type: book
@@ -74,11 +78,15 @@ Some bibliography managers, such as Zotero with the BetterBibTeX plugin, can exp
   editor = {Bekker, Immanuel},
   title = {Aristotelis opera},
   publisher = {Reimer},
-  publisher-place = {Berlim},
-  number-of-volumes = {4},
-  issued = {1831}
+  address = {Berlim},
+  volumes = {4},
+  year = {1831}
 }
 ```
+::: {.callout-warning appearance="simple"}
+It is important to understand that the field names in `BibLaTeX` are different from `CSL-JSON`, which is why we print the
+:::
+
 ## RIS
 ```ris
 TY  - BOOK
@@ -101,12 +109,6 @@ For example, the following snippet:
 Will render as:
 
 > The works of [@AristOp]{.author} were first edited by [@AristOp]{.editor} in [@AristOp]{.issued}.
-
-
-<!-- ![](/img/2023-03-18-22-24-10.png) -->
-
-
-
 
 
 

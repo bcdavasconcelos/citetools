@@ -5,64 +5,68 @@ subtitle: |
   Advanced bibliography for Pandoc and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
 author: "Bernardo Vasconcelos"
 date: "2021-09-01"
-format:
-  html:
-    header-includes: |
-      <style>
-        code span.co {
-          font-style: normal!important;
-        }
-      </style>
 listing:
-  id: sample-listings
-  contents: docs/citetools
-  type: table
-  sort: title
+  id: lua-filters
+  contents:
+    - docs/citetools/Cite-Field/index.qmd
+    - docs/citetools/Multiple-Bibliographies/index.qmd
+    - docs/citetools/Citation-Backlinks/index.qmd
+  type: grid
+  grid-columns: 2
 ---
+
+::: {.callout-note collapse="true"}
+## Quickstart
+Install using:
+```bash
+quarto install extension bcdavasconcelos/citetools
+```
+
+Activate it by adding `citetools` to the `_quarto.yml` file in the filters section.
+
+```yaml
+filters:
+  - citetools
+```
+
+Add bibliography files to the metadata using `bibliography_BIBNAME: path/to/bibfile.bib`, adding the corresponding divs to the document using:
+
+ ```markdown
+ ::: {#refs_BIBNAME}
+ :::
+ ```
+
+ Cite reference as you normally do with Pandoc using `[@Citekey]`. When necessary, use `[@Citekey]{.csl_field}` to cite using a specific [CSL-Field](field-names.qmd).
+
+:::
+
 
 # Introduction {.unnumbered}
 
 The vanilla Pandoc and Quarto's Citeproc environment is powerful and its syntax is simple. It uses `[@Citekey]` for `Author (Date)` and `[-@Citekey]` for `(Date)`.^[In the case of `[-@Citekey]`, the `-` is being used switch on author suppresion. The page locator can always be appended using `[@Citekey, p. 1]` for `Author (Date, p. 1)` or `[-@Citekey, p. 1]` for `(Date, p. 1)`]
 
-
 ::: {.callout-tip appearance="simple"}
 The advantage of this markup syntax lies in its simplicity and the compatibility with all formats supported by Pandoc, a universal document converter.
 :::
 
-This extension introduces advanced bibliography features by bundling up several Lua filters ([see below](#license)). It allows, among other things, the creation of multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`), the citation of arbitrary fields from the references, such as `author`, `editor`, or `translator` names and `title` / `original-title` of works, and last, but not least, the creation of linked indexes of citations.
 
-1. [Multiple bibliographies](docs/citetools/Multiple-Bibliographies/index.qmd)
-2. [Cite Field](docs/citetools/Cite-Field/index.qmd)
-3. [Citation backlinks](/docs/citetools/Citation-Backlinks/index.qmd)
-- [License](#license)
+This extension introduces advanced bibliography features by bundling up several Lua filters ([see below](#license)). It allows, among other things, the creation of multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`), the citation of arbitrary fields from the references, such as `author`, `editor`, and `translator` names, or `title` and `original-title` of works. And last, but not least, the creation of linked indexes of citations.
 
 
+::: {#lua-filters}
+:::
 
 
+::: {.callout-note collapse="true"}
+## New to Quarto <img src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />?
+Visit the [getting started](https://quarto.org/docs/get-started/) guide to download and install Quarto.
 
-1. Create multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`).^[This is a feature that is common in other bibliography typesetting mechanisms, such as `BibLaTeX` and `BibTeX`, and that was sorely missing from Pandoc's Citeproc environment.]
-2. Cite arbitrary fields from the references, such as `author`, `editor`, or `translator` names and `title` / `original-title` of works.^[This is also a feature that is common `BibLaTeX` and `BibTeX` through commands such as `\citeauthor`, `\citetitle`, `\citefield`, and so on.]
-3. Turn the bibliography into a linked index of citations.
+**Jumpstart:**
+On macOS ({{< fa brands apple >}}), use [Homebrew](https://brew.sh/) to `brew install quarto`. On Windows ({{< fa brands windows >}}), use [Chocolatey](https://chocolatey.org/) to `choco install quarto`. On Linux ({{< fa brands linux >}}), use your package manager to install `quarto`.
 
-[[Multiple bibliographies]]
+**Go deeper:** [Awesome Quarto](https://github.com/mcanouil/awesome-quarto), [Quarto Extensions](https://github.com/quarto-ext?type=source), [Quarto on Github](https://github.com/search?q=topic%3Aquarto&type=repositories), [RStudio Community](https://community.rstudio.com/tags/quarto), [Stack Overflow](https://stackoverflow.com/questions/tagged/quarto), [Twitter](https://twitter.com/quarto_pub).
+:::
 
-
-generate a bibliography in all formats supported by Pandoc (which totalize more than 30 formats, including `LaTeX`, `DOCX`, `HTML`, `EPUB`, `PDF`, and so on)
-
- but it lacks some features that are common in other bibliography typesetting mechanisms, such as `BibLaTeX` and `BibTeX`. This extension aims to fill these gaps using only *Lua Filters*.
-
-
-
-## Features
-
-
-More specifically, this bunddle seeks to address in the simplest of ways possible the following demands:
-
-**1. Multiple bibliographies**
-
-The need for multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`).
-
-![](img/2023-03-18-22-02-26.png)
 
 
 

@@ -1,0 +1,272 @@
+---
+title: Field names
+---
+
+Here you'll find the skeleton of several bibliography formats, in case you intend to write them yourself, or just to use as a reference.
+
+
+## CSL-YAML
+
+::: {.panel-tabset}
+
+## Example
+```yaml
+references:
+- id: ID
+  type: book
+  author:
+  - family: Lastname
+    given: Name
+  editor:
+  - family: Lastname
+    given: Name
+  translator:
+  - family: Lastname
+    given: Name
+  title: Title
+  publisher: Publisher
+  publisher-place: City
+  issued: 2022-12
+```
+## Book
+```yaml
+references:
+- id:
+  type: book
+  author:
+  - family:
+    given:
+  editor:
+  - family:
+    given:
+  translator:
+  - family:
+    given:
+  title:
+  publisher:
+  publisher-place:
+  issued:
+```
+## Article
+```yaml
+references:
+- id:
+  type: article-journal
+  author:
+  - family:
+    given:
+  editor:
+  - family:
+    given:
+  translator:
+  - family:
+    given:
+  title:
+  container-title:
+  issue:
+  issued:
+```
+## All fields
+```yaml
+references:
+- annote:
+  author:
+  - family:
+    given:
+  editor:
+  - family:
+    given:
+  translator:
+  - family:
+    given:
+  director:
+  - family:
+    given:
+  call-number:
+  title:
+  collection-title:
+  container-title:
+  chapter-number:
+  collection-number:
+  doi:
+  edition:
+  genre:
+  id:
+  isbn:
+  issn:
+  issued:
+  keyword:
+  note:
+  page:
+  publisher:
+  publisher-place:
+  type:
+  url:
+  version:
+  volume:
+```
+## Types
+
+```
+article
+article-journal
+article-magazine
+article-newspaper
+bill
+book
+broadcast
+chapter
+entry-dictionary
+entry-encyclopedia
+graphic
+interview
+legal_case
+legislation
+manuscript
+map
+motion_picture
+paper-conference
+patent
+personal_communication
+post
+post-weblog
+report
+review
+review-book
+song
+speech
+thesis
+webpage
+```
+
+:::
+
+
+## BibTeX
+
+::: {.panel-tabset}
+
+## Example
+```bibtex
+@book{ID,
+author = {Lastname, Name},
+editor = {Lastname, Name},
+translator = {Lastname, Name},
+title = {Title},
+address = {City},
+publisher = {Publisher},
+library = {library call-number},
+volume = {1},
+year = {2022},
+}
+```
+## Book
+```bibtex
+@book{ID,
+author = {},
+editor = {},
+translator = {},
+title = {},
+address = {},
+publisher = {},
+library = {},
+volume = {},
+year = {},
+}
+```
+## Article
+
+```bibtex
+@article{ID,
+author = {},
+editor = {},
+title = {},
+journal = {},
+issue = {},
+number = {},
+pages = {},
+year = {},
+doi = {}
+}
+```
+## All fields
+```bibtex
+@book{ID,
+author = {},
+editor = {},
+translator = {},
+director = {},
+title = {},
+booktitle = {},
+shortauthor = {},
+shorthand = {},
+shortlabel = {},
+address = {},
+publisher = {},
+howpublished = {},
+type = {},
+library = {},
+series = {},
+journal = {},
+issue = {},
+number = {},
+edition = {},
+chapter = {},
+volume = {},
+month = {},
+pages = {},
+year = {},
+school = {},
+organization = {},
+institution = {},
+annote = {},
+note = {},
+keywords = {},
+isbn = {},
+issn = {},
+doi = {},
+url = {},
+crossref = {},
+key = {},
+copyright = {},
+version = {},
+file = {}
+}
+```
+## Types
+
+```
+@article
+@artwork
+@audio
+@bookinbook
+@booklet
+@collection
+@dataset
+@inreference
+@jurisdiction
+@legislation
+@letter
+@manual
+@misc
+@movie
+@mvbook
+@mvcollection
+@mvproceedings
+@online
+@patent
+@periodical
+@proceedings
+@review
+@software
+@suppbook
+@suppcollection
+@suppperiodical
+@techreport
+@thesis
+@unpublished
+```
+:::
+
+
+

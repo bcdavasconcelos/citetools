@@ -1,9 +1,9 @@
 ---
-title: Citation Backlinks
+title: 3 Citation Backlinks
 ---
 
 The need to turn the bibliography into a linked index of cited references, with links from the entries back to each of its multiple occurences in the body of the text (*e.g.* in `PDF`/`DOCX`: `[p. 1, p. 4, p. 10]`, in `HTML`: `[1, 2, 3]`) (and with the ability to turn these off globally or in an *ad hoc* fashion).
 
-![](/img/2023-03-18-22-32-06.png)
+
 
 - *Optionally*, the need to split the bibliography into sections, printing the bibliography for each chapter/section/part. (For this, you must uncomment the apropriate line in the `_extension.yaml` file.)
