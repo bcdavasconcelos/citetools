@@ -1,0 +1,10 @@
+
+| Syntax | Output |
+|----------------|----------------|
+| `@Aubenque1961a` | @Aubenque1961a |
+| `[@Aubenque1961a]` | [@Aubenque1961a] |
+| `[@Aubenque1961a, p.15]` | [@Aubenque1961a, p.15] |
+| `[-@Aubenque1961a]` | [-@Aubenque1961a] |
+| `[-@Aubenque1961a, p.15]` | [-@Aubenque1961a, p.15] |
+
+: Variations of the Citation syntax

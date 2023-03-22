@@ -1,0 +1,22 @@
+---
+title: The basics of Pandoc and Quarto's Citeproc Bibliography
+bibliography: ../refs/primary.json
+citeproc: true
+---
+
+Before we can begin with advanced bibliography features in Pandoc and Quarto, we need to get some basics out of the way, as this will be the foundation for the advanced bibliography features. So, before each section on advanced bibliography features, we will first cover some basics.
+
+::: {.callout-tip appearance="simple"}
+## Official documentation
+See the official documentation on citations at [Pandoc](https://pandoc.org/MANUAL.html#citations) and [Quarto](https://quarto.org/docs/authoring/footnotes-and-citations.html#sec-citations).
+:::
+
+[How to create a bibliography file](basics-creating-bibliography.qmd)
+
+[How to setup a bibliography](basics-setup.qmd)
+
+[How to cite](basics-how-to-cite.qmd)
+
+[Citation syntax](basics-citation-syntax.qmd)
+
+

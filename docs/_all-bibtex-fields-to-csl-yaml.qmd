@@ -1,0 +1,191 @@
+::: {.callout-note collapse="true"}
+## Given this very unlikely BibTeX reference...
+Repeated with different types, such as `book`, `article`, `incollection`, `inbook`, `thesis`.
+
+```bibtex
+@book{ID,
+author = {author},
+editor = {editor},
+translator = {translator},
+director = {director},
+title = {title},
+booktitle = {booktitle},
+shortauthor = {shortauthor},
+shorthand = {shorthand},
+shortlabel = {shortlabel},
+address = {address},
+publisher = {publisher},
+howpublished = {howpublished},
+type = {type description},
+library = {library},
+series = {series},
+journal = {journal},
+issue = {issue},
+organization = {organization},
+school = {school},
+institution = {institution},
+keywords = {keywords},
+annote = {annote},
+note = {note},
+isbn = {isbn},
+issn = {issn},
+doi = {doi},
+url = {url},
+edition = {edition},
+chapter = {chapter},
+volume = {volume},
+eid = {Electronic identifier},
+number = {number},
+month = {month},
+pages = {pages},
+year = {year},
+crossref = {crossref},
+key = {key},
+version = {0},
+LCCN = {LCCN},
+file = {file:///Users/bcdav/x.pdf},
+contents = {copyright}
+}
+```
+:::
+
+Converted with the command `/usr/local/bin/pandoc -f bibtex -t markdown -s --citeproc --wrap=none`, we would get this YAML:
+
+::: {.panel-tabset}
+## book
+```yaml
+- annote: annote
+  author:
+  - family: author
+  call-number: library
+  chapter-number: chapter
+  collection-number: number
+  collection-title: Series
+  container-title: journal
+  director:
+  - family: director
+  doi: doi
+  edition: edition
+  editor:
+  - family: editor
+  genre: type description
+  id: ID
+  isbn: isbn
+  issn: issn
+  issued: year
+  keyword: keywords
+  note: note
+  page: pages
+  publisher: school; institution; organization; howpublished; publisher
+  publisher-place: address
+  title: Title
+  translator:
+  - family: translator
+  type: book
+  url: url
+  version: 0
+  volume: volume
+```
+## article
+```yaml
+- annote: annote
+  author:
+  - family: author
+  call-number: library
+  chapter-number: chapter
+  collection-title: Series
+  container-title: journal
+  director:
+  - family: director
+  doi: doi
+  edition: edition
+  editor:
+  - family: editor
+  genre: type description
+  id: ID
+  isbn: isbn
+  issn: issn
+  issue: number, issue
+  issued: year
+  keyword: keywords
+  note: note
+  page: pages
+  publisher: school; institution; organization; howpublished; publisher
+  publisher-place: address
+  title: Title
+  translator:
+  - family: translator
+  type: article-journal
+  url: url
+  version: 0
+  volume: volume
+  ```
+## incollection
+```yaml
+- annote: annote
+  author:
+  - family: author
+  call-number: library
+  chapter-number: chapter
+  collection-number: number
+  collection-title: Series
+  container-title: Booktitle
+  director:
+  - family: director
+  doi: doi
+  edition: edition
+  editor:
+  - family: editor
+  genre: type description
+  id: ID
+  isbn: isbn
+  issn: issn
+  issued: year
+  keyword: keywords
+  note: note
+  page: pages
+  publisher: school; institution; organization; howpublished; publisher
+  publisher-place: address
+  title: Title
+  translator:
+  - family: translator
+  type: chapter
+  url: url
+  version: 0
+  volume: volume
+```
+## pdhthesis
+```yaml
+- annote: annote
+  author:
+  - family: author
+  call-number: library
+  chapter-number: chapter
+  collection-title: Series
+  container-title: journal
+  director:
+  - family: director
+  doi: doi
+  edition: edition
+  editor:
+  - family: editor
+  genre: type description
+  id: ID
+  isbn: isbn
+  issn: issn
+  issued: year
+  keyword: keywords
+  note: note
+  number: number
+  page: pages
+  publisher: school; institution; organization; howpublished; publisher
+  publisher-place: address
+  title: Title
+  translator:
+  - family: translator
+  type: thesis
+  url: url
+  version: 0
+  volume: volume
+```
+:::

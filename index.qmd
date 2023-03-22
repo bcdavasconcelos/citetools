@@ -8,9 +8,9 @@ date: "2021-09-01"
 listing:
   id: lua-filters
   contents:
-    - docs/citetools/Cite-Field/index.qmd
-    - docs/citetools/Multiple-Bibliographies/index.qmd
-    - docs/citetools/Citation-Backlinks/index.qmd
+    - docs/cite-field.qmd
+    - docs/multibib.qmd
+    - docs/citation-backlinks.qmd
   type: grid
   grid-columns: 2
 ---
@@ -36,10 +36,8 @@ Add bibliography files to the metadata using `bibliography_BIBNAME: path/to/bibf
  :::
  ```
 
- Cite reference as you normally do with Pandoc using `[@Citekey]`. When necessary, use `[@Citekey]{.csl_field}` to cite using a specific [CSL-Field](field-names.qmd).
-
+ Cite reference as you normally do with Pandoc using `[@Citekey]`. When necessary, use `[@Citekey]{.csl_field}` to cite using a specific [CSL-Field](docs/csl-fields.qmd).
 :::
-
 
 # Introduction {.unnumbered}
 

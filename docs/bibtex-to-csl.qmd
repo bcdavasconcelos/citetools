@@ -1,0 +1,55 @@
+---
+title: BibTeX to Citation Style Language (YAML and JSON)
+---
+
+In this page you'll find useful information about how Pandoc handles the conversion of `BibTeX` bibliography to its native `CSL-JSON`/`CSL-YAML` representation.
+
+The number of possible bibliography fields along the number of possible types of reference makes up for an extraordinarily large number of possible combinations. Eventually, when converting from one format to the other using Pandoc, the content of some fields may end up in perplexing places (or end up nowhere). This is a consequence of the fact that `BibTeX` and `CSL` are very different systems (one is very old, while the other still rather recent). So this page is meant as a quick reference for those bringing their references from the jurrasic BibTeX into the  CSL-JSON/CSL-YAML using Pandoc and Quarto.
+
+::: {.callout-warning}
+We'll be covering the conversion from `BibTeX` to `CSL-JSON`/`CSL-YAML`, but not the other way around. For the purpose of using Cite Tools, this is the only direction that interests, even if it is not strictly necessary. For more information on `BibTeX`, see [here](https://en.wikipedia.org/wiki/BibTeX). For more information on the `CSL-YAML` format, see [here](https://docs.citationstyles.org/en/stable/specification.html).
+:::
+
+## BibTeX Types
+
+| BibTeX Type | CSL-YAML |
+| ------- | ------- |
+| article | article-journal |
+| inproceedings | paper-conference |
+| proceedings, book | book |
+| inbook, incollection | chapter |
+| mastersthesis, phdthesis | thesis |
+| online | webpage |
+| review | review |
+| booklet | pamphlet |
+
+: Where do BibTeX types end up in CSL-YAML/CSL-JSON?
+
+## BibTeX Fields
+
+| BibTeX | CSL-YAML |
+| ------ | ----- |
+| authors | author |
+| editors | editor |
+| edition | edition |
+| title | title |
+| shorttitle | title-short |
+| issue | `nil` |
+| issue (**article**) | issue |
+| number (**article**) | issue |
+| number (**book**) | collection-number |
+| number (**phdthesis**) | number |
+| booktitle | `nil` |
+| booktitle (**inproceedings incollection inbook**) | container-title |
+| journal (**book proceedings masterthesis lexicon online booklet**) | container-title |
+| chapter | chapter-number |
+| volume | volume |
+| series | collection-title |
+| school, institution, organization, howpublished, publisher | publisher |
+| address | publisher-place |
+| library | call-number |
+| pages | page |
+| version | version |
+| type | genre |
+
+: Where do BibTeX fields end up in CSL-YAML/CSL-JSON?

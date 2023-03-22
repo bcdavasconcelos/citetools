@@ -1,5 +1,5 @@
 ---
-title: Prime Matter
+title: Creating Bibliography
 ---
 
 First of all, you will need to be able to provide a bibliography file in one of different possible formats. The most common ones are called `BibLaTeX` or `BibTeX`. However, you can also use `CSL-JSON` files, which is *preferable* since the latter *faster* and it is the format used by `Citeproc` internally to represent bibliographies.

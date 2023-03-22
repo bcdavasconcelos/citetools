@@ -43,6 +43,7 @@ Some bibliography managers, such as Zotero with the BetterBibTeX plugin, can exp
 :::
 
 ## CSL-JSON
+
 ```json
 {
     "author": [

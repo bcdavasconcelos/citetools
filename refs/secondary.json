@@ -76,5 +76,31 @@
     }
   ],
   "type": "book"
+},  {
+  "author": [
+    {
+      "family": "Aubenque",
+      "given": "Pierre"
+    }
+  ],
+  "container-title": "Aristote et les problèmes de méthode",
+  "editor": [
+    {
+      "family": "Mansion",
+      "given": "S."
+    }
+  ],
+  "id": "Aubenque1961a",
+  "issued": {
+    "date-parts": [
+      [
+        1961
+      ]
+    ]
+  },
+  "publisher": "Publications Universitaires",
+  "publisher-place": "Louvain",
+  "title": "Sur la notion aristotélicienne d’aporie",
+  "type": "chapter"
 }
 ]

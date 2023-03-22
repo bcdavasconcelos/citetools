@@ -1,25 +1,40 @@
-project:
-  type: website
-
-# cache: true
-# freeze: auto
-editor: visual
-format-links: [pdf,docx]
-
-
-
 website:
-  page-navigation: true
-  title: "Cite Tools"
-  site-url: "https://bcdavasconcelos.github.io/citetools"
-  repo-url: https://github.com/bcdavasconcelos/citetools
-  repo-actions: [edit, issue]
-
-  page-footer:
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    left: "&copy; CC-By BCDAV, 2023"
-
   sidebar:
+    contents:
+      - section: "Cite Tools"
+        href: index.qmd
+        contents:
+          - section: "The Basics"
+            href: docs/basics.qmd
+            icon: book
+            contents:
+              - text: "Creating bibliography"
+                href: docs/basics-creating-bibliography.qmd
+                icon: tree
+              - text: "Setting up a simple bibliography"
+                href: docs/basics-setup.qmd
+                icon: tree
+          - section: "Multiple Bibliographies"
+            icon: book
+            href: docs/multibib.qmd
+            contents:
+              - text: "Setting it up"
+                href: docs/howto-multibib.qmd
+                icon: tree
+          - section: "Cite Field"
+            href: docs/cite-field.qmd
+            icon: book
+            contents:
+              - text: "Bibliography Formats"
+                href: docs/bib-formats.qmd
+                icon: tree
+              - text: "From BibTeX to CSL"
+                href: docs/bibtex-to-csl.qmd
+                icon: tree
+          - text: "Citation Backlinks"
+            href: docs/citation-backlinks.qmd
+            icon: book
+    sort: [title, order]
     logo: "images/greek-ship.png"
     # logo: "images/ulysses.png"
     pinned: true
@@ -36,42 +51,36 @@ website:
         text: "Twitter"
     style: "floating" # docked floating
     search: true
-    collapse-level: 1
-    contents:
-      - text: "Multiple Bibliographies"
-        href: docs/citetools/Multiple-Bibliographies/index.qmd
-        contents:
-          - text: "Prime Matter"
-            href: docs/citetools/Multiple-Bibliographies/1-Prime-Matter.qmd
-          - text: "How to set it up"
-            href: docs/citetools/Multiple-Bibliographies/2-How-to-set-it-up.qmd
-          - text: "Advanced"
-            href: docs/citetools/Multiple-Bibliographies/3-Advanced/index.qmd
-            contents:
-              - text: "Using Multiple Bibliographies in Scrivener"
-                href: docs/citetools/Multiple-Bibliographies/3-Advanced/1-Using-Multiple-Bibliographies-in-Scrivener.qmd
-      - text: "Citation Backlinks"
-        href: docs/citetools/Citation-Backlinks/index.qmd
-      - text: "Cite Field"
-        href: docs/citetools/Cite-Field/index.qmd
-        contents:
-          - text: "Field names"
-            href: docs/citetools/Cite-Field/field-names.qmd
-      - text: "About"
-        href: docs/About/index.qmd
-        contents:
-          - text: "About Cite Tools"
-            href: docs/About/1-About-Cite-Tools.qmd
-          - text: "About Quarto"
-            href: docs/About/2-About-Quarto.qmd
-          - text: "About BCDAV"
-            href: docs/About/3-About-BCDAV.qmd
+    # background: "#453bcd"
+    collapse-level: 2
+  page-navigation: true
+  title: "Cite Tools"
+  site-url: "https://bcdavasconcelos.github.io/citetools"
+  repo-url: https://github.com/bcdavasconcelos/citetools
+  repo-actions: [edit, issue]
+
+  page-footer:
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    left: "&copy; CC-By BCDAV, 2023"
+
+project:
+  type: website
+
+# cache: true
+# freeze: auto
+editor: visual
+format-links: [pdf,docx]
+
+
+
+
 format: # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
   html:
-    theme:
-      light: [Lumen] # Cerulean, Cosmo, Flatly, Journal, Litera, Lumen, Lux, Materia, Minty, Morph, Pulse, Sandstone, Simplex, Sketchy, Spacelab, United, Yeti, Zephyr
-      dark: [Quartz] # Cyborg, Darkly, Quartz, Slate, Solar, Superhero, Vapor
-    # mainfont: Alegreya
+    theme: # Slate e
+# Pulse: Rocho (muito bonito) | Spacelab: menos brilhante e mais opaco | Materia: azul claro pouco (material?) | yeti: github like | United: laranja brilhante |
+      light: [Pulse] # Cerulean, Cosmo, Flatly, Journal, Litera, Lumen, Lux, Materia, Minty, Morph, Pulse, Sandstone, Simplex, Sketchy, Spacelab, United, Yeti, Zephyr
+      dark: [Solar] # Cyborg, Darkly, Quartz, Slate, Solar, Superhero, Vapor
+    mainfont: Alegreya
     # mainfont: "Atkinson Hyperlegible"
     header-includes: |
       <style>
@@ -87,8 +96,8 @@ format: # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
 
 filters:
   - fontawesome
+  - include-files.lua
   - citetools
-  # - include-files.lua
   # - include-code-files.lua
   # - quarto
 
@@ -98,4 +107,4 @@ citeproc: false
 bibliography_primary: refs/primary.json
 bibliography_secondary: refs/secondary.json
 verbosity: ERROR
-csl: https://raw.githubusercontent.com/bcdavasconcelos/ABNT-Phi/main/abnt-phi-sc.csl
+# csl: https://raw.githubusercontent.com/bcdavasconcelos/ABNT-Phi/main/abnt-phi-sc.csl

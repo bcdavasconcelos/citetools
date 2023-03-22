@@ -1,6 +1,8 @@
 ---
-title: Field names
+title: Bibliography Formats
 ---
+
+The first thing you should now is that no two bibliography formats are create equal; so, while one field appears in way in your bibliography manager, that content might not be interpreted by Pandoc as belonging to that same field. In most cases, fields In some cases, the field won't even exist in Pandoc's native Citation Style Language format. And the second is tha Pandoc internally uses a format called [Citation Style Language]() in JSON format. This is the format that is used to define the bibliography style. The CSL-JSON format is a complex beast, and it's not easy to write it by hand. But there is a simpler format, called CSL-YAML, that is easier to write and read.
 
 Here you'll find the skeleton of several bibliography formats, in case you intend to write them yourself, or just to use as a reference.
 
@@ -270,3 +272,4 @@ file = {}
 
 
 
+{{< include _all-bibtex-fields-to-csl-yaml.qmd >}}
