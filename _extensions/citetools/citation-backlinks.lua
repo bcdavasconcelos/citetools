@@ -1,3 +1,5 @@
+-- Todo: even with link-citations and link-fields turned off, citation-backlinks still adds a single backlink to each reference in the final bibliography div.
+
 --- citation-backlinks.lua – adds citation backlinks to the bibliography
 ---
 --- Copyright: © 2022 John MacFarlane and Albert Krewinkel

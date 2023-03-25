@@ -1,0 +1,239 @@
+---
+title: Cite Field
+tbl-cap-location: bottom
+code-annotations: hover
+link-citations: false
+link-fields: false
+---
+
+In many areas we are frequently invited to comment on different editions and translations of the same work. In such cases, we refer not only the authors and dates of the publications, but also to their editors, translators, publishers, and their original-titles and editions. But how to do this? If `citetools` is enabled, then the answer lies in a small variation of [Pandoc's vanilla syntax for citations](01-basics.qmd).
+
+
+::: {.callout-note appearance="simple"}
+Use `[@Citekey]{.csl_field}` where `.csl_field` is the field name prefixed by a dot, to specify the field to print.
+:::
+
+
+
+
+
+### Practical example
+
+Here is a printout of different citation fields followed by a concrete example of how to use them in a document.
+
+| Raw | Output |
+| :-------: | :--------: |
+| `[@AristOp]{.author}`  |  [@AristOp]{.author} |
+| `[@AristOp]{.editor}` | [@AristOp]{.editor} |
+| `[@AristOp]{.title}` | [@AristOp]{.title} |
+| `[@AristOp]{.issued}`  | [@AristOp]{.issued}^[Note that `[-@AristOp]` would render as [-@AristOp].] |
+| `[@AristOp]{.publisher}` | [@AristOp]{.publisher} |
+| `[@AristOp]{.publisher-place}` | [@AristOp]{.publisher-place} |
+| `[@AristOp]{.edition}` | [@AristOp]{.edition} |
+| `[@AristOp]{.number-of-volumes}` | [@AristOp]{.number-of-volumes} |
+
+: Printout of different fields from the reference {tbl-colwidths="[50,50]"}
+
+
+
+::: {.callout-note collapse="true"}
+## AristOp
+
+::: {.panel-tabset}
+## CSL-YAML
+```yaml
+type: book
+id: AristOp
+author:
+- family: Aristotle
+editor:
+- family: Bekker
+  given: Immanuel
+title: Aristotelis opera
+issued:
+  date-parts:
+  - 1831
+number-of-volumes: '4'
+publisher: Reimer
+publisher-place: Berlim
+edition: '1'
+```
+
+::: {.callout-tip appearance="simple"}
+Document processing using Quarto and Pandoc is *much* faster using `CSL-YAML/JSON` bibliographies than using `BibTeX` or `RIS` because Pandoc also uses the [Citation Style Language](https://citationstyles.org/) internally (of which CSL-YAML is a representation).
+:::
+
+## CSL-JSON
+```json
+{
+    "author": [
+      {
+        "family": "Aristotle"
+      }
+    ],
+    "editor": [
+      {
+        "family": "Bekker",
+        "given": "Immanuel"
+      }
+    ],
+    "id": "AristOp",
+    "issued": {
+      "date-parts": [
+        [
+          1831
+        ]
+      ]
+    },
+    "number-of-volumes": "4",
+    "publisher": "Reimer",
+    "publisher-place": "Berlim",
+    "title": "Aristotelis opera",
+    "type": "book",
+    "edition": "1"
+  }
+```
+## BibTeX
+```bibtex
+@book{AristOp,
+  author = {Aristotle},
+  editor = {Bekker, Immanuel},
+  title = {Aristotelis opera},
+  publisher = {Reimer},
+  address = {Berlim},
+  volumes = {4},
+  edition = {1},
+  year = {1831}
+}
+```
+
+## RIS
+```ris
+TY  - BOOK
+ID  - AristOp
+AU  - Aristotle
+ED  - Bekker, Immanuel
+TI  - Aristotelis opera
+PB  - Reimer
+CY  - Berlim
+ET  - 1
+VL  - 4
+Y1  - 1831
+ER  -
+```
+:::
+:::
+
+
+
+
+<!-- Now, let us see that in practice with the following snippet: 
+
+> The works of `[@AristOp]{.author}` were first edited by `[@AristOp]{.editor}` under the title `[@AristOp]{.title}` in `[@AristOp]{.issued}`. -->
+
+With this knowledge, we could state the following in our text:
+
+> The works of \[\@AristOp]{.author} were first edited by \[\@AristOp]{.editor} under the title \[\@AristOp]{.title} in \[\@AristOp]{.issued}.
+
+Which would render as:
+
+> The works of [@AristOp]{.author} were first edited by [@AristOp]{.editor} under the title [@AristOp]{.title} in [@AristOp]{.issued}.
+
+
+
+
+
+
+## Citation Style Language
+
+::: {.callout-note appearance="simple"}
+Did you notice that we used `[@AristOp]{.issued}` instead of ~~`[@AristOp]{.date}`~~? And `[@AristOp]{.publisher-place}` instead of ~~`[@AristOp]{.city}`~~? 
+:::
+
+Internally, as we said, Pandoc uses the [Citation Style Language](https://docs.citationstyles.org/en/stable/specification.html) to handle bibliographies. This is a standard schema for bibliographic data, which is used by some bibliography managers, such as Zotero, and JabRef. Most, however, are closer to 
+the conventions of [BibTeX](https://en.wikipedia.org/wiki/BibTeX#Field_types) (or [RIS](https://en.wikipedia.org/wiki/RIS_(file_format)#Tags)) which is why you may not see an exact correspondence between the CSL variables and BibTeX field names. 
+
+In CSL, there are following variables:
+
+```ruby
+  abstract accessed annote archive archive_collection archive_location archive-place author authority available-date call-number chair chapter-number citation-key citation-label citation-number collection-editor collection-number collection-title compiler composer container-author container-title container-title-short contributor curator dimensions director division DOI edition editor editor-translator editorial-director event event-date event-place event-title executive-producer first-reference-note-number genre guest host illustrator interviewer ISBN ISSN issue issued jurisdiction keyword language license locator medium narrator note notes number number-of-pages number-of-volumes organizer original-author original-date original-publisher original-publisher-place original-title page page-first part-number part-title performer PMCID PMID printing-number producer publisher publisher-place recipient references reviewed-author reviewed-genre reviewed-title scale script-writer section series-creator source status submitted supplement-number title title-short translator URL version volume volume-title year-suffix
+  ```
+  
+
+
+
+
+
+
+Here is a quick reference, not exaustive by any means, of where will the data end up in the conversion from BibTeX and RIS to CSL. This menas that the CSL variables on the first column is the final destination and it receives the content of the second or third column fields depending on the format it converts from. On the second tab, we map the references types from BibTeX to the CSL types.
+
+::: {.panel-tabset}
+## CSL & BibTeX Fields
+| CSL | BibTeX | RIS |
+|:----:|:----:|:--:|
+| author | authors | AU |
+| editor | editors | ED |
+| issued | date | PY |
+| title | title | T1 |
+| title-short | shorttitle | `-` |
+| container-title | booktitle (**inproceedings incollection inbook**) | BT |
+| container-title | journal (**article book proceedings masterthesis lexicon online booklet**) | JA |
+| collection-title | series | `-` |
+| original-title | origtitle | OR |
+| publisher | school, institution, organization, howpublished, publisher | PB |
+| publisher-place | address | PP |
+| abstract | abstract | AB |
+| url | URL | UR |
+| keywords | keywords | KW |
+| chapter-number | chapter | `-` |
+| issue | issue (**article**), number (**article**) | IS |
+| number | number (**phdthesis**) | IS |
+| collection-number | number (**book**) | IS |
+| volume | volume | VL |
+| number-of-volumes | volumes | NV |
+| page | pages | SP |
+| edition | edition | ET |
+| genre | type | `-` |
+| call-number | library | ID |
+| version | version | `-` |
+
+: Where do BibTeX and RIS fields end up in CSL-YAML/CSL-JSON?
+
+See also, the full list of [CSL variables](https://docs.citationstyles.org/en/stable/specification.html#appendix-iv-variables), [BibTeX Fields](https://en.wikipedia.org/wiki/BibTeX#Field_types) and [RIS Tags](https://en.wikipedia.org/wiki/RIS_(file_format)#Tags).
+
+
+## CSL & BibTeX Types
+
+| CSL         | BibTeX   |
+|:----------:|:---------:|
+| article-journal  | article       |
+| book             | book          |
+| pamphlet         | booklet       |
+| chapter          | inbook        |
+| chapter          | incollection  |
+| paper-conference | inproceedings |
+| book             | manual        |
+| thesis           | mastersthesis |
+| thesis           | misc          |
+| thesis           | phdthesis     |
+| book             | proceedings   |
+| report           | techreport    |
+| manuscript       | unpublished   |
+
+: How do BibTeX types end up in CSL-YAML/CSL-JSON?
+
+See also the full list of [CSL](https://docs.citationstyles.org/en/stable/specification.html#appendix-iii-types) and [BibTeX](https://en.wikipedia.org/wiki/BibTeX#Entry_types) types.
+:::
+
+
+
+
+# Primary Sources {.appendix}
+
+::: {#refs_primary}
+:::
+
+
+
+[^1]: In fact, we can get any field from the reference, as long as it is defined in the [CSL](https://docs.citationstyles.org/en/stable/specification.html) schema. These include:
+  

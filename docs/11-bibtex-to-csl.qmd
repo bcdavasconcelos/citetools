@@ -15,13 +15,18 @@ We'll be covering the conversion from `BibTeX` to `CSL-JSON`/`CSL-YAML`, but not
 | BibTeX Type | CSL-YAML |
 | ------- | ------- |
 | article | article-journal |
-| inproceedings | paper-conference |
-| proceedings, book | book |
-| inbook, incollection | chapter |
-| mastersthesis, phdthesis | thesis |
-| online | webpage |
-| review | review |
+| book | book |
 | booklet | pamphlet |
+| inbook | chapter |
+| incollection | chapter |
+| inproceedings | paper-conference |
+| manual | book |
+| mastersthesis | thesis |
+| misc | thesis |
+| phdthesis | thesis |
+| proceedings | book |
+| techreport | report |
+| unpublished | manuscript |
 
 : Where do BibTeX types end up in CSL-YAML/CSL-JSON?
 

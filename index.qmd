@@ -5,15 +5,28 @@ subtitle: |
   Advanced bibliography for Pandoc and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
 author: "Bernardo Vasconcelos"
 date: "2021-09-01"
-listing:
-  id: lua-filters
-  contents:
-    - docs/cite-field.qmd
-    - docs/multibib.qmd
-    - docs/citation-backlinks.qmd
-  type: grid
-  grid-columns: 2
+#listing:
+#  id: lua-filters
+#  contents:
+#    - docs/cite-field.qmd
+#    - docs/multibib.qmd
+#    - docs/citation-backlinks.qmd
+#  type: grid
+#  grid-columns: 2
 ---
+
+This extension introduces advanced bibliography features by bundling up several Lua filters ([see below](#license)). It allows, among other things, the creation of multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`), the citation of arbitrary fields from the references, such as `author`, `editor`, and `translator` names, or `title` and `original-title` of works. And last, but not least, the creation of linked indexes of citations.
+
+::: {.callout-note collapse="true"}
+## New to Quarto <img src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />?
+Visit the [getting started](https://quarto.org/docs/get-started/) guide to download and install Quarto.
+
+**Jumpstart:**
+On macOS ({{< fa brands apple >}}), use [Homebrew](https://brew.sh/) to `brew install quarto`. On Windows ({{< fa brands windows >}}), use [Chocolatey](https://chocolatey.org/) to `choco install quarto`. On Linux ({{< fa brands linux >}}), use your package manager to install `quarto`.
+
+**Go deeper:** [Awesome Quarto](https://github.com/mcanouil/awesome-quarto), [Quarto Extensions](https://github.com/quarto-ext?type=source), [Quarto on Github](https://github.com/search?q=topic%3Aquarto&type=repositories), [RStudio Community](https://community.rstudio.com/tags/quarto), [Stack Overflow](https://stackoverflow.com/questions/tagged/quarto), [Twitter](https://twitter.com/quarto_pub).
+:::
+
 
 ::: {.callout-note collapse="true"}
 ## Quickstart
@@ -37,68 +50,17 @@ Add bibliography files to the metadata using `bibliography_BIBNAME: path/to/bibf
  ```
 
  Cite reference as you normally do with Pandoc using `[@Citekey]`. When necessary, use `[@Citekey]{.csl_field}` to cite using a specific [CSL-Field](docs/csl-fields.qmd).
-:::
 
-# Introduction {.unnumbered}
+ You can disable the automatic linking of citations with CSL fields by adding `link-fields: false` to the metadata.
 
-The vanilla Pandoc and Quarto's Citeproc environment is powerful and its syntax is simple. It uses `[@Citekey]` for `Author (Date)` and `[-@Citekey]` for `(Date)`.^[In the case of `[-@Citekey]`, the `-` is being used switch on author suppresion. The page locator can always be appended using `[@Citekey, p. 1]` for `Author (Date, p. 1)` or `[-@Citekey, p. 1]` for `(Date, p. 1)`]
-
-::: {.callout-tip appearance="simple"}
-The advantage of this markup syntax lies in its simplicity and the compatibility with all formats supported by Pandoc, a universal document converter.
+ That's it.
 :::
 
 
-This extension introduces advanced bibliography features by bundling up several Lua filters ([see below](#license)). It allows, among other things, the creation of multiple bibliographies (or bibliographies with multiple sections, such as `primary sources` and `secondary sources`), the citation of arbitrary fields from the references, such as `author`, `editor`, and `translator` names, or `title` and `original-title` of works. And last, but not least, the creation of linked indexes of citations.
+<!-- <img width="665" alt="image" src="https://user-images.githubusercontent.com/35749099/226091195-7b27f8a7-c802-4cbb-bac9-81265b7aed45.png"> -->
 
 
-::: {#lua-filters}
-:::
-
-
-::: {.callout-note collapse="true"}
-## New to Quarto <img src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />?
-Visit the [getting started](https://quarto.org/docs/get-started/) guide to download and install Quarto.
-
-**Jumpstart:**
-On macOS ({{< fa brands apple >}}), use [Homebrew](https://brew.sh/) to `brew install quarto`. On Windows ({{< fa brands windows >}}), use [Chocolatey](https://chocolatey.org/) to `choco install quarto`. On Linux ({{< fa brands linux >}}), use your package manager to install `quarto`.
-
-**Go deeper:** [Awesome Quarto](https://github.com/mcanouil/awesome-quarto), [Quarto Extensions](https://github.com/quarto-ext?type=source), [Quarto on Github](https://github.com/search?q=topic%3Aquarto&type=repositories), [RStudio Community](https://community.rstudio.com/tags/quarto), [Stack Overflow](https://stackoverflow.com/questions/tagged/quarto), [Twitter](https://twitter.com/quarto_pub).
-:::
-
-
-
-
-## Install
-
-Users of Quarto can install this extension with the following command
-
-```bash
-quarto install extension bcdavasconcelos/citetools
-```
-
-and use it by adding `citetools` to the `filters` entry in their YAML header.
-
-``` yaml
----
-filters:
-  - citetools
----
-```
-
-### Cite fields and citation backlinks global options
-
-- `link-fields` (boolean): Link inlines printed by `citefield` to their corresponding entry in the bibliography. Default: `true`.
-- `link-citations` (boolean): Link citations to their respective reference in the bibliography. Default: `true`. Note: if `link-citations` is set to `false`, `link-fields` is also set to `false`.
-
----
-
-See sample document `sample.qmd` for a working example with explanations.
-
-
-<img width="665" alt="image" src="https://user-images.githubusercontent.com/35749099/226091195-7b27f8a7-c802-4cbb-bac9-81265b7aed45.png">
-
-
-License
+<!-- License
 ------------------------------------------------------------------
 Filters published under the MIT license by Albert Krewinkel ([tarleb](https://github.com/tarleb)).
 
@@ -113,6 +75,6 @@ Filters published under the MIT license by Albert Krewinkel ([tarleb](https://gi
 
 
 All Pandoc Lua filters in this extension are published under the MIT license, see
-file `LICENSE` for details.
+file `LICENSE` for details. -->
 
-[Back to top](#top)
+<!-- [Back to top](#top) -->

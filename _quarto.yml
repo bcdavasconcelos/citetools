@@ -4,35 +4,20 @@ website:
       - section: "Cite Tools"
         href: index.qmd
         contents:
-          - section: "The Basics"
-            href: docs/basics.qmd
+          - text: "The Basics"
+            href: docs/01-basics.qmd
+            icon: book              
+          - text: "Multiple Bibliographies"
             icon: book
-            contents:
-              - text: "Creating bibliography"
-                href: docs/basics-creating-bibliography.qmd
-                icon: tree
-              - text: "Setting up a simple bibliography"
-                href: docs/basics-setup.qmd
-                icon: tree
-          - section: "Multiple Bibliographies"
+            href: docs/02-multibib.qmd
+          - text: "Cite Field"
+            href: docs/03-cite-field.qmd
             icon: book
-            href: docs/multibib.qmd
-            contents:
-              - text: "Setting it up"
-                href: docs/howto-multibib.qmd
-                icon: tree
-          - section: "Cite Field"
-            href: docs/cite-field.qmd
-            icon: book
-            contents:
-              - text: "Bibliography Formats"
-                href: docs/bib-formats.qmd
-                icon: tree
-              - text: "From BibTeX to CSL"
-                href: docs/bibtex-to-csl.qmd
-                icon: tree
           - text: "Citation Backlinks"
-            href: docs/citation-backlinks.qmd
+            href: docs/04-citation-backlinks.qmd
+            icon: book
+          - text: "About"
+            href: docs/05-about.qmd
             icon: book
     sort: [title, order]
     logo: "images/greek-ship.png"
