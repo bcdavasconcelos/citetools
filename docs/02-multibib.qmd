@@ -99,7 +99,7 @@ title: Multiple Bibliographies
 [@EN] [@Aubenque1961a]
 
 
-# Primary Sources
+## Primary Sources
 
 ---
 bibliography_primary: refs/primary.json
@@ -108,7 +108,7 @@ bibliography_primary: refs/primary.json
 ::: {#refs_primary}
 :::
 
-# Secondary Sources
+## Secondary Sources
 
 ---
 bibliography_secondary: refs/secondary.json

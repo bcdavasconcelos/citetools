@@ -1,9 +1,49 @@
 ---
-title: 3 Citation Backlinks
+title: Citation Backlinks
+code-annotations: hover
 ---
 
-The need to turn the bibliography into a linked index of cited references, with links from the entries back to each of its multiple occurences in the body of the text (*e.g.* in `PDF`/`DOCX`: `[p. 1, p. 4, p. 10]`, in `HTML`: `[1, 2, 3]`) (and with the ability to turn these off globally or in an *ad hoc* fashion).
+In the vanilla Pandoc Citeproc, you can use `link-citations` to control wheter citations in the body of the text should be clickable links to the reference in the bibliography (*e.g.* [@EN]{.title-short}). This is a very useful feature, especially when you want to quickly check the source of a citation without having to scroll through the whole text. 
 
 
+::: {.callout-tip appearance="simple"}
+The `citetools`extension will take this one step further and adds to the the entries in the bibliography -- in a crescent ordinal fashion `[1, 2, 3, 4]`^[In other output formats, such as PDF, the reader will see the page number insted of a crescent ordinal number.] --  a backlink to every citation they have received in the document. 
+:::
 
-- *Optionally*, the need to split the bibliography into sections, printing the bibliography for each chapter/section/part. (For this, you must uncomment the apropriate line in the `_extension.yaml` file.)
+This allows the reader to easily arrive at sections of the text where the same reference was discussed, quickly seeing with the the array of backlinks, how many times each reference was used in the text (*see reference in the bottom of the text*).
+
+## How to avoid an excess of undesired links
+
+In `citetools` there are options to avoid undesired linking and anomalies caused by citing individual fields, such as repeated links to the same entry in a single phrase or section.
+
+### Turning off links in individual citations
+
+First, there is the option to force a citation to not be a link by adding a simple `dot` at the end of the `.csl_field`. 
+
+| Default         | Link-suppresion  |
+|-----------------|:----------------:|
+| `[@EN]{.title}` | `[@EN]{.title.}` |
+| [@EN]{.title}   | [@EN]{.title.}   |
+
+### Global options
+
+Then, there is also the global `link-fields` option, which allows the user to turn off links in citations that target individual fields. It can be used in conjuntion with other options that target the bibliography, such as `link-citations` and `link-bibliography`.
+
+```yaml
+link-citations: true # <1> 
+link-fields: true # <2> 
+link-bibliography: true # <3> 
+lang: en-US # <4> 
+notes-after-punctuation: true # <5> 
+```
+1. If true, citations will be hyperlinked to the corresponding bibliography entries (for author-date and numerical styles only). Defaults to false.
+2. If true, citations which target a specific variable or field will be hyperlinked to the corresponding bibliography entries (for author-date and numerical styles only). If `link-citations` is true, this defaults to true.
+3. If true, DOIs, PMCIDs, PMID, and URLs in bibliographies will be rendered as hyperlinks. (If an entry contains a DOI, PMCID, PMID, or URL, but none of these fields are rendered by the style, then the title, or in the absence of a title the whole entry, will be hyperlinked.) Defaults to true.
+4. The lang field will affect how the style is localized, for example in the translation of labels, the use of quotation marks, and the way items are sorted. (For backwards compatibility, locale may be used instead of lang, but this use is deprecated.)
+5. If true (the default for note styles), pandoc will put footnote references or superscripted numerical citations after following punctuation. For example, if the source contains blah blah \[\@jones99]., the result will look like blah blah.[^1], with the note moved after the period and the space collapsed. If false, the space will still be collapsed, but the footnote will not be moved after the punctuation. The option may also be used in numerical styles that use superscripts for citation numbers (but for these styles the default is not to move the citation).
+
+
+## References
+
+::: {#refs_primary}
+:::

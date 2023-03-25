@@ -16,9 +16,9 @@ website:
           - text: "Citation Backlinks"
             href: docs/04-citation-backlinks.qmd
             icon: book
-          - text: "About"
-            href: docs/05-about.qmd
-            icon: book
+      - text: "About"
+        href: docs/05-about.qmd
+        icon: book
     sort: [title, order]
     logo: "images/greek-ship.png"
     # logo: "images/ulysses.png"
