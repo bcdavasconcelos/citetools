@@ -3,11 +3,11 @@ title: Citation Backlinks
 code-annotations: hover
 ---
 
-In the vanilla Pandoc Citeproc, you can use `link-citations` to control whether citations in the body of the text should be clickable links to the reference in the bibliography (*e.g.* [@EN]{.title-short}). This is a very useful feature, especially when you want to quickly check the source of a citation without having to scroll through the whole text. 
+In the vanilla Pandoc Citeproc, you can use `link-citations` to control whether citations in the body of the text should be clickable links to the reference in the bibliography (*e.g.* [@EN]{.title-short}). This is a very useful feature, especially when you want to quickly check the source of a citation without having to scroll through the whole text.
 
 
 ::: {.callout-tip appearance="simple"}
-The `citetools` extension will take this one step further and adds to the entries in the bibliography -- in a crescent ordinal fashion `[1, 2, 3, 4]`^[In other output formats, such as PDF, the reader will see the page number instead of a crescent ordinal number.] --  a backlink to every citation they have received in the document. 
+The `citetools` extension will take this one step further and adds to the entries in the bibliography -- in a crescent ordinal fashion `[1, 2, 3, 4]`^[In other output formats, such as PDF, the reader will see the page number instead of a crescent ordinal number.] --  a backlink to every citation they have received in the document.
 :::
 
 This allows the reader to easily arrive at sections of the text where the same reference was discussed, quickly seeing with the array of backlinks, how many times each reference was used in the text (_see reference at the bottom of the text_).
@@ -18,7 +18,7 @@ In `citetools` there are options to avoid undesired linking and anomalies caused
 
 ### Turning off links in individual citations
 
-First, there is the option to force a citation to not be a link by adding a simple `dot` at the end of the `.csl_field`. 
+First, there is the option to force a citation to not be a link by adding a simple `dot` at the end of the `.csl_field`.
 
 | Default         | Link-suppresion  |
 |-----------------|:----------------:|
@@ -30,17 +30,17 @@ First, there is the option to force a citation to not be a link by adding a simp
 Then, there is also the global `link-fields` option, which allows the user to turn off links in citations that target individual fields. It can be used in conjunction with other options that target the bibliography, such as `link-citations` and `link-bibliography`.
 
 ```yaml
-link-citations: true # <1> 
-link-fields: true # <2> 
-link-bibliography: true # <3> 
-lang: en-ZA # <4> 
+link-citations: true # <1>
+link-fields: true # <2>
+link-bibliography: true # <3>
+lang: en-ZA # <4>
 ```
 1. Hyperlink citations to the corresponding bibliography entries. Defaults to false.
 2. Hyperlink citations that target specific CSL fields to the corresponding entries in the bibliography. If `link-citations` is true, this defaults to true.
 3. Hyperlink DOIs, PMCIDs, PMID, and URLs in bibliographies. Defaults to true.
 4. Affects the bibliography tags. Defaults to en-US.
 
-## References
+## References {.appendix}
 
 ::: {#refs_primary}
 :::

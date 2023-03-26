@@ -86,10 +86,9 @@ Also, please note that if the placeholder doesn't make its way into the document
 :::
 
 
+## Working example of multiple bibliographies
 
-## Minimal example with strategy to ensure matching IDs
-
-To make sure ids match, it can be a good strategy placing the bibliography file close to the div placeholder.
+To ensure sure ids match, it can be a good strategy placing the bibliography file close to the div placeholder.
 
 ```markdown
 ---
@@ -118,7 +117,7 @@ bibliography_secondary: refs/secondary.json
 :::
 ```
 
-You should have a working document with multiple bibliographies:
+With this, you should have a working document with multiple bibliographies that would render in the following way:
 
 
 [@EN] [@Aubenque1961a]
