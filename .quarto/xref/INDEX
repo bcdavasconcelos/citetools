@@ -1,0 +1,254 @@
+{
+  "changelog.md": {
+    "changelog.html": "1f5eb1ad"
+  },
+  "docs/citetools/Cite-Field/index.qmd": {
+    "index.html": "a6c2ba01"
+  },
+  "docs/citetools/Citation-Backlinks/index.qmd": {
+    "index.html": "b9e17f7b"
+  },
+  "docs/citetools/Multiple-Bibliographies/3-Advanced/index.qmd": {
+    "index.html": "55cf8e28"
+  },
+  "docs/citetools/Multiple-Bibliographies/3-Advanced/1-Using-Multiple-Bibliographies-in-Scrivener.qmd": {
+    "1-Using-Multiple-Bibliographies-in-Scrivener.html": "041850d8"
+  },
+  "docs/citetools/Multiple-Bibliographies/index.qmd": {
+    "index.html": "9ba028ca"
+  },
+  "docs/citetools/Multiple-Bibliographies/2-How-to-set-it-up.qmd": {
+    "2-How-to-set-it-up.html": "e1aeed2f"
+  },
+  "docs/citetools/Multiple-Bibliographies/1-Prime-Matter.qmd": {
+    "1-Prime-Matter.html": "d25fa4db"
+  },
+  "docs/About/3-About-BCDAV.qmd": {
+    "3-About-BCDAV.html": "3097b921"
+  },
+  "docs/About/index.qmd": {
+    "index.html": "8f21116a"
+  },
+  "docs/About/2-About-Quarto.qmd": {
+    "2-About-Quarto.html": "78c62edc"
+  },
+  "docs/About/About.qmd": {
+    "About.html": "f914cd3a"
+  },
+  "docs/About/1-About-Cite-Tools.qmd": {
+    "1-About-Cite-Tools.html": "24bf26cf"
+  },
+  "index.qmd": {
+    "index.html": "3394d9e1"
+  },
+  "sample.qmd": {
+    "sample.html": "bca95242"
+  },
+  "docs/citetools/Cite-Field/1-Field-names.qmd": {
+    "1-Field-names.html": "6d1f43e7"
+  },
+  "docs/citetools/Cite-Field/field-names.qmd": {
+    "field-names.html": "c54eff52"
+  },
+  "docs/citetools/2 Cite-Field/field-names.qmd": {
+    "field-names.html": "279b5cb0"
+  },
+  "docs/citetools/2 Cite-Field/bibtex-to-csl-yaml.qmd": {
+    "bibtex-to-csl-yaml.html": "48b0fdc5"
+  },
+  "docs/citetools/2 Cite-Field/index.qmd": {
+    "index.html": "3f6d1b3d"
+  },
+  "docs/citetools/1 Multiple-Bibliographies/3-Advanced/index.qmd": {
+    "index.html": "2ede1512"
+  },
+  "docs/citetools/1 Multiple-Bibliographies/3-Advanced/1-Using-Multiple-Bibliographies-in-Scrivener.qmd": {
+    "1-Using-Multiple-Bibliographies-in-Scrivener.html": "e3488ebf"
+  },
+  "docs/citetools/1 Multiple-Bibliographies/index.qmd": {
+    "index.html": "3ee81c70"
+  },
+  "docs/citetools/1 Multiple-Bibliographies/2-How-to-set-it-up.qmd": {
+    "2-How-to-set-it-up.html": "708e66b9"
+  },
+  "docs/citetools/1 Multiple-Bibliographies/1-Prime-Matter.qmd": {
+    "1-Prime-Matter.html": "de756b3a"
+  },
+  "docs/citetools/3 Citation-Backlinks/index.qmd": {
+    "index.html": "2d33f6c5"
+  },
+  "docs/citetools/2-Cite-Field/field-names.qmd": {
+    "field-names.html": "b0e29e88"
+  },
+  "docs/citetools/2-Cite-Field/index.qmd": {
+    "index.html": "1cf0db75"
+  },
+  "docs/citetools/2-Cite-Field/bibtex-to-csl-yaml.qmd": {
+    "bibtex-to-csl-yaml.html": "31f2feb7"
+  },
+  "docs/citetools/3-Citation-Backlinks/index.qmd": {
+    "index.html": "9accca47"
+  },
+  "docs/citetools/1-Multiple-Bibliographies/3-Advanced/index.qmd": {
+    "index.html": "7ee9b223"
+  },
+  "docs/citetools/1-Multiple-Bibliographies/3-Advanced/1-Using-Multiple-Bibliographies-in-Scrivener.qmd": {
+    "1-Using-Multiple-Bibliographies-in-Scrivener.html": "8c300fb9"
+  },
+  "docs/citetools/1-Multiple-Bibliographies/index.qmd": {
+    "index.html": "4978292e"
+  },
+  "docs/citetools/1-Multiple-Bibliographies/2-How-to-set-it-up.qmd": {
+    "2-How-to-set-it-up.html": "e45ceab9"
+  },
+  "docs/citetools/1-Multiple-Bibliographies/1-Prime-Matter.qmd": {
+    "1-Prime-Matter.html": "afd3f18f"
+  },
+  "docs/multibib-in-scrivener.qmd": {
+    "multibib-in-scrivener.html": "c84ad702"
+  },
+  "docs/citation-backlinks.qmd": {
+    "citation-backlinks.html": "9e6a0dae"
+  },
+  "docs/prime-matter.qmd": {
+    "prime-matter.html": "3e97e533"
+  },
+  "docs/bibtex-to-csl-yaml.qmd": {
+    "bibtex-to-csl-yaml.html": "9cbf1d32"
+  },
+  "docs/multibib.qmd": {
+    "multibib.html": "2488ef6a"
+  },
+  "docs/howto-multibib.qmd": {
+    "howto-multibib.html": "6c4e9851"
+  },
+  "docs/cite-field.qmd": {
+    "cite-field.html": "a1538b61"
+  },
+  "docs/bibtex-to-csl.qmd": {
+    "bibtex-to-csl.html": "550fd576"
+  },
+  "docs/csl-fields.qmd": {
+    "csl-fields.html": "1c96e647"
+  },
+  "docs/vanilla.qmd": {
+    "vanilla.html": "b270339c"
+  },
+  "docs/sample.qmd": {
+    "sample.html": "8d89be5b"
+  },
+  "docs/basics-how-to-cite.qmd": {
+    "basics-how-to-cite.html": "7f170145"
+  },
+  "docs/basics-how-to-setup.qmd": {
+    "basics-how-to-setup.html": "542d4456"
+  },
+  "docs/basics.qmd": {
+    "basics.html": "08a8b79d"
+  },
+  "docs/bib-formats.qmd": {
+    "bib-formats.html": "415f2780"
+  },
+  "docs/basics-creating-bibliography.qmd": {
+    "basics-creating-bibliography.html": "9756b2fb"
+  },
+  "docs/basics-setup.qmd": {
+    "basics-setup.html": "fed8c8ef"
+  },
+  "docs/basics-citation-syntax.qmd": {
+    "basics-citation-syntax.html": "879fe945"
+  },
+  "docs/05 howto-multibib.qmd": {
+    "05 howto-multibib.html": "3633e44f"
+  },
+  "docs/09 basics-how-to-cite.qmd": {
+    "09 basics-how-to-cite.html": "95bdabf4"
+  },
+  "docs/03 basics-setup.qmd": {
+    "03 basics-setup.html": "1c768651"
+  },
+  "docs/06 multibib-in-scrivener.qmd": {
+    "06 multibib-in-scrivener.html": "4ba8d623"
+  },
+  "docs/01 basics.qmd": {
+    "01 basics.html": "d1b80a58"
+  },
+  "docs/11 bibtex-to-csl.qmd": {
+    "11 bibtex-to-csl.html": "5a925e4f"
+  },
+  "docs/08 cite-field.qmd": {
+    "08 cite-field.html": "508f92fa"
+  },
+  "docs/10 bib-formats.qmd": {
+    "10 bib-formats.html": "e11d8147"
+  },
+  "docs/04 multibib.qmd": {
+    "04 multibib.html": "3c1181d5"
+  },
+  "docs/02 basics-creating-bibliography.qmd": {
+    "02 basics-creating-bibliography.html": "55dd041d"
+  },
+  "docs/07 basics-citation-syntax.qmd": {
+    "07 basics-citation-syntax.html": "ad54e6d6"
+  },
+  "docs/12 citation-backlinks.qmd": {
+    "12 citation-backlinks.html": "9fb9ed53"
+  },
+  "docs/04-multibib.qmd": {
+    "04-multibib.html": "280fa6e0"
+  },
+  "docs/06-multibib-in-scrivener.qmd": {
+    "06-multibib-in-scrivener.html": "10c37396"
+  },
+  "docs/12-citation-backlinks.qmd": {
+    "12-citation-backlinks.html": "7d472807"
+  },
+  "docs/08-cite-field.qmd": {
+    "08-cite-field.html": "855ba4ed"
+  },
+  "docs/01-basics.qmd": {
+    "01-basics.html": "4d70fb88"
+  },
+  "docs/02-basics-creating-bibliography.qmd": {
+    "02-basics-creating-bibliography.html": "ac352959"
+  },
+  "docs/07-basics-citation-syntax.qmd": {
+    "07-basics-citation-syntax.html": "7fc73cf0"
+  },
+  "docs/03-basics-setup.qmd": {
+    "03-basics-setup.html": "d5e49cf7"
+  },
+  "docs/09-basics-how-to-cite.qmd": {
+    "09-basics-how-to-cite.html": "47d37529"
+  },
+  "docs/05-howto-multibib.qmd": {
+    "05-howto-multibib.html": "884eb441"
+  },
+  "docs/11-bibtex-to-csl.qmd": {
+    "11-bibtex-to-csl.html": "e3bc2ddf"
+  },
+  "docs/10-bib-formats.qmd": {
+    "10-bib-formats.html": "06550d00"
+  },
+  "docs/02-multibib.qmd": {
+    "02-multibib.html": "6ac61086"
+  },
+  "docs/03-cite-field.qmd": {
+    "03-cite-field.html": "f1303867"
+  },
+  "docs/04-citation-backlinks.qmd": {
+    "04-citation-backlinks.html": "14e4482d"
+  },
+  "docs/05-about.qmd": {
+    "05-about.html": "87562fb3"
+  },
+  "docs/03a-bib-formats.qmd": {
+    "03a-bib-formats.html": "b6312bc1"
+  },
+  "test/input.md": {
+    "input.html": "e09b3662"
+  },
+  "input.qmd": {
+    "input.html": "a6f47e60"
+  }
+}
