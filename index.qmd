@@ -88,13 +88,13 @@ Place the corresponding placeholders where they should be printed in the documen
 
 ## Usage 📖
 
- Cite references [as you normally do in Pandoc](/docs_qmd/01-basics.qmd) and they will be linked 🔗 and backlinked 🔗 to the bibliography 📚
+ Cite references [as you normally do in Pandoc](/docs_qmd/01-basics.qmd#how-to-cite-in-pandoc) and they will be linked 🔗 and backlinked 🔗 to the bibliography 📚
 
  ```markdown
  [@citekey]
  ```
 
- Use `[@Citekey]{.csl_field}` to arbitrarily 🎯🥋 print specific fields instead of the usual Author-Date.
+ Use `[@Citekey]{.csl_field}` to arbitrarily print specific fields instead of the usual Author-Date 🎯
 
   ```markdown
   [@citekey]{.author}

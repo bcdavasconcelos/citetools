@@ -57,7 +57,8 @@ cache: true
 freeze: auto
 # editor: visual
 format-links: [pdf,docx]
-mainfont: Source Sans Pro
+mainfont: Source Serif Pro
+sansfont: Source Sans Pro
 monofont: Source Code Pro
 
 
@@ -71,8 +72,12 @@ format: # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
     # mainfont: "Atkinson Hyperlegible"
     header-includes: |
       <style>
+      @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
         .callout-header {
-          # background-color: transparent!important;
+          background-color: transparent!important;
+        }
+        .header, h1, h2, h3, h4, h5, h6{
+          font-family: Source Sans Pro, sans-serif!important;
         }
       </style>
     code-copy: true

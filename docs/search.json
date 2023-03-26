@@ -179,7 +179,7 @@
     "href": "index.html#usage",
     "title": "Cite Tools",
     "section": "Usage 📖",
-    "text": "Usage 📖\nCite references as you normally do in Pandoc and they will be linked 🔗 and backlinked 🔗 to the bibliography 📚\n[@citekey]\nUse [@Citekey]{.csl_field} to arbitrarily 🎯🥋 print specific fields instead of the usual Author-Date.\n[@citekey]{.author}\n[@citekey]{.title}\n[@citekey]{.original-title}\nAppend the field name with a dot (.) to avoid creating a link to the bibliography in this particular citation📍\n[@citekey]{.author.}\nThis can also be done globally 🌐 by setting link-fields: false in the metadata3\n---\nlink-fields: false\n---"
+    "text": "Usage 📖\nCite references as you normally do in Pandoc and they will be linked 🔗 and backlinked 🔗 to the bibliography 📚\n[@citekey]\nUse [@Citekey]{.csl_field} to arbitrarily print specific fields instead of the usual Author-Date 🎯\n[@citekey]{.author}\n[@citekey]{.title}\n[@citekey]{.original-title}\nAppend the field name with a dot (.) to avoid creating a link to the bibliography in this particular citation📍\n[@citekey]{.author.}\nThis can also be done globally 🌐 by setting link-fields: false in the metadata3\n---\nlink-fields: false\n---"
   },
   {
     "objectID": "index.html#documentation",
