@@ -78,6 +78,9 @@ format: # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
         }
         .header, h1, h2, h3, h4, h5, h6{
           font-family: Source Sans Pro, sans-serif!important;
+          .p {
+            font-family: Source Serif Pro, serif!important;
+          }
         }
       </style>
     code-copy: true

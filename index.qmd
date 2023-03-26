@@ -65,7 +65,7 @@ filters:
 
 ## Quickstart 🚀
 
-Add the path to the bibliography files to the document YAML header or to `_quarto.yml` 📁
+Add the path to the bibliography files to the document YAML header or `_quarto.yml` 📁
 
 ```yaml
 ---
@@ -94,19 +94,19 @@ Place the corresponding placeholders where they should be printed in the documen
  [@citekey]
  ```
 
- Use `[@Citekey]{.csl_field}` to arbitrarily print specific fields instead of the usual Author-Date 🎯
+ Use `[@Citekey]{.csl_field}` to arbitrarily print specific fields instead of the usual Author-Date format. This is useful for printing the title of a book or the name of a journal in the text. 🎯
 
   ```markdown
   [@citekey]{.author}
   [@citekey]{.title}
   [@citekey]{.original-title}
   ```
- Append the field name with a dot (`.`) to avoid creating a link to the bibliography in this particular citation📍
+ Append the field name with a dot to avoid creating a link to the bibliography in this particular citation📍
 
   ```markdown
   [@citekey]{.author.}
   ```
- This can also be done globally 🌐 by setting `link-fields: false` in the metadata^[If `link-citations` is `false` then `link-fields` will also default to `false`.]
+ This can also be done globally 🌐 by setting `link-fields: false` in the metadata^[If `link-citations` is `false` then `link-fields` will also default to `false`.]. This is useful if you want to print the title of a book or the name of a journal in the text, but don't want to create a link to the bibliography.
 
   ```yaml
   ---
