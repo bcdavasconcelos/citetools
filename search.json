@@ -172,7 +172,7 @@
     "href": "index.html#installation",
     "title": "Cite Tools",
     "section": "Installation 📦",
-    "text": "Installation 📦\nIf the prospect of typing something on the command line seems daunting, or if you simply need a sample, you can download the citetools repository  directly and open it in VSCode to see a working example.\nOtherwise, create a new project and install it using:\nquarto install extension bcdavasconcelos/citetools\nActivate it by adding citetools to the _quarto.yml file in the filters section.\nfilters:\n  - citetools"
+    "text": "Installation 📦\nIf the prospect of typing something on the command line seems daunting, or if you simply need a sample, you can download the citetools repository directly and open it in VSCode to see a working example.\nOtherwise, create a new project and install it using:\nquarto install extension bcdavasconcelos/citetools\nActivate it by adding citetools to the _quarto.yml file in the filters section.\nfilters:\n  - citetools"
   },
   {
     "objectID": "index.html#quickstart",
