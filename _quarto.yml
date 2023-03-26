@@ -55,9 +55,9 @@ website:
 
 # cache: true
 # freeze: auto
-editor: visual
-format-links: [pdf,docx]
-
+# editor: visual
+# format-links: [pdf,docx]
+mainfont: Alegreya
 
 
 
@@ -66,11 +66,15 @@ format: # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
     theme: # Slate e
 # Pulse: Rocho (muito bonito) | Spacelab: menos brilhante e mais opaco | Materia: azul claro pouco (material?) | yeti: github like | United: laranja brilhante |
       light: [Pulse] # Cerulean, Cosmo, Flatly, Journal, Litera, Lumen, Lux, Materia, Minty, Morph, Pulse, Sandstone, Simplex, Sketchy, Spacelab, United, Yeti, Zephyr
-      dark: [Solar] # Cyborg, Darkly, Quartz, Slate, Solar, Superhero, Vapor
-    mainfont: Alegreya
+      dark: [Cyborg] # Cyborg, Darkly, Quartz, Slate, Solar, , Vapor
     # mainfont: "Atkinson Hyperlegible"
     header-includes: |
       <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        p {text-align: justify;
+        font-family: Alegreya}
+        tr.odd {font-family: Alegreya}
+        caption, figcaption, .column-margin p {font-family: Alegreya!important; text-align: left !important;}
         .callout-header {
           background-color: transparent!important;
         }

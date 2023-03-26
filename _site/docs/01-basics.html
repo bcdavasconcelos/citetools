@@ -117,6 +117,11 @@ div.csl-indent {
   }
 }</script>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  p {text-align: justify;
+  font-family: Alegreya}
+  tr.odd {font-family: Alegreya}
+  caption, figcaption, .column-margin p {font-family: Alegreya!important; text-align: left !important;}
   .callout-header {
     background-color: transparent!important;
   }
@@ -369,30 +374,30 @@ How to share the Pandoc folder
 <caption>Variations of the Citation syntax</caption>
 <thead>
 <tr class="header">
-<th>Syntax</th>
-<th>Output</th>
+<th style="text-align: center;">Syntax</th>
+<th style="text-align: center;">Output</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>@Aubenque1961a</code></td>
-<td><span id="cite_4"><span class="citation" data-cites="Aubenque1961a">Aubenque (<a href="#ref-Aubenque1961a" role="doc-biblioref">1961</a>)</span></span></td>
+<td style="text-align: center;"><code>@Aubenque1961a</code></td>
+<td style="text-align: center;"><span id="cite_4"><span class="citation" data-cites="Aubenque1961a">Aubenque (<a href="#ref-Aubenque1961a" role="doc-biblioref">1961</a>)</span></span></td>
 </tr>
 <tr class="even">
-<td><code>[@Aubenque1961a]</code></td>
-<td><span id="cite_5"><span class="citation" data-cites="Aubenque1961a">(<a href="#ref-Aubenque1961a" role="doc-biblioref">Aubenque 1961</a>)</span></span></td>
+<td style="text-align: center;"><code>[@Aubenque1961a]</code></td>
+<td style="text-align: center;"><span id="cite_5"><span class="citation" data-cites="Aubenque1961a">(<a href="#ref-Aubenque1961a" role="doc-biblioref">Aubenque 1961</a>)</span></span></td>
 </tr>
 <tr class="odd">
-<td><code>[@Aubenque1961a, p.15]</code></td>
-<td><span id="cite_6"><span class="citation" data-cites="Aubenque1961a">(<a href="#ref-Aubenque1961a" role="doc-biblioref">Aubenque 1961, 15</a>)</span></span></td>
+<td style="text-align: center;"><code>[@Aubenque1961a, p.15]</code></td>
+<td style="text-align: center;"><span id="cite_6"><span class="citation" data-cites="Aubenque1961a">(<a href="#ref-Aubenque1961a" role="doc-biblioref">Aubenque 1961, 15</a>)</span></span></td>
 </tr>
 <tr class="even">
-<td><code>[-@Aubenque1961a]</code></td>
-<td><span id="cite_7"><span class="citation" data-cites="Aubenque1961a">(<a href="#ref-Aubenque1961a" role="doc-biblioref">1961</a>)</span></span></td>
+<td style="text-align: center;"><code>[-@Aubenque1961a]</code></td>
+<td style="text-align: center;"><span id="cite_7"><span class="citation" data-cites="Aubenque1961a">(<a href="#ref-Aubenque1961a" role="doc-biblioref">1961</a>)</span></span></td>
 </tr>
 <tr class="odd">
-<td><code>[-@Aubenque1961a, p.15]</code></td>
-<td><span id="cite_8"><span class="citation" data-cites="Aubenque1961a">(<a href="#ref-Aubenque1961a" role="doc-biblioref">1961, 15</a>)</span></span></td>
+<td style="text-align: center;"><code>[-@Aubenque1961a, p.15]</code></td>
+<td style="text-align: center;"><span id="cite_8"><span class="citation" data-cites="Aubenque1961a">(<a href="#ref-Aubenque1961a" role="doc-biblioref">1961, 15</a>)</span></span></td>
 </tr>
 </tbody>
 </table>

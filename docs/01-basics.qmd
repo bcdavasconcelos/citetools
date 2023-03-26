@@ -114,7 +114,7 @@ The citation key is *optionally* followed by a locator, which can be a page numb
 
 
 | Syntax | Output |
-|----------------|----------------|
+| :--------------: | :--------------: |
 | `@Aubenque1961a` | @Aubenque1961a |
 | `[@Aubenque1961a]` | [@Aubenque1961a] |
 | `[@Aubenque1961a, p.15]` | [@Aubenque1961a, p.15] |
