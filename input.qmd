@@ -14,7 +14,6 @@ verbosity: ERROR
 #section-bibs-level: 1 # for section-bibliographies
 #reference-section-title: References # for section-bibliographies
 #csl: https://raw.githubusercontent.com/bcdavasconcelos/ABNT-Phi/main/abnt-phi-sc.csl
-mainfont: Alegreya
 format:
   html:
     header-includes: |

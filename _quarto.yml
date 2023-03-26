@@ -80,8 +80,8 @@ format: # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
     reference-location: document # `block`, `section`, `margin`, `document`
 
 filters:
-  - docs_qmd/_extensions/quarto-ext/fontawesome/fontawesome.lua
-  - docs_qmd/_extensions/include-code-files/include-code-files.lua
+  - fontawesome
+  - include-code-files
   - citetools
 
 citeproc: false

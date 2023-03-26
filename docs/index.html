@@ -77,6 +77,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -249,7 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Cite Tools is an extension of the Quarto Open-Source Scientific and Technical Publishing System, built upon Pandoc and compatible with any version above <code>2.17</code>, that bundles together <a href="./docs_qmd/05-about.html">several Lua filters</a> 🌙 to introduce advanced bibliography features.</p>
 <section id="why-a-bibliography" class="level2">
 <h2 class="anchored" data-anchor-id="why-a-bibliography">Why a bibliography 🔌?</h2>
-<p>Users of the jurasic <a href="https://en.wikipedia.org/wiki/BibTeX">BibTeX</a> would probably be exceptionally pleased with the speed and reliability of Pandoc Citeproc, and the fact that it converts documents to over 60 different formats (including HTML, LaTeX, Word).</p>
+<p>Users of the Jurassic <a href="https://en.wikipedia.org/wiki/BibTeX">BibTeX</a> would probably be exceptionally pleased with the speed and reliability of Pandoc Citeproc, and the fact that it converts documents to over 60 different formats (including HTML, LaTeX, Word).</p>
 <p>Out-of-the-box, however, Citeproc does not provide common BibTeX functionalities, such as the ability to split the bibliography into multiple sections, or the ability to cite arbitrary fields of the references (<em>e.g.</em> <code>citetitle</code>, <code>citeauthor</code>, <code>citefield</code>). It also lacks the interesting <strong>backref</strong> option afforded by BibTeX and <a href="http://www.ctan.org/pkg/hyperref">HyperRef</a>, which allows for the creation of linked indexes of citations.</p>
 <p>Luckely, Citeproc is extensible, and this extension aims to provide a solution to these limitations and, <em>hopefully</em>, allow Pandoc and Quarto users to <strong>completely</strong> replace BibTeX/BibLaTeX with Citeproc. It will allow the user to <em>easily</em> create multiple bibliographies (or bibliographies with multiple sections, such as <em>primary</em> and <em>secondary sources</em>), cite arbitrary fields of the references<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, and create linked indexes of citations<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. All of this with very little configuration needed.</p>
 <p>Also, with the advent of Quarto, it has become easier for those not well-versed Lua or Pandoc to use extensions such as this one! So, why not?!</p>
@@ -280,9 +282,9 @@ Quarto Quickstart 🚀
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li>On macOS (), use <a href="https://brew.sh/">Homebrew</a> to <code>brew install quarto</code>.</li>
-<li>On Windows (), use <a href="https://chocolatey.org/">Chocolatey</a> to <code>choco install quarto</code>.</li>
-<li>On Linux (), use your package manager to install <code>quarto</code>.</li>
+<li>On macOS (<i class="fa-brands fa-apple" aria-label="apple"></i>), use <a href="https://brew.sh/">Homebrew</a> to <code>brew install quarto</code>.</li>
+<li>On Windows (<i class="fa-brands fa-windows" aria-label="windows"></i>), use <a href="https://chocolatey.org/">Chocolatey</a> to <code>choco install quarto</code>.</li>
+<li>On Linux (<i class="fa-brands fa-linux" aria-label="linux"></i>), use your package manager to install <code>quarto</code>.</li>
 </ul>
 <p>Find out more at <a href="https://github.com/mcanouil/awesome-quarto">Awesome Quarto</a>, <a href="https://github.com/quarto-ext?type=source">Quarto Extensions</a>, <a href="https://github.com/search?q=topic%3Aquarto&amp;type=repositories">Quarto on Github</a>, <a href="https://community.rstudio.com/tags/quarto">RStudio Community</a>, <a href="https://stackoverflow.com/questions/tagged/quarto">Stack Overflow</a>, <a href="https://twitter.com/quarto_pub">Twitter</a>.</p>
 </div>
@@ -291,12 +293,12 @@ Quarto Quickstart 🚀
 </section>
 <section id="new-to-pandoc" class="level2">
 <h2 class="anchored" data-anchor-id="new-to-pandoc">New to Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&amp;v=4" style="object-fit: cover;width:1em;height:1em;">?</h2>
-<p><a href="https://pandoc.org/">Pandoc</a> is a universal document converter developed by John MacFarlane, professor of philosophy, that is at the core of Quarto. To learn more about it, see the <a href="https://pandoc.org/MANUAL.html">Pandoc User’s Guide</a> <a href="https://pandoc.org/MANUAL.pdf"></a>. You can install Pandoc as a standalone application, but it will also inevitably be included in any Quarto instalation.</p>
+<p><a href="https://pandoc.org/">Pandoc</a> is a universal document converter developed by John MacFarlane, professor of philosophy, that is at the core of Quarto. To learn more about it, see the <a href="https://pandoc.org/MANUAL.html">Pandoc User’s Guide</a> <a href="https://pandoc.org/MANUAL.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a>. You can install Pandoc as a standalone application, but it will also inevitably be included in any Quarto instalation.</p>
 <p>Make sure to check <a href="https://groups.google.com/g/pandoc-discuss">Pandoc-Discuss</a> in case you have unsolved questions. You can also ask questions on <a href="https://stackoverflow.com/questions/tagged/pandoc">Pandoc at Stack Overflow</a>.</p>
 </section>
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation 📦</h2>
-<p>If the prospect of typing something on the command line seems daunting, or if you simply need a sample, you can download the <a href="https://github.com/bcdavasconcelos/citetools/archive/refs/heads/main.zip">citetools repository</a> directly and open it in VSCode to see a working example.</p>
+<p>If the prospect of typing something on the command line seems daunting, or if you simply need a sample, you can download the <a href="https://github.com/bcdavasconcelos/citetools/archive/refs/heads/main.zip">citetools repository</a> <i class="fa-brands fa-github" aria-label="github"></i> directly and open it in VSCode to see a working example.</p>
 <p>Otherwise, create a new project and install it using:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension bcdavasconcelos/citetools</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Activate it by adding <code>citetools</code> to the <code>_quarto.yml</code> file in the filters section.</p>
@@ -337,9 +339,9 @@ Quarto Quickstart 🚀
 <h2 class="anchored" data-anchor-id="documentation">Documentation 📚</h2>
 <p>This <a href="https://quarto.org/docs/websites/">Quarto-powered website</a> provides documentation for the following filters:</p>
 <ul>
-<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/multiple-bibliographies.lua"></a> <a href="./docs_qmd/02-multibib.html">multiple-bibliographies</a></li>
-<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/cite-field.lua"></a> <a href="./docs_qmd/03-cite-field.html">cite-field</a></li>
-<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/citation-backlinks.lua"></a> <a href="./docs_qmd/04-citation-backlinks.html">citation-backlinks</a></li>
+<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/multiple-bibliographies.lua"><i class="fa-solid fa-file-code" aria-label="file-code"></i></a> <a href="./docs_qmd/02-multibib.html">multiple-bibliographies</a></li>
+<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/cite-field.lua"><i class="fa-solid fa-file-code" aria-label="file-code"></i></a> <a href="./docs_qmd/03-cite-field.html">cite-field</a></li>
+<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/citation-backlinks.lua"><i class="fa-solid fa-file-code" aria-label="file-code"></i></a> <a href="./docs_qmd/04-citation-backlinks.html">citation-backlinks</a></li>
 </ul>
 <p>In the future, we plan to add documentation for the following filters:</p>
 <ul>
@@ -349,7 +351,7 @@ Quarto Quickstart 🚀
 </section>
 <section id="contributing" class="level2">
 <h2 class="anchored" data-anchor-id="contributing">Contributing 🤝</h2>
-<p>If you have suggestions for other filters, improvements to the existing ones, or bug reports, please open an issue at the <a href="https://github.com/bcdavasconcelos/citetools/issues">citetools repository</a> .</p>
+<p>If you have suggestions for other filters, improvements to the existing ones, or bug reports, please open an issue at the <a href="https://github.com/bcdavasconcelos/citetools/issues">citetools repository</a> <i class="fa-brands fa-github" aria-label="github"></i>.</p>
 </section>
 <section id="acknowledgments" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments 🙏</h2>

@@ -7,13 +7,14 @@ author: "Bernardo Vasconcelos"
 date: 2023-03-26
 filters:
   - citetools
+  - fontawesome
 ---
 
 Cite Tools is an extension of the Quarto Open-Source Scientific and Technical Publishing System, built upon Pandoc and compatible with any version above `2.17`, that bundles together [several Lua filters](/docs_qmd/05-about.qmd) 🌙 to introduce advanced bibliography features.
 
 ## Why a bibliography 🔌?
 
-Users of the jurasic [BibTeX](https://en.wikipedia.org/wiki/BibTeX) would probably be exceptionally pleased with the speed and reliability of Pandoc Citeproc, and the fact that it converts documents to over 60 different formats (including HTML, LaTeX, Word).
+Users of the Jurassic [BibTeX](https://en.wikipedia.org/wiki/BibTeX) would probably be exceptionally pleased with the speed and reliability of Pandoc Citeproc, and the fact that it converts documents to over 60 different formats (including HTML, LaTeX, Word).
 
 Out-of-the-box, however, Citeproc does not provide common BibTeX functionalities, such as the ability to split the bibliography into multiple sections, or the ability to cite arbitrary fields of the references (*e.g.* `citetitle`, `citeauthor`, `citefield`). It also lacks the interesting **backref** option afforded by BibTeX and [HyperRef](http://www.ctan.org/pkg/hyperref), which allows for the creation of linked indexes of citations.
 
