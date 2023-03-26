@@ -6,8 +6,6 @@
 Core.bib
 pandoclog.json
 .Rproj.user
-_site/
 /.luarc.json
 /.quarto/
 _extensions/.DS_Store
-_site/
