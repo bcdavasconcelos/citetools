@@ -2,6 +2,8 @@
 
 <div id="top"></div>
 
+[![Render and Publish](https://github.com/bcdavasconcelos/citetools/actions/workflows/quarto-publish.yml/badge.svg)](https://github.com/bcdavasconcelos/citetools/actions/workflows/quarto-publish.yml)
+
 <!-- [![GitHub build status][CI badge]][CI workflow] -->
 
 This extension introduces advanced bibliography features to Pandoc and Quarto's Citeproc environment. It bundles several Lua filters ([*vide infra*](#license)) to address complex bibliography demands while keeping the output consistent across all formats (`LaTeX`, `DOCX`, `HTML`, and so on).
