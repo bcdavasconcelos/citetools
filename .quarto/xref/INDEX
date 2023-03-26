@@ -250,5 +250,26 @@
   },
   "input.qmd": {
     "input.html": "a6f47e60"
+  },
+  "docs_qmd/06-multibib-in-scrivener.qmd": {
+    "06-multibib-in-scrivener.html": "fcec4dac"
+  },
+  "docs_qmd/02-multibib.qmd": {
+    "02-multibib.html": "d8e22a53"
+  },
+  "docs_qmd/01-basics.qmd": {
+    "01-basics.html": "6aa04313"
+  },
+  "docs_qmd/05-about.qmd": {
+    "05-about.html": "9d586fa3"
+  },
+  "docs_qmd/03-cite-field.qmd": {
+    "03-cite-field.html": "ba9d22c1"
+  },
+  "docs_qmd/04-citation-backlinks.qmd": {
+    "04-citation-backlinks.html": "83471ceb"
+  },
+  "docs_qmd/11-bibtex-to-csl.qmd": {
+    "11-bibtex-to-csl.html": "f7d913b7"
   }
 }

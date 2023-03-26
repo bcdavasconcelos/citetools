@@ -7,17 +7,9 @@ author: "Bernardo Vasconcelos"
 date: 2023-03-26
 filters:
   - citetools
-#listing:
-#  id: lua-filters
-#  contents:
-#    - docs/cite-field.qmd
-#    - docs/multibib.qmd
-#    - docs/citation-backlinks.qmd
-#  type: grid
-#  grid-columns: 2
 ---
 
-Cite Tools is an extension of the Quarto Open-Source Scientific and Technical Publishing System, built upon Pandoc and compatible with any version above `2.17`, that bundles together [several Lua filters](/docs/05-about.qmd) 🌙 to introduce advanced bibliography features.
+Cite Tools is an extension of the Quarto Open-Source Scientific and Technical Publishing System, built upon Pandoc and compatible with any version above `2.17`, that bundles together [several Lua filters](/docs_qmd/05-about.qmd) 🌙 to introduce advanced bibliography features.
 
 ## Why a bibliography 🔌?
 
@@ -95,7 +87,7 @@ Place the corresponding placeholders where they should be printed in the documen
 
 ## Usage 📖
 
- Cite references [as you normally do in Pandoc](/docs/01-basics.qmd) and they will be linked 🔗 and backlinked 🔗 to the bibliography 📚
+ Cite references [as you normally do in Pandoc](/docs_qmd/01-basics.qmd) and they will be linked 🔗 and backlinked 🔗 to the bibliography 📚
 
  ```markdown
  [@citekey]
@@ -125,9 +117,9 @@ Place the corresponding placeholders where they should be printed in the documen
 
 This [Quarto-powered website](https://quarto.org/docs/websites/) provides documentation for the following filters:
 
-- [{{< fa solid file-code >}}](https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/multiple-bibliographies.lua) [multiple-bibliographies](/docs/02-multibib.qmd)
-- [{{< fa solid file-code >}}](https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/cite-field.lua) [cite-field](/docs/03-cite-field.qmd)
-- [{{< fa solid file-code >}}](https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/citation-backlinks.lua) [citation-backlinks](/docs/04-citation-backlinks.qmd)
+- [{{< fa solid file-code >}}](https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/multiple-bibliographies.lua) [multiple-bibliographies](/docs_qmd/02-multibib.qmd)
+- [{{< fa solid file-code >}}](https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/cite-field.lua) [cite-field](/docs_qmd/03-cite-field.qmd)
+- [{{< fa solid file-code >}}](https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/citation-backlinks.lua) [citation-backlinks](/docs_qmd/04-citation-backlinks.qmd)
 
 In the future, we plan to add documentation for the following filters:
 

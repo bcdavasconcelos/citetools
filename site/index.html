@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./docs/01-basics.html" rel="next">
+<link href="./docs_qmd/01-basics.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -161,28 +161,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/01-basics.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
+  <a href="./docs_qmd/01-basics.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">The Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/02-multibib.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
+  <a href="./docs_qmd/02-multibib.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">Multiple Bibliographies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/03-cite-field.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
+  <a href="./docs_qmd/03-cite-field.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">Cite Field</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/04-citation-backlinks.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
+  <a href="./docs_qmd/04-citation-backlinks.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">Citation Backlinks</span></a>
   </div>
@@ -191,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/05-about.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
+  <a href="./docs_qmd/05-about.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">About</span></a>
   </div>
@@ -251,7 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>Cite Tools is an extension of the Quarto Open-Source Scientific and Technical Publishing System, built upon Pandoc and compatible with any version above <code>2.17</code>, that bundles together <a href="./docs/05-about.html">several Lua filters</a> 🌙 to introduce advanced bibliography features.</p>
+<p>Cite Tools is an extension of the Quarto Open-Source Scientific and Technical Publishing System, built upon Pandoc and compatible with any version above <code>2.17</code>, that bundles together <a href="./docs_qmd/05-about.html">several Lua filters</a> 🌙 to introduce advanced bibliography features.</p>
 <section id="why-a-bibliography" class="level2">
 <h2 class="anchored" data-anchor-id="why-a-bibliography">Why a bibliography 🔌?</h2>
 <p>Users of the jurasic <a href="https://en.wikipedia.org/wiki/BibTeX">BibTeX</a> would probably be exceptionally pleased with the speed and reliability of Pandoc Citeproc, and the fact that it converts documents to over 60 different formats (including HTML, LaTeX, Word).</p>
@@ -325,7 +325,7 @@ Quarto Quickstart 🚀
 </section>
 <section id="usage" class="level2">
 <h2 class="anchored" data-anchor-id="usage">Usage 📖</h2>
-<p>Cite references <a href="./docs/01-basics.html">as you normally do in Pandoc</a> and they will be linked 🔗 and backlinked 🔗 to the bibliography 📚</p>
+<p>Cite references <a href="./docs_qmd/01-basics.html">as you normally do in Pandoc</a> and they will be linked 🔗 and backlinked 🔗 to the bibliography 📚</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@citekey</span><span class="co">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Use <code>[@Citekey]{.csl_field}</code> to arbitrarily 🎯🥋 print specific fields instead of the usual Author-Date.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@citekey</span><span class="co">]</span>{.author}</span>
@@ -342,9 +342,9 @@ Quarto Quickstart 🚀
 <h2 class="anchored" data-anchor-id="documentation">Documentation 📚</h2>
 <p>This <a href="https://quarto.org/docs/websites/">Quarto-powered website</a> provides documentation for the following filters:</p>
 <ul>
-<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/multiple-bibliographies.lua"></a> <a href="./docs/02-multibib.html">multiple-bibliographies</a></li>
-<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/cite-field.lua"></a> <a href="./docs/03-cite-field.html">cite-field</a></li>
-<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/citation-backlinks.lua"></a> <a href="./docs/04-citation-backlinks.html">citation-backlinks</a></li>
+<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/multiple-bibliographies.lua"></a> <a href="./docs_qmd/02-multibib.html">multiple-bibliographies</a></li>
+<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/cite-field.lua"></a> <a href="./docs_qmd/03-cite-field.html">cite-field</a></li>
+<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/citation-backlinks.lua"></a> <a href="./docs_qmd/04-citation-backlinks.html">citation-backlinks</a></li>
 </ul>
 <p>In the future, we plan to add documentation for the following filters:</p>
 <ul>
@@ -737,7 +737,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./docs/01-basics.html" class="pagination-link">
+      <a href="./docs_qmd/01-basics.html" class="pagination-link">
         <span class="nav-page-text">The Basics</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

@@ -14,19 +14,19 @@ website:
         href: index.qmd
         contents:
           - text: "The Basics"
-            href: docs/01-basics.qmd
+            href: docs_qmd/01-basics.qmd
             icon: book
           - text: "Multiple Bibliographies"
             icon: book
-            href: docs/02-multibib.qmd
+            href: docs_qmd/02-multibib.qmd
           - text: "Cite Field"
-            href: docs/03-cite-field.qmd
+            href: docs_qmd/03-cite-field.qmd
             icon: book
           - text: "Citation Backlinks"
-            href: docs/04-citation-backlinks.qmd
+            href: docs_qmd/04-citation-backlinks.qmd
             icon: book
       - text: "About"
-        href: docs/05-about.qmd
+        href: docs_qmd/05-about.qmd
         icon: book
     sort: [title, order]
     logo: "images/greek-ship.png"
