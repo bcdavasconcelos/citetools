@@ -2,7 +2,7 @@
 title: |
   Cite Tools
 subtitle: |
-  Extension 🔌 with advanced bibliography 📚 for Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&v=4" style="object-fit: cover;width:1em;height:1em;" /> and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
+  Extension with advanced bibliography for Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&v=4" style="object-fit: cover;width:1em;height:1em;" /> and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
 author: "Bernardo Vasconcelos"
 date: 2023-03-26
 filters:
@@ -19,7 +19,7 @@ filters:
 
 Cite Tools is an extension of the Quarto Open-Source Scientific and Technical Publishing System, built upon Pandoc and compatible with any version above `2.17`, that bundles together [several Lua filters](/docs/05-about.qmd) 🌙 to introduce advanced bibliography features.
 
-## Why a bibliography extension? 🤔
+## Why a bibliography 🔌?
 
 Users of the jurasic [BibTeX](https://en.wikipedia.org/wiki/BibTeX) would probably be exceptionally pleased with the speed and reliability of Pandoc Citeproc, and the fact that it converts documents to over 60 different formats (including HTML, LaTeX, Word).
 
