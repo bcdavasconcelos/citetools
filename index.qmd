@@ -2,7 +2,7 @@
 title: |
   Cite Tools
 subtitle: |
-  Extension with advanced bibliography for Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&v=4" style="object-fit: cover;width:1em;height:1em;" /> and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
+  Advanced bibliography for Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&v=4" style="object-fit: cover;width:1em;height:1em;" /> and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
 author: "Bernardo Vasconcelos"
 date: 2023-03-26
 filters:
@@ -14,7 +14,7 @@ Cite Tools is an extension of the Quarto Open-Source Scientific and Technical Pu
 
 ## Why a bibliography extension?
 
-Users of the jurassic [BibTeX](https://en.wikipedia.org/wiki/BibTeX) would probably be exceptionally pleased with the speed and reliability of Pandoc Citeproc, and the fact that it converts documents to over 60 different formats (including HTML, LaTeX, Word).
+Users of the jurassic [BibTeX](https://en.wikipedia.org/wiki/BibTeX) would probably be exceptionally pleased with the speed and reliability of Pandoc Citeproc. Apart from being (*a lot*) faster, Citeproc will produce the same output across all formats supported by Pandoc, which amount to over 60, including HTML, LaTeX, and Word.
 
 Out-of-the-box, however, Citeproc does not provide common BibTeX functionalities, such as the ability to split the bibliography into multiple sections, or the ability to cite arbitrary fields of the references (*e.g.* `citetitle`, `citeauthor`, `citefield`). It also lacks the interesting **backref** option afforded by BibTeX and [HyperRef](http://www.ctan.org/pkg/hyperref), which allows for the creation of linked indexes of citations.
 
