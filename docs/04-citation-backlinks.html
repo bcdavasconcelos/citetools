@@ -248,18 +248,18 @@ div.csl-indent {
 
 </header>
 
-<p>In the vanilla Pandoc Citeproc, you can use <code>link-citations</code> to control wheter citations in the body of the text should be clickable links to the reference in the bibliography (<em>e.g.</em> <span id="cite_1"><span class="citation" data-cites="EN"><a href="#ref-EN" role="doc-biblioref"><em>EN</em></a></span></span>). This is a very useful feature, especially when you want to quickly check the source of a citation without having to scroll through the whole text.</p>
+<p>In the vanilla Pandoc Citeproc, you can use <code>link-citations</code> to control whether citations in the body of the text should be clickable links to the reference in the bibliography (<em>e.g.</em> <span id="cite_1"><span class="citation" data-cites="EN"><a href="#ref-EN" role="doc-biblioref"><em>EN</em></a></span></span>). This is a very useful feature, especially when you want to quickly check the source of a citation without having to scroll through the whole text.</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>The <code>citetools</code>extension will take this one step further and adds to the the entries in the bibliography – in a crescent ordinal fashion <code>[1, 2, 3, 4]</code><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> – a backlink to every citation they have received in the document.</p>
+<p>The <code>citetools</code> extension will take this one step further and adds to the entries in the bibliography – in a crescent ordinal fashion <code>[1, 2, 3, 4]</code><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> – a backlink to every citation they have received in the document.</p>
 </div>
 </div>
 </div>
-<p>This allows the reader to easily arrive at sections of the text where the same reference was discussed, quickly seeing with the the array of backlinks, how many times each reference was used in the text (<em>see reference in the bottom of the text</em>).</p>
+<p>This allows the reader to easily arrive at sections of the text where the same reference was discussed, quickly seeing with the array of backlinks, how many times each reference was used in the text (<em>see reference at the bottom of the text</em>).</p>
 <section id="how-to-avoid-an-excess-of-undesired-links" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-avoid-an-excess-of-undesired-links">How to avoid an excess of undesired links</h2>
 <p>In <code>citetools</code> there are options to avoid undesired linking and anomalies caused by citing individual fields, such as repeated links to the same entry in a single phrase or section.</p>
@@ -287,32 +287,27 @@ div.csl-indent {
 </section>
 <section id="global-options" class="level3">
 <h3 class="anchored" data-anchor-id="global-options">Global options</h3>
-<p>Then, there is also the global <code>link-fields</code> option, which allows the user to turn off links in citations that target individual fields. It can be used in conjuntion with other options that target the bibliography, such as <code>link-citations</code> and <code>link-bibliography</code>.</p>
+<p>Then, there is also the global <code>link-fields</code> option, which allows the user to turn off links in citations that target individual fields. It can be used in conjunction with other options that target the bibliography, such as <code>link-citations</code> and <code>link-bibliography</code>.</p>
 <div class="sourceCode" id="annotated-cell-1"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-1" class="code-annotation-target"><a href="#annotated-cell-1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">link-citations</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2">2</button><span id="annotated-cell-1-2" class="code-annotation-target"><a href="#annotated-cell-1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">link-fields</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="3">3</button><span id="annotated-cell-1-3" class="code-annotation-target"><a href="#annotated-cell-1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">link-bibliography</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="4">4</button><span id="annotated-cell-1-4" class="code-annotation-target"><a href="#annotated-cell-1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lang</span><span class="kw">:</span><span class="at"> en-US</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="5">5</button><span id="annotated-cell-1-5" class="code-annotation-target"><a href="#annotated-cell-1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">notes-after-punctuation</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="4">4</button><span id="annotated-cell-1-4" class="code-annotation-target"><a href="#annotated-cell-1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lang</span><span class="kw">:</span><span class="at"> en-ZA</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="1" data-code-annotation="1" data-code-cell="annotated-cell-1">If true, citations will be hyperlinked to the corresponding bibliography entries (for author-date and numerical styles only). Defaults to false.</span>
+<span data-code-annotation="1" data-code-lines="1" data-code-cell="annotated-cell-1">Hyperlink citations to the corresponding bibliography entries. Defaults to false.</span>
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="2" data-code-annotation="2" data-code-cell="annotated-cell-1">If true, citations which target a specific variable or field will be hyperlinked to the corresponding bibliography entries (for author-date and numerical styles only). If <code>link-citations</code> is true, this defaults to true.</span>
+<span data-code-annotation="2" data-code-lines="2" data-code-cell="annotated-cell-1">Hyperlink citations that target specific CSL fields to the corresponding entries in the bibliography. If <code>link-citations</code> is true, this defaults to true.</span>
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-lines="3" data-code-annotation="3" data-code-cell="annotated-cell-1">If true, DOIs, PMCIDs, PMID, and URLs in bibliographies will be rendered as hyperlinks. (If an entry contains a DOI, PMCID, PMID, or URL, but none of these fields are rendered by the style, then the title, or in the absence of a title the whole entry, will be hyperlinked.) Defaults to true.</span>
+<span data-code-annotation="3" data-code-lines="3" data-code-cell="annotated-cell-1">Hyperlink DOIs, PMCIDs, PMID, and URLs in bibliographies. Defaults to true.</span>
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-lines="4" data-code-annotation="4" data-code-cell="annotated-cell-1">The lang field will affect how the style is localized, for example in the translation of labels, the use of quotation marks, and the way items are sorted. (For backwards compatibility, locale may be used instead of lang, but this use is deprecated.)</span>
-</dd>
-<dt data-target-cell="annotated-cell-1" data-target-annotation="5">5</dt>
-<dd>
-<span data-code-lines="5" data-code-annotation="5" data-code-cell="annotated-cell-1">If true (the default for note styles), pandoc will put footnote references or superscripted numerical citations after following punctuation. For example, if the source contains blah blah [@jones99]., the result will look like blah blah.[^1], with the note moved after the period and the space collapsed. If false, the space will still be collapsed, but the footnote will not be moved after the punctuation. The option may also be used in numerical styles that use superscripts for citation numbers (but for these styles the default is not to move the citation).</span>
+<span data-code-annotation="4" data-code-lines="4" data-code-cell="annotated-cell-1">Affects the bibliography tags. Defaults to en-US.</span>
 </dd>
 </dl>
 </section>
@@ -332,9 +327,18 @@ Aristotle. 1831. <span>“Ethica Nicomachea.”</span> In <em>Aristotelis Opera<
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>In other output formats, such as PDF, the reader will see the page number insted of a crescent ordinal number.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>In other output formats, such as PDF, the reader will see the page number instead of a crescent ordinal number.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section></div></main> <!-- /main -->
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{vasconcelos2023,
+  author = {Vasconcelos, BCDA},
+  title = {Citation {Backlinks}},
+  date = {2023},
+  url = {https://bcdavasconcelos.github.io/citetools/docs/04-citation-backlinks.html},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-vasconcelos2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Vasconcelos, BCDA. 2023. <span>“Citation Backlinks.”</span> 2023. <a href="https://bcdavasconcelos.github.io/citetools/docs/04-citation-backlinks.html">https://bcdavasconcelos.github.io/citetools/docs/04-citation-backlinks.html</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -763,7 +767,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© CC-By BCDAV, 2023</div>   
+    <div class="nav-footer-left"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"></a> BCDAV, 2023</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>

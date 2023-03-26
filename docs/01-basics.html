@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cite Tools - The Basics of Pandoc’s Citeproc</title>
+<title>Cite Tools - The Basics of Pandoc Citeproc</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -232,7 +232,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The Basics of Pandoc’s Citeproc</h1>
+<h1 class="title">The Basics of Pandoc Citeproc</h1>
 </div>
 
 
@@ -273,8 +273,8 @@ Creating a bibliography file
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Before you can use Cite Tool, you will need a bibliography file. Although nothing stops you from keeping bibliography files manually, this is not advisible for anything other than very small scale projects. For everything else, consider using a software such as <a href="http://www.zotero.org">Zotero</a>, <a href="https://www.jabref.org">JabRef</a>, <a href="https://www.sonnysoftware.com">Bookends</a>, <a href="https://bibdesk.sourceforge.io">Bibdesk</a>, <a href="https://endnote.com">Endnote</a> (and see also <a href="https://en.wikipedia.org/wiki/Comparison_of_reference_management_software">this comparison on Wikipedia</a>). These programs allows you to edit your bibliography and easily export it in the desired format.</p>
-<p>The most common format, and one of the oldest, is called <code>BibTeX</code> (or <code>BibLaTeX</code>); others, more recent, include <code>CSL-JSON</code> and <code>CSL-YAML</code>. These latter are <em>preferable</em> since they perform much faster on <strong>Pandoc</strong> and <strong>Quarto</strong> (being, in fact, the format used to represent the bibliography internally)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>Before you can use Cite Tool, you will need a bibliography file. Although nothing stops you from keeping bibliography files manually, this is not advisable for anything other than very small-scale projects. For everything else, consider using software such as <a href="http://www.zotero.org">Zotero</a>, <a href="https://www.jabref.org">JabRef</a>, <a href="https://www.sonnysoftware.com">Bookends</a>, <a href="https://bibdesk.sourceforge.io">Bibdesk</a>, <a href="https://endnote.com">Endnote</a> (and see also <a href="https://en.wikipedia.org/wiki/Comparison_of_reference_management_software">this comparison on Wikipedia</a>). These programs allow you to edit your bibliography and easily export it in the desired format.</p>
+<p>The most common format, and one of the oldest, is called <code>BibTeX</code> (or <code>BibLaTeX</code>); others, more recent, include <code>CSL-JSON</code> and <code>CSL-YAML</code>. These latter are <em>preferable</em> since they perform much faster on <strong>Pandoc</strong> and <strong>Quarto</strong> (being the format used to represent the bibliography internally)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <p>You can also use shared bibliographies on Github (just provide Pandoc with the URL to the raw file) or shared Zotero libraries, which can be downloaded using the API by accessing the link below, where <code>LibraryID</code> should be replaced by the 7-digit code in the middle of the library URL.</p>
 <p><code>https://api.zotero.org/groups/LibraryID/items?format=bibtex&amp;limit=999</code></p>
 </div>
@@ -282,7 +282,7 @@ Creating a bibliography file
 </div>
 <section id="how-to-setup-a-simple-bibliography" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-setup-a-simple-bibliography">How to Setup a Simple Bibliography</h2>
-<p>To set up the bibliography of a document, include the the path to the bibliography file in the YAML header.</p>
+<p>Set up the bibliography of a document by including the path to the bibliography file in the YAML header.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> path/to/bibfile.bib</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">csl</span><span class="kw">:</span><span class="at"> path/to/cslfile.csl</span><span class="co"> # optional</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -301,7 +301,7 @@ CSL file
 </div>
 </div>
 </div>
-<p>It is also advisable keeping the bibliography and CSL style files in the default Pandoc folder:</p>
+<p>It is also advisable to keep the bibliography and CSL style files in the default Pandoc folder:</p>
 <ul>
 <li><i class="fa-brands fa-apple" aria-label="apple"></i> macOS: <code>~/.local/share/pandoc</code></li>
 <li><i class="fa-brands fa-linux" aria-label="linux"></i> Linux: <code>~/.local/share/pandoc</code></li>
@@ -309,7 +309,7 @@ CSL file
 </ul>
 <p>You can find the path to your Pandoc folder by running the following command in your terminal:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This way, you can use the same bibliography and CSL style files in all your documents. Alternatively, you can keep the files in the same folder as your document, which is the approach favored by <a href="https://quarto.org/docs/projects/quarto-projects.html">Quarto</a>.</p>
+<p>This way, you can use the same bibliography and CSL-style files in all your documents. Alternatively, you can keep the files in the same folder as your document, which is the approach favored by <a href="https://quarto.org/docs/projects/quarto-projects.html">Quarto</a>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -322,13 +322,13 @@ How to share the Pandoc folder
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>If the Pandoc folder needs to me shared among multiple devices, you can use a cloud service like Dropbox or Google Drive to store the files and use a <code>symbolic link</code> to place the files in the Pandoc folder. For example, if you are using Dropbox, you can run the following command in your terminal:</p>
+<p>If the Pandoc folder needs to be shared among multiple devices, you can use a cloud service like Dropbox or Google Drive to store the files and use a <code>symbolic link</code> to place the files in the Pandoc folder. For example, if you are using Dropbox, you can run the following command in your terminal:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> ~/Dropbox/Pandoc ~/.local/share/pandoc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The symbolic link will appear as a shortcut pointing to the Dropbox folder and any changes will be reflected in both locations.</p>
 </div>
 </div>
 </div>
-<p>If the files are in Pandoc’s default folder or in the same folder as the document, you can simply supply the file name:</p>
+<p>If the files are in the default Pandoc folder or the same folder as the document, you can simply supply the file name:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> bibfile.bib</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">csl</span><span class="kw">:</span><span class="at"> cslfile.csl</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can, but you don’t have to, place a div at the end of the document or where you want the bibliography to be printed.</p>
@@ -344,7 +344,7 @@ How to share the Pandoc folder
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>The advantage of this markup syntax lies in its simplicity and the compatibility with all formats supported by Pandoc, a universal document converter.</p>
+<p>The advantage of this markup syntax lies in its simplicity and compatibility with all formats supported by Pandoc, a universal document converter.</p>
 </div>
 </div>
 </div>
@@ -410,9 +410,19 @@ Aubenque, Pierre. 1961. <span>“Sur La Notion Aristotélicienne d’aporie.”<
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>They are not, however, widely supported, so you’ll probably be stuck with <code>BibTeX</code> or <code>BibLaTeX</code> anyway.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>They are not, however, widely supported, so you’ll probably be stuck with <code>BibTeX</code> or <code>BibLaTeX</code> in some way or other anyway.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section></div></main> <!-- /main -->
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{vasconcelos2023,
+  author = {Vasconcelos, BCDA},
+  title = {The {Basics} of {Pandoc} {Citeproc}},
+  date = {2023},
+  url = {https://bcdavasconcelos.github.io/citetools/docs/01-basics.html},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-vasconcelos2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Vasconcelos, BCDA. 2023. <span>“The Basics of Pandoc Citeproc.”</span>
+2023. <a href="https://bcdavasconcelos.github.io/citetools/docs/01-basics.html">https://bcdavasconcelos.github.io/citetools/docs/01-basics.html</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -776,7 +786,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© CC-By BCDAV, 2023</div>   
+    <div class="nav-footer-left"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"></a> BCDAV, 2023</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>

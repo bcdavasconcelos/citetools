@@ -207,7 +207,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title"><p>Cite Tools</p></h1>
-<p class="subtitle lead"></p><p>Advanced bibliography for Pandoc and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;"></p><p></p>
+<p class="subtitle lead"></p><p>Extension 🔌 with advanced bibliography 📚 for Pandoc and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;"></p><p></p>
 </div>
 
 
@@ -234,7 +234,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>This extension introduces advanced bibliography features by bundling up several Lua filters (<a href="#license">see below</a>). It allows, among other things, the creation of multiple bibliographies (or bibliographies with multiple sections, such as <code>primary sources</code> and <code>secondary sources</code>), the citation of arbitrary fields from the references, such as <code>author</code>, <code>editor</code>, and <code>translator</code> names, or <code>title</code> and <code>original-title</code> of works. And last, but not least, the creation of linked indexes of citations.</p>
+<p>This extension bundles together <a href="./docs/05-about.html">several Lua filters</a> 🌙 that will work with any Pandoc version above <code>2.17</code>.</p>
+<p>This extension allows for:</p>
+<ul>
+<li>The creation of multiple bibliographies (or bibliographies with multiple sections, such as <em>primary</em> and <em>secondary sources</em>).</li>
+<li>The citation of arbitrary fields<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> of the references, such as <em>author</em>, <em>editor</em>, and <em>translator</em> names, or <em>title</em> and <em>original-title</em> of works.</li>
+<li>The creation of linked indexes of citations.</li>
+</ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -247,8 +253,14 @@ New to Quarto <img src="https://quarto.org/favicon.png" style="object-fit: cover
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Visit the <a href="https://quarto.org/docs/get-started/">getting started</a> guide to download and install Quarto.</p>
-<p><strong>Jumpstart:</strong> On macOS (<i class="fa-brands fa-apple" aria-label="apple"></i>), use <a href="https://brew.sh/">Homebrew</a> to <code>brew install quarto</code>. On Windows (<i class="fa-brands fa-windows" aria-label="windows"></i>), use <a href="https://chocolatey.org/">Chocolatey</a> to <code>choco install quarto</code>. On Linux (<i class="fa-brands fa-linux" aria-label="linux"></i>), use your package manager to install <code>quarto</code>.</p>
+<p>Visit the <a href="https://quarto.org/docs/get-started/">getting started</a> guide to download and install Quarto. Once installed, you can use it to create, build, and preview your documents. Quarto is built on top of Pandoc, and it is compatible with all of Pandoc’s features.</p>
+<p>I <strong>highly recommend</strong> visiting the <a href="https://quarto.org/docs/get-started/hello/vscode.html">Tutorial: Hello, Quarto</a> to learn how to create your first document with Quarto. You’ll learn how to create a document, build it, and preview it; and will learn more about the excellent extensions for <a href="https://quarto.org/docs/get-started/#quarto-for-vs-code">VS Code</a> and <a href="https://quarto.org/docs/get-started/#quarto-for-rstudio">RStudio</a> that will make your life easier.</p>
+<p><strong>Jumpstart:</strong></p>
+<ul>
+<li>On macOS (<i class="fa-brands fa-apple" aria-label="apple"></i>), use <a href="https://brew.sh/">Homebrew</a> to <code>brew install quarto</code>.</li>
+<li>On Windows (<i class="fa-brands fa-windows" aria-label="windows"></i>), use <a href="https://chocolatey.org/">Chocolatey</a> to <code>choco install quarto</code>.</li>
+<li>On Linux (<i class="fa-brands fa-linux" aria-label="linux"></i>), use your package manager to install <code>quarto</code>.</li>
+</ul>
 <p><strong>Go deeper:</strong> <a href="https://github.com/mcanouil/awesome-quarto">Awesome Quarto</a>, <a href="https://github.com/quarto-ext?type=source">Quarto Extensions</a>, <a href="https://github.com/search?q=topic%3Aquarto&amp;type=repositories">Quarto on Github</a>, <a href="https://community.rstudio.com/tags/quarto">RStudio Community</a>, <a href="https://stackoverflow.com/questions/tagged/quarto">Stack Overflow</a>, <a href="https://twitter.com/quarto_pub">Twitter</a>.</p>
 </div>
 </div>
@@ -259,48 +271,177 @@ New to Quarto <img src="https://quarto.org/favicon.png" style="object-fit: cover
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Quickstart
+New to Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&amp;v=4" style="object-fit: cover;width:1em;height:1em;">?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>At the core of Quarto lies Pandoc, the universal document converter developed by John MacFarlane, professor of philosophy. You can learn more about Pandoc <a href="https://pandoc.org/">here</a>. In particular, see the <a href="https://pandoc.org/MANUAL.html">Pandoc User’s Guide</a> <a href="https://pandoc.org/MANUAL.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a>. You can install Pandoc indenpendently, but if you install Quarto, Pandoc will be installed automatically.</p>
+<p>Make sure to check <a href="https://groups.google.com/g/pandoc-discuss">Pandoc-Discuss</a> in case you have unsolved questions. You can also ask questions on <a href="https://stackoverflow.com/questions/tagged/pandoc">Pandoc at Stack Overflow</a>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Justification 🤔
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>BibLaTeX users trying out Citeproc would probably be exceptionally pleased with its speed and reliability, and the fact that one can convert bibliography consistently into all formats supported by Pandoc (including HTML, LaTeX, Word, and dozens of others).</p>
+<p>Some limitations, however, would inevitably become apparent. First, there is the inability to split the bibliography into multiple sections. Then, there is the lack of commands familiar to BibTeX users, such as <code>\citetitle</code>, <code>\citeauthor</code>, <code>\citefield</code>. Finally, there is the lack of the interesting <code>backref</code> option afforded by bibtex and hyperref, which allows for the creation of linked indexes of citations.</p>
+<p>This extension aims to provide a solution to these limitations and, <em>hopefully</em>, allow Pandoc and Quarto users to <em>completely</em> replace BibTeX/BibLaTeX with Citeproc.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Installation 📦
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Install using:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension bcdavasconcelos/citetools</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Activate it by adding <code>citetools</code> to the <code>_quarto.yml</code> file in the filters section.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filters</span><span class="kw">:</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> citetools</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Add bibliography files to the metadata using <code>bibliography_BIBNAME: path/to/bibfile.bib</code>, adding the corresponding divs to the document using:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::: {#refs_BIBNAME}</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Cite reference as you normally do with Pandoc using <code>[@Citekey]</code>. When necessary, use <code>[@Citekey]{.csl_field}</code> to cite using a specific <a href="docs/csl-fields.qmd">CSL-Field</a>.</p>
-<p>You can disable the automatic linking of citations with CSL fields by adding <code>link-fields: false</code> to the metadata.</p>
-<p>That’s it.</p>
+<p>If you need a sample project to test it out, you can download the <a href="https://github.com/bcdavasconcelos/citetools/archive/refs/heads/main.zip">citetools repository</a> <i class="fa-brands fa-github" aria-label="github"></i></p>
 </div>
 </div>
 </div>
-<!-- <img width="665" alt="image" src="https://user-images.githubusercontent.com/35749099/226091195-7b27f8a7-c802-4cbb-bac9-81265b7aed45.png"> -->
-<!-- License
-------------------------------------------------------------------
-Filters published under the MIT license by Albert Krewinkel ([tarleb](https://github.com/tarleb)).
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Quickstart 🚀
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Add the path to the bibliography files to the document YAML header or to <code>_quarto.yml</code> 📁</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography_bib-name</span><span class="kw">:</span><span class="at"> path/to/bibfile.bib</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography_other-bib-name</span><span class="kw">:</span><span class="at"> path/to/otherbibfile.bib</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Place the corresponding placeholders where they should be printed in the document body 🖨️</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>::: {#refs_bib-name}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>::: {#refs_other-bib-name}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Cite references <a href="./docs/01-basics.html">as you normally do in Pandoc</a> and they will be linked 🔗 and backlinked 🔗 to the bibliography 📚</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@citekey</span><span class="co">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Use <code>[@Citekey]{.csl_field}</code> to arbitrarily print specific fields instead of the usual Author-Date 💪</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@citekey</span><span class="co">]</span>{.author}</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@citekey</span><span class="co">]</span>{.title}</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@citekey</span><span class="co">]</span>{.original-title}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Append the field name with a dot (<code>.</code>) to avoid creating a link to the bibliography in this particular citation📍</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@citekey</span><span class="co">]</span>{.author.}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This can also be done globally by setting <code>link-fields: false</code> in the metadata<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> 🌐</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">link-fields</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You’re ready to rock. 🤘</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Documentation 📚
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This <a href="https://quarto.org/docs/websites/">Quarto-powered website</a> documents the following filters:</p>
+<ul>
+<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/multiple-bibliographies.lua"><i class="fa-solid fa-file-code" aria-label="file-code"></i></a> <a href="./docs/02-multibib.html">multiple-bibliographies</a></li>
+<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/cite-field.lua"><i class="fa-solid fa-file-code" aria-label="file-code"></i></a> <a href="./docs/03-cite-field.html">cite-field</a></li>
+<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/citation-backlinks.lua"><i class="fa-solid fa-file-code" aria-label="file-code"></i></a> <a href="./docs/04-citation-backlinks.html">citation-backlinks</a></li>
+</ul>
+<p>In the future, we plan to add documentation for the following filters:</p>
+<ul>
+<li><a href="https://github.com/pandoc-ext/section-bibliographies">section-bibliographies</a></li>
+<li><a href="https://github.com/dialoa/recursive-citeproc">recursive citeproc</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contributing 🤝
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you have suggestions for other filters, improvements to the existing ones, or bug reports, please open an issue at the <a href="https://github.com/bcdavasconcelos/citetools/issues">citetools repository</a> <i class="fa-brands fa-github" aria-label="github"></i>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Acknowledgments 🙏
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>John MacFarlane, for creating Pandoc and Quarto.</li>
+<li>Albert Krewinkel, for creating Pandoc filters.</li>
+<li>The community of Quarto and Pandoc users.</li>
+</ul>
+</div>
+</div>
+</div>
 
-- [multibib](https://github.com/pandoc-ext/multibib)
-- [multiple-bibliographies](https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies)
-- [citation-backlinks](https://github.com/bcdavasconcelos/citation-backlinks)
-- [section-bibliographies](https://github.com/pandoc-ext/section-bibliographies)
-
-Filters published under the MIT license by Albert Krewinkel ([tarleb](https://github.com/tarleb)) & Bernardo Vasconcelos ([bcdavasconcelos](https://github.com/bcdavasconcelos)).
-
-- [citefield](https://github.com/bcdavasconcelos/citefield)
-
-
-All Pandoc Lua filters in this extension are published under the MIT license, see
-file `LICENSE` for details. -->
-<!-- [Back to top](#top) -->
 
 
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>In the official nomenclature, CSL has <em>variables</em>, BibTeX has <em>fields</em>, and RIS has <em>tags</em>. As a general rule, we have stuck to the term <em>fields</em>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>If <code>link-citations</code> is <code>false</code> then <code>link-fields</code> will also default to <code>false</code>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{vasconcelos2023,
+  author = {Vasconcelos, BCDA},
+  title = {Cite {Tools}},
+  date = {2023},
+  url = {https://bcdavasconcelos.github.io/citetools/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-vasconcelos2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Vasconcelos, BCDA. 2023. <span>“Cite Tools .”</span> 2023. <a href="https://bcdavasconcelos.github.io/citetools/">https://bcdavasconcelos.github.io/citetools/</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -661,7 +802,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© CC-By BCDAV, 2023</div>   
+    <div class="nav-footer-left"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"></a> BCDAV, 2023</div>   
     <div class="nav-footer-center">
       &nbsp;
     <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/bcdavasconcelos/citetools/edit/main/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/bcdavasconcelos/citetools/issues/new" class="toc-action">Report an issue</a></p></div></div></div>

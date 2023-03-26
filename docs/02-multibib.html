@@ -222,8 +222,8 @@ div.csl-indent {
   <li><a href="#how-to-setup-multiple-bibliographies" id="toc-how-to-setup-multiple-bibliographies" class="nav-link active" data-scroll-target="#how-to-setup-multiple-bibliographies">How to Setup Multiple Bibliographies</a></li>
   <li><a href="#minimal-example-with-strategy-to-ensure-matching-ids" id="toc-minimal-example-with-strategy-to-ensure-matching-ids" class="nav-link" data-scroll-target="#minimal-example-with-strategy-to-ensure-matching-ids">Minimal example with strategy to ensure matching IDs</a>
   <ul class="collapse">
-  <li><a href="#primary-sources" id="toc-primary-sources" class="nav-link" data-scroll-target="#primary-sources">Primary Sources</a></li>
-  <li><a href="#secondary-sources" id="toc-secondary-sources" class="nav-link" data-scroll-target="#secondary-sources">Secondary Sources</a></li>
+  
+  
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/bcdavasconcelos/citetools/edit/main/docs/02-multibib.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/bcdavasconcelos/citetools/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -281,7 +281,7 @@ Installation
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>There are two versions of the multilple bibliographies filter by Albert Krewinkel. The first one is called <code>multiple-bibliographies</code> and it can be found in the Pandoc Lua Filters <a href="https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies">repository</a>. The second one is called <code>multibib</code> and it can be found in its own <a href="https://github.com/pandoc-ext/multibib">repository</a>. We are using the first one due to <a href="https://github.com/pandoc-ext/multibib/issues/4#issue-1623925814">small issues</a> with he second. The differences between them are boderline inexistent, but there are some. <!-- [^2] --></p>
+<p>There are two versions of the multilple bibliographies filter by Albert Krewinkel. The first one is called <code>multiple-bibliographies</code> and it can be found in the Pandoc Lua Filters <a href="https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies">repository</a>. The second one is called <code>multibib</code> and it can be found in its own <a href="https://github.com/pandoc-ext/multibib">repository</a>. We are using the first one due to a <a href="https://github.com/pandoc-ext/multibib/issues/4#issue-1623925814">minute issue</a> with he second. The differences between them are boderline inexistent, but there are some.</p>
 <p>Both filters are included in the bundle, but only <code>multiple bibliographies</code> is being used by default. You are, however, free to experiment with both editing the content of the <code>_quarto.yaml</code> file in the <code>_extension</code> folder. They have both been <a href="https://github.com/bcdavasconcelos/citetools/blob/7ac1c6fd8c1d39db56ac5a41c037853cd76ac301/_extensions/citetools/multiple-bibliographies.lua#L66">tweaked to work</a> with the <code>citetools</code> extension.</p>
 </div>
 </div>
@@ -302,8 +302,8 @@ Installation
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>With <code>multibib</code>, you should add all of them to the <code>bibliography</code> entry instead, in the form of a dictionary.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at">  </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at"> refs/primary.json  </span></span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at"> refs/primary.json</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">secondary</span><span class="kw">:</span><span class="at"> refs/secondary.json</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -365,7 +365,7 @@ Div names
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@EN</span><span class="co">] [@Aubenque1961a]</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Primary Sources</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Primary Sources {.appendix}</span></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>bibliography_primary: refs/primary.json</span>
@@ -374,7 +374,7 @@ Div names
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>::: {#refs_primary}</span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Secondary Sources</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Secondary Sources  {.appendix}</span></span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>bibliography_secondary: refs/secondary.json</span>
@@ -384,16 +384,19 @@ Div names
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You should have a working document with multiple bibliographies:</p>
 <p><span id="cite_1"><span class="citation" data-cites="EN">(<a href="#ref-EN" role="doc-biblioref">Aristotle 1831</a>)</span></span> <span id="cite_2"><span class="citation" data-cites="Aubenque1961a">(<a href="#ref-Aubenque1961a" role="doc-biblioref">Aubenque 1961</a>)</span></span></p>
-<section id="primary-sources" class="level3">
-<h3 class="anchored" data-anchor-id="primary-sources">Primary Sources</h3>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section id="primary-sources" class="level3 appendix"><h2 class="anchored quarto-appendix-heading">Primary Sources</h2><div class="quarto-appendix-contents">
+
 <div id="refs_primary" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-EN" class="csl-entry" role="listitem">
 Aristotle. 1831. <span>“Ethica Nicomachea.”</span> In <em>Aristotelis Opera</em>, edited by Immanuel Bekker, 1094a01–1181b23. Berlim: Reimer. [<a href="#cite_1">1</a>]
 </div>
 </div>
-</section>
-<section id="secondary-sources" class="level3">
-<h3 class="anchored" data-anchor-id="secondary-sources">Secondary Sources</h3>
+</div></section><section id="secondary-sources" class="level3 appendix"><h2 class="anchored quarto-appendix-heading">Secondary Sources</h2><div class="quarto-appendix-contents">
+
 <div id="refs_secondary" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-Aubenque1961a" class="csl-entry" role="listitem">
 Aubenque, Pierre. 1961. <span>“Sur La Notion Aristotélicienne d’aporie.”</span> In <em>Aristote Et Les Problèmes de Méthode</em>, edited by S. Mansion. Louvain: Publications Universitaires. [<a href="#cite_2">1</a>]
@@ -401,10 +404,17 @@ Aubenque, Pierre. 1961. <span>“Sur La Notion Aristotélicienne d’aporie.”<
 </div>
 
 
-</section>
-</section>
-
-</main> <!-- /main -->
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{vasconcelos2023,
+  author = {Vasconcelos, BCDA},
+  title = {Multiple {Bibliographies}},
+  date = {2023},
+  url = {https://bcdavasconcelos.github.io/citetools/docs/02-multibib.html},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-vasconcelos2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Vasconcelos, BCDA. 2023. <span>“Multiple Bibliographies.”</span> 2023.
+<a href="https://bcdavasconcelos.github.io/citetools/docs/02-multibib.html">https://bcdavasconcelos.github.io/citetools/docs/02-multibib.html</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -768,7 +778,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© CC-By BCDAV, 2023</div>   
+    <div class="nav-footer-left"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"></a> BCDAV, 2023</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>

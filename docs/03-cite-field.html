@@ -245,7 +245,7 @@ div.csl-indent {
 
 </header>
 
-<p>In many areas we are frequently invited to comment on different editions and translations of the same work. In such cases, we refer not only the authors and dates of the publications, but also to their editors, translators, publishers, and their original-titles and editions. But how to do this? If <code>citetools</code> is enabled, then the answer lies in a small variation of <a href="../docs/01-basics.html">Pandoc’s vanilla syntax for citations</a>.</p>
+<p>In many areas, we are frequently invited to comment on different editions and translations of the same work. In such cases, we refer not only to the authors and dates of the publications, but also to their editors, translators, publishers, and their original titles and editions. But how to do this? If <code>citetools</code> is enabled, then the answer lies in a small variation of <a href="../docs/01-basics.html">Pandoc’s vanilla syntax for citations</a>.</p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -407,9 +407,6 @@ ER  -</code></pre>
 </div>
 </div>
 </div>
-<!-- Now, let us see that in practice with the following snippet: 
-
-> The works of `[@AristOp]{.author}` were first edited by `[@AristOp]{.editor}` under the title `[@AristOp]{.title}` in `[@AristOp]{.issued}`. -->
 <p>With this knowledge, we could state the following in our text:</p>
 <blockquote class="blockquote">
 <p>The works of [@AristOp]{.author} were first edited by [@AristOp]{.editor} under the title [@AristOp]{.title} in [@AristOp]{.issued}.</p>
@@ -432,9 +429,9 @@ ER  -</code></pre>
 </div>
 </div>
 <p>Internally, as we said, Pandoc uses the <a href="https://docs.citationstyles.org/en/stable/specification.html">Citation Style Language</a> to handle bibliographies. This is a standard schema for bibliographic data, which is used by some bibliography managers, such as Zotero, and JabRef. Most, however, are closer to the conventions of <a href="https://en.wikipedia.org/wiki/BibTeX#Field_types">BibTeX</a> (or <a href="https://en.wikipedia.org/wiki/RIS_(file_format)#Tags">RIS</a>) which is why you may not see an exact correspondence between the CSL variables and BibTeX field names.</p>
-<p>In CSL, there are following variables:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode ruby code-with-copy"><code class="sourceCode ruby"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>  abstract accessed annote archive archive_collection archive_location archive<span class="kw">-</span>place author authority available<span class="kw">-</span>date call<span class="kw">-</span>number chair chapter<span class="kw">-</span>number citation<span class="kw">-</span>key citation<span class="kw">-</span>label citation<span class="kw">-</span>number collection<span class="kw">-</span>editor collection<span class="kw">-</span>number collection<span class="kw">-</span>title compiler composer container<span class="kw">-</span>author container<span class="kw">-</span>title container<span class="kw">-</span>title<span class="kw">-</span>short contributor curator dimensions director division <span class="cn">DOI</span> edition editor editor<span class="kw">-</span>translator editorial<span class="kw">-</span>director event event<span class="kw">-</span>date event<span class="kw">-</span>place event<span class="kw">-</span>title executive<span class="kw">-</span>producer first<span class="kw">-</span>reference<span class="kw">-</span>note<span class="kw">-</span>number genre guest host illustrator interviewer <span class="cn">ISBN</span> <span class="cn">ISSN</span> issue issued jurisdiction keyword language license locator medium narrator note notes number number<span class="kw">-</span>of<span class="kw">-</span>pages number<span class="kw">-</span>of<span class="kw">-</span>volumes organizer original<span class="kw">-</span>author original<span class="kw">-</span>date original<span class="kw">-</span>publisher original<span class="kw">-</span>publisher<span class="kw">-</span>place original<span class="kw">-</span>title page page<span class="kw">-</span>first part<span class="kw">-</span>number part<span class="kw">-</span>title performer <span class="cn">PMCID</span> <span class="cn">PMID</span> printing<span class="kw">-</span>number producer publisher publisher<span class="kw">-</span>place recipient references reviewed<span class="kw">-</span>author reviewed<span class="kw">-</span>genre reviewed<span class="kw">-</span>title scale script<span class="kw">-</span>writer section series<span class="kw">-</span>creator source status submitted supplement<span class="kw">-</span>number title title<span class="kw">-</span>short translator <span class="cn">URL</span> version volume volume<span class="kw">-</span>title year<span class="kw">-</span>suffix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Here is a quick reference, not exaustive by any means, of where will the data end up in the conversion from BibTeX and RIS to CSL. This menas that the CSL variables on the first column is the final destination and it receives the content of the second or third column fields depending on the format it converts from. On the second tab, we map the references types from BibTeX to the CSL types.</p>
+<p>In CSL, there are the following variables:</p>
+<pre><code>  abstract accessed annote archive archive_collection archive_location archive-place author authority available-date call-number chair chapter-number citation-key citation-label citation-number collection-editor collection-number collection-title compiler composer container-author container-title container-title-short contributor curator dimensions director division DOI edition editor editor-translator editorial-director event event-date event-place event-title executive-producer first-reference-note-number genre guest host illustrator interviewer ISBN ISSN issue issued jurisdiction keyword language license locator medium narrator note notes number number-of-pages number-of-volumes organizer original-author original-date original-publisher original-publisher-place original-title page page-first part-number part-title performer PMCID PMID printing-number producer publisher publisher-place recipient references reviewed-author reviewed-genre reviewed-title scale script-writer section series-creator source status submitted supplement-number title title-short translator URL version volume volume-title year-suffix</code></pre>
+<p>Here is a quick reference, not exhaustive by any means, of where will the data end up in the conversion from BibTeX and RIS to CSL. This means that the CSL variables on the first column are the final destination and they receive the content of the second or third-column fields depending on the format it converts from. On the second tab, we map the reference types from BibTeX to the CSL types.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">CSL &amp; BibTeX Fields</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">CSL &amp; BibTeX Types</a></li></ul>
 <div class="tab-content">
@@ -669,7 +666,16 @@ Aristotle. 1831. <em>Aristotelis Opera</em>. Edited by Immanuel Bekker. 1st ed. 
 <ol>
 <li id="fn1"><p>Note that <code>[-@AristOp]</code> would render as <span id="cite_1"><span class="citation" data-cites="AristOp">(1831)</span></span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section></div></main> <!-- /main -->
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{vasconcelos2023,
+  author = {Vasconcelos, BCDA},
+  title = {Cite {Field}},
+  date = {2023},
+  url = {https://bcdavasconcelos.github.io/citetools/docs/03-cite-field.html},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-vasconcelos2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Vasconcelos, BCDA. 2023. <span>“Cite Field.”</span> 2023. <a href="https://bcdavasconcelos.github.io/citetools/docs/03-cite-field.html">https://bcdavasconcelos.github.io/citetools/docs/03-cite-field.html</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1098,7 +1104,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© CC-By BCDAV, 2023</div>   
+    <div class="nav-footer-left"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"></a> BCDAV, 2023</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
