@@ -53,11 +53,12 @@ website:
     left: |
       <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> BCDAV, 2023
 
-# cache: true
-# freeze: auto
+cache: true
+freeze: auto
 # editor: visual
-# format-links: [pdf,docx]
+format-links: [pdf,docx]
 mainfont: Source Sans Pro
+monofont: Source Code Pro
 
 
 
@@ -66,7 +67,7 @@ format: # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
     theme: # Slate e
 # Pulse: Rocho (muito bonito) | Spacelab: menos brilhante e mais opaco | Materia: azul claro pouco (material?) | yeti: github like | United: laranja brilhante |
       light: [Pulse] # Cerulean, Cosmo, Flatly, Journal, Litera, Lumen, Lux, Materia, Minty, Morph, Pulse, Sandstone, Simplex, Sketchy, Spacelab, United, Yeti, Zephyr
-      dark: [Cyborg] # Cyborg, Darkly, Quartz, Slate, Solar, , Vapor
+      dark: [Cyborg] # Cyborg, Darkly, Quartz, Slate, Solar,Superhero, Vapor
     # mainfont: "Atkinson Hyperlegible"
     header-includes: |
       <style>

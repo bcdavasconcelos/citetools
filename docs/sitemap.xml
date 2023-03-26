@@ -1,43 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/06-multibib-in-scrivener.html</loc>
-    <lastmod>2023-03-26T18:46:29.356Z</lastmod>
-  </url>
-  <url>
     <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/02-multibib.html</loc>
-    <lastmod>2023-03-26T18:46:30.843Z</lastmod>
+    <lastmod>2023-03-26T19:32:08.447Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/01-basics.html</loc>
-    <lastmod>2023-03-26T18:46:32.099Z</lastmod>
+    <lastmod>2023-03-26T19:32:09.181Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/05-about.html</loc>
-    <lastmod>2023-03-26T18:46:32.915Z</lastmod>
+    <lastmod>2023-03-26T19:32:09.658Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/03-cite-field.html</loc>
-    <lastmod>2023-03-26T18:46:35.278Z</lastmod>
+    <lastmod>2023-03-26T19:32:12.469Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/04-citation-backlinks.html</loc>
-    <lastmod>2023-03-26T18:46:36.974Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/11-bibtex-to-csl.html</loc>
-    <lastmod>2023-03-26T18:46:37.870Z</lastmod>
+    <lastmod>2023-03-26T19:32:13.724Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/changelog.html</loc>
-    <lastmod>2023-03-26T18:46:38.569Z</lastmod>
+    <lastmod>2023-03-26T19:32:14.195Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/index.html</loc>
-    <lastmod>2023-03-26T18:46:39.710Z</lastmod>
+    <lastmod>2023-03-26T19:32:14.923Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/input.html</loc>
-    <lastmod>2023-03-26T18:46:40.793Z</lastmod>
+    <lastmod>2023-03-26T19:32:15.560Z</lastmod>
   </url>
 </urlset>

@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "docs_qmd/06-multibib-in-scrivener.html",
-    "href": "docs_qmd/06-multibib-in-scrivener.html",
-    "title": "Multiple Bibliographies in Scrivener",
-    "section": "",
-    "text": "In Scrivener, you can add multiple bibliographies to your project using the strategy below. Once this is done, the only task to add new bibliography files to your project will be to paste the path to one of the files in the metadata of your document. This is a very simple task, and it can be done in a few seconds.\n\n\nFirst of all, create a new meta data field called path.\nCreate a Section Type called Multibib.\nCreate a new Section in your project, and set its Section Type to Multibib.\nPaste the path to the bibliography file in the path metadata field.\nIn the Compile formats Section Layout, add the following code to the Title Sufix of the Multibib Section:\n\n {.appendix}\n\n---\nbibliography_multibib&lt;$linkID&gt;: \"&lt;$custom:Path&gt;\"\n---\n\n::: {#refs_multibib&lt;$linkID&gt;}\n:::\n\n\n\nCitationBibTeX citation:@online{vasconcelos2023,\n  author = {Vasconcelos, BCDA},\n  title = {Multiple {Bibliographies} in {Scrivener}},\n  date = {2023},\n  url = {https://bcdavasconcelos.github.io/citetools/docs_qmd/06-multibib-in-scrivener.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nVasconcelos, BCDA. 2023. “Multiple Bibliographies in\nScrivener.” 2023. https://bcdavasconcelos.github.io/citetools/docs_qmd/06-multibib-in-scrivener.html."
-  },
-  {
     "objectID": "docs_qmd/02-multibib.html",
     "href": "docs_qmd/02-multibib.html",
     "title": "Multiple Bibliographies",
@@ -126,27 +119,6 @@
     "text": "Footnotes\n\n\nIn other output formats, such as PDF, the reader will see the page number instead of a crescent ordinal number.↩︎"
   },
   {
-    "objectID": "docs_qmd/11-bibtex-to-csl.html",
-    "href": "docs_qmd/11-bibtex-to-csl.html",
-    "title": "BibTeX to Citation Style Language (YAML and JSON)",
-    "section": "",
-    "text": "In this page you’ll find useful information about how Pandoc handles the conversion of BibTeX bibliography to its native CSL-JSON/CSL-YAML representation.\nThe number of possible bibliography fields along the number of possible types of reference makes up for an extraordinarily large number of possible combinations. Eventually, when converting from one format to the other using Pandoc, the content of some fields may end up in perplexing places (or end up nowhere). This is a consequence of the fact that BibTeX and CSL are very different systems (one is very old, while the other still rather recent). So this page is meant as a quick reference for those bringing their references from the jurrasic BibTeX into the CSL-JSON/CSL-YAML using Pandoc and Quarto."
-  },
-  {
-    "objectID": "docs_qmd/11-bibtex-to-csl.html#bibtex-types",
-    "href": "docs_qmd/11-bibtex-to-csl.html#bibtex-types",
-    "title": "BibTeX to Citation Style Language (YAML and JSON)",
-    "section": "BibTeX Types",
-    "text": "BibTeX Types\n\nWhere do BibTeX types end up in CSL-YAML/CSL-JSON?\n\n\nBibTeX Type\nCSL-YAML\n\n\n\n\narticle\narticle-journal\n\n\nbook\nbook\n\n\nbooklet\npamphlet\n\n\ninbook\nchapter\n\n\nincollection\nchapter\n\n\ninproceedings\npaper-conference\n\n\nmanual\nbook\n\n\nmastersthesis\nthesis\n\n\nmisc\nthesis\n\n\nphdthesis\nthesis\n\n\nproceedings\nbook\n\n\ntechreport\nreport\n\n\nunpublished\nmanuscript"
-  },
-  {
-    "objectID": "docs_qmd/11-bibtex-to-csl.html#bibtex-fields",
-    "href": "docs_qmd/11-bibtex-to-csl.html#bibtex-fields",
-    "title": "BibTeX to Citation Style Language (YAML and JSON)",
-    "section": "BibTeX Fields",
-    "text": "BibTeX Fields\n\nWhere do BibTeX fields end up in CSL-YAML/CSL-JSON?\n\n\n\n\n\n\nBibTeX\nCSL-YAML\n\n\n\n\nauthors\nauthor\n\n\neditors\neditor\n\n\nedition\nedition\n\n\ntitle\ntitle\n\n\nshorttitle\ntitle-short\n\n\nissue\nnil\n\n\nissue (article)\nissue\n\n\nnumber (article)\nissue\n\n\nnumber (book)\ncollection-number\n\n\nnumber (phdthesis)\nnumber\n\n\nbooktitle\nnil\n\n\nbooktitle (inproceedings incollection inbook)\ncontainer-title\n\n\njournal (book proceedings masterthesis lexicon online booklet)\ncontainer-title\n\n\nchapter\nchapter-number\n\n\nvolume\nvolume\n\n\nseries\ncollection-title\n\n\nschool, institution, organization, howpublished, publisher\npublisher\n\n\naddress\npublisher-place\n\n\nlibrary\ncall-number\n\n\npages\npage\n\n\nversion\nversion\n\n\ntype\ngenre"
-  },
-  {
     "objectID": "changelog.html",
     "href": "changelog.html",
     "title": "citetools",
@@ -168,11 +140,11 @@
     "text": "Cite Tools is an extension of the Quarto Open-Source Scientific and Technical Publishing System, built upon Pandoc and compatible with any version above 2.17, that bundles together several Lua filters 🌙 to introduce advanced bibliography features."
   },
   {
-    "objectID": "index.html#why-a-bibliography",
-    "href": "index.html#why-a-bibliography",
+    "objectID": "index.html#why-a-bibliography-extension",
+    "href": "index.html#why-a-bibliography-extension",
     "title": "Cite Tools",
-    "section": "Why a bibliography 🔌?",
-    "text": "Why a bibliography 🔌?\nUsers of the Jurassic BibTeX would probably be exceptionally pleased with the speed and reliability of Pandoc Citeproc, and the fact that it converts documents to over 60 different formats (including HTML, LaTeX, Word).\nOut-of-the-box, however, Citeproc does not provide common BibTeX functionalities, such as the ability to split the bibliography into multiple sections, or the ability to cite arbitrary fields of the references (e.g. citetitle, citeauthor, citefield). It also lacks the interesting backref option afforded by BibTeX and HyperRef, which allows for the creation of linked indexes of citations.\nLuckely, Citeproc is extensible, and this extension aims to provide a solution to these limitations and, hopefully, allow Pandoc and Quarto users to completely replace BibTeX/BibLaTeX with Citeproc. It will allow the user to easily create multiple bibliographies (or bibliographies with multiple sections, such as primary and secondary sources), cite arbitrary fields of the references1, and create linked indexes of citations2. All of this with very little configuration needed.\nAlso, with the advent of Quarto, it has become easier for those not well-versed Lua or Pandoc to use extensions such as this one! So, why not?!"
+    "section": "Why a bibliography extension?",
+    "text": "Why a bibliography extension?\nUsers of the jurassic BibTeX would probably be exceptionally pleased with the speed and reliability of Pandoc Citeproc, and the fact that it converts documents to over 60 different formats (including HTML, LaTeX, Word).\nOut-of-the-box, however, Citeproc does not provide common BibTeX functionalities, such as the ability to split the bibliography into multiple sections, or the ability to cite arbitrary fields of the references (e.g. citetitle, citeauthor, citefield). It also lacks the interesting backref option afforded by BibTeX and HyperRef, which allows for the creation of linked indexes of citations.\nLuckely, Citeproc is extensible, and this extension aims to provide a solution to these limitations and, hopefully, allow Pandoc and Quarto users to completely replace BibTeX/BibLaTeX with Citeproc. It will allow the user to easily create multiple bibliographies (or bibliographies with multiple sections, such as primary and secondary sources), cite arbitrary fields of the references1, and create linked indexes of citations2. All of this with very little configuration needed.\nAlso, with the advent of Quarto, it has become easier for those not well-versed Lua or Pandoc to use extensions such as this one! So, why not?!"
   },
   {
     "objectID": "index.html#new-to-quarto",
