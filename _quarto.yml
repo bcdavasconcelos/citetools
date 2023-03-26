@@ -84,14 +84,8 @@ format: # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
     toc: true
     reference-location: document # `block`, `section`, `margin`, `document`
 
-
 filters:
-  - fontawesome
-  - include-files.lua
   - citetools
-  # - include-code-files.lua
-  # - quarto
-
 
 citeproc: false
 bibliography_primary: refs/primary.json
