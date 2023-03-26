@@ -1,24 +1,38 @@
 [
   {
+    "objectID": "sample.html",
+    "href": "sample.html",
+    "title": "Example of Citetools in action",
+    "section": "",
+    "text": "Introduction\nThis very concise sample ilustrates the use of multiple-bibliographies to separate primary (refs/primary.json) and secondary (refs/secondary.json) sources for the document; the use of citation-backlinks to turn the bibliography into an index of citations with links back to the text; and the use of citefield to print in the body of the text useful information from the bibliographic references.\nOptionally, section-bibliographies can be used to separate the bibliography into sections. For this, you must uncomment the apropriate line in the _extension.yaml file.\n\n\nThe Works of Aristotle\nThis is an example of complex use of bibliographic references. We are relying on the bibliography to print in the text the correct names of the authors, editors, and translators & title of the works.\nThe works of [@AristOp]{.author} were first edited by\n[@AristOp]{.editor} in [@AristOp]{.issued}.\nThe works of Aristotle were first edited by Bekker in 1831.\nLater, the [@DA]{.title} was edited by [@DABiehl1896]{.editor}\nin [@DABiehl1896]{.issued} [repr. in [@DATheiler]{.translator}'s\n[@DATheiler]{.issued} translation]; by [@DAForster]{.editor} in\n[@DAForster]{.issued} [repr. in [@DACorcilius]{.translator}'s\n[@DACorcilius]{.issued} translation]; and by [@DARoss]{.editor}\nin [@DARoss]{.issued}.\nLater, the De anima was edited by Biehl in 1896 [repr. in Seidl’s 1995 translation]; by Förster in 1912 [repr. in Corcilius’s 2017 translation]; and by Ross in 1961.\n\n\n\n\nPrimary Sources\n\n\n\nAristotle. 1831a. Aristotelis Opera. Edited by Immanuel Bekker. 1st ed. 4 vols. Berlim: Reimer. [1, 2]\n\n\n———. 1831b. “De Anima.” In Aristotelis Opera, edited by Immanuel Bekker, 402a01–435b25. Berlim: Reimer. [1]\n\n\n———. 1896. De Anima. Edited by Wilhelm Biehl. Leipzig: Teubner. [1, 2]\n\n\n———. 1912. Aristotelis de Anima Libri III. Edited by Aurél Förster. Budapeste: Hungarian Academy of Sciences. [1, 2]\n\n\n———. 1961. De Anima. Edited by William David Ross. Oxford: Clarendon. [1, 2]\n\n\nSecondary Sources\n\n\n\nAristoteles. 2017. Über Die Seele. De Anima. Translated by Klaus Corcilius. Hamburg: Felix Meiner. [1, 2]\n\n\nAristotelis. 1995. De Anima. Translated by H. Seidl and W. Theiler. Hamburg: Felix Meiner. [1]\n\n\n\n\nCitationBibTeX citation:@online{vasconcelos2023,\n  author = {BCDA Vasconcelos},\n  title = {Example of {Citetools} in Action},\n  date = {2023},\n  url = {https://bcdavasconcelos.github.io/citetools/sample.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBCDA Vasconcelos. 2023. “Example of Citetools in Action.”\n2023. https://bcdavasconcelos.github.io/citetools/sample.html."
+  },
+  {
     "objectID": "changelog.html",
     "href": "changelog.html",
-    "title": "citetools",
+    "title": "Cite Tools",
     "section": "",
     "text": "Released 2023-03-18."
   },
   {
-    "objectID": "changelog.html#v1.0.0",
-    "href": "changelog.html#v1.0.0",
-    "title": "citetools",
+    "objectID": "docs/04-citation-backlinks.html",
+    "href": "docs/04-citation-backlinks.html",
+    "title": "Citation Backlinks",
     "section": "",
-    "text": "Released 2023-03-18."
+    "text": "In the vanilla Pandoc Citeproc, you can use link-citations to control whether citations in the body of the text should be clickable links to the reference in the bibliography (e.g. EN). This is a very useful feature, especially when you want to quickly check the source of a citation without having to scroll through the whole text.\nThis allows the reader to easily arrive at sections of the text where the same reference was discussed, quickly seeing with the array of backlinks, how many times each reference was used in the text (see reference at the bottom of the text)."
   },
   {
-    "objectID": "docs/06-multibib-in-scrivener.html",
-    "href": "docs/06-multibib-in-scrivener.html",
-    "title": "Multiple Bibliographies in Scrivener",
-    "section": "",
-    "text": "In Scrivener, you can add multiple bibliographies to your project using the strategy below. Once this is done, the only task to add new bibliography files to your project will be to paste the path to one of the files in the metadata of your document. This is a very simple task, and it can be done in a few seconds.\n\n\nFirst of all, create a new meta data field called path.\nCreate a Section Type called Multibib.\nCreate a new Section in your project, and set its Section Type to Multibib.\nPaste the path to the bibliography file in the path metadata field.\nIn the Compile formats Section Layout, add the following code to the Title Sufix of the Multibib Section:\n\n {.appendix}\n\n---\nbibliography_multibib&lt;$linkID&gt;: \"&lt;$custom:Path&gt;\"\n---\n\n::: {#refs_multibib&lt;$linkID&gt;}\n:::\n\n\n\nCitationBibTeX citation:@online{vasconcelos2023,\n  author = {Vasconcelos, BCDA},\n  title = {Multiple {Bibliographies} in {Scrivener}},\n  date = {2023},\n  url = {https://bcdavasconcelos.github.io/citetools/docs/06-multibib-in-scrivener.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nVasconcelos, BCDA. 2023. “Multiple Bibliographies in\nScrivener.” 2023. https://bcdavasconcelos.github.io/citetools/docs/06-multibib-in-scrivener.html."
+    "objectID": "docs/04-citation-backlinks.html#how-to-avoid-an-excess-of-undesired-links",
+    "href": "docs/04-citation-backlinks.html#how-to-avoid-an-excess-of-undesired-links",
+    "title": "Citation Backlinks",
+    "section": "How to avoid an excess of undesired links",
+    "text": "How to avoid an excess of undesired links\nIn citetools there are options to avoid undesired linking and anomalies caused by citing individual fields, such as repeated links to the same entry in a single phrase or section.\n\nTurning off links in individual citations\nFirst, there is the option to force a citation to not be a link by adding a simple dot at the end of the .csl_field.\n\n\n\nDefault\nLink-suppresion\n\n\n\n\n[@EN]{.title}\n[@EN]{.title.}\n\n\nEthica nicomachea\nEthica nicomachea\n\n\n\n\n\nGlobal options\nThen, there is also the global link-fields option, which allows the user to turn off links in citations that target individual fields. It can be used in conjunction with other options that target the bibliography, such as link-citations and link-bibliography.\nlink-citations: true # <1> \nlink-fields: true # <2> \nlink-bibliography: true # <3> \nlang: en-ZA # <4> \n\nHyperlink citations to the corresponding bibliography entries. Defaults to false.\nHyperlink citations that target specific CSL fields to the corresponding entries in the bibliography. If link-citations is true, this defaults to true.\nHyperlink DOIs, PMCIDs, PMID, and URLs in bibliographies. Defaults to true.\nAffects the bibliography tags. Defaults to en-US."
+  },
+  {
+    "objectID": "docs/04-citation-backlinks.html#references",
+    "href": "docs/04-citation-backlinks.html#references",
+    "title": "Citation Backlinks",
+    "section": "References",
+    "text": "References\n\n\nAristotle. 1831. “Ethica Nicomachea.” In Aristotelis Opera, edited by Immanuel Bekker, 1094a01–1181b23. Berlim: Reimer. [1, 2]"
   },
   {
     "objectID": "docs/02-multibib.html",
@@ -39,7 +53,21 @@
     "href": "docs/02-multibib.html#minimal-example-with-strategy-to-ensure-matching-ids",
     "title": "Multiple Bibliographies",
     "section": "Minimal example with strategy to ensure matching IDs",
-    "text": "Minimal example with strategy to ensure matching IDs\nTo make sure ids match, it can be a good strategy placing the bibliography file close to the div placeholder.\n---\ntitle: Multiple Bibliographies\n---\n\n[@EN] [@Aubenque1961a]\n\n\n## Primary Sources {.appendix}\n\n---\nbibliography_primary: refs/primary.json\n---\n\n::: {#refs_primary}\n:::\n\n## Secondary Sources  {.appendix}\n\n---\nbibliography_secondary: refs/secondary.json\n---\n\n::: {#refs_secondary}\n:::\nYou should have a working document with multiple bibliographies:\n(Aristotle 1831) (Aubenque 1961)"
+    "text": "Minimal example with strategy to ensure matching IDs\nTo make sure ids match, it can be a good strategy placing the bibliography file close to the div placeholder.\n---\ntitle: Multiple Bibliographies\n---\n\n[@EN] [@Aubenque1961a]\n\n\n## Primary Sources\n\n---\nbibliography_primary: refs/primary.json\n---\n\n::: {#refs_primary}\n:::\n\n## Secondary Sources\n\n---\nbibliography_secondary: refs/secondary.json\n---\n\n::: {#refs_secondary}\n:::\nYou should have a working document with multiple bibliographies:\n(Aristotle 1831) (Aubenque 1961)"
+  },
+  {
+    "objectID": "docs/05-about.html",
+    "href": "docs/05-about.html",
+    "title": "About",
+    "section": "",
+    "text": "Logo image generated Dall-E using Enso-like round black and white painting with ancient greek war-ship with man tied to the mast as prompt."
+  },
+  {
+    "objectID": "docs/05-about.html#license",
+    "href": "docs/05-about.html#license",
+    "title": "About",
+    "section": "License",
+    "text": "License\nFilters published under the MIT license by Albert Krewinkel (tarleb).\n\nmultibib\nmultiple-bibliographies\ncitation-backlinks\nsection-bibliographies\n\nFilters published under the MIT license by Albert Krewinkel (tarleb) & Bernardo Vasconcelos (bcdavasconcelos).\n\ncitefield\n\nAll Pandoc Lua filters in this extension are published under the MIT license, see file LICENSE for details.\nThe Cite Tools Documentation is under a Creative Commons Attribution-NonCommercial 4.0 International License."
   },
   {
     "objectID": "docs/01-basics.html",
@@ -70,27 +98,6 @@
     "text": "Syntax Summary\n\nVariations of the Citation syntax\n\n\nSyntax\nOutput\n\n\n\n\n@Aubenque1961a\nAubenque (1961)\n\n\n[@Aubenque1961a]\n(Aubenque 1961)\n\n\n[@Aubenque1961a, p.15]\n(Aubenque 1961, 15)\n\n\n[-@Aubenque1961a]\n(1961)\n\n\n[-@Aubenque1961a, p.15]\n(1961, 15)\n\n\n\nNow that we have the basics covered, let us see what Cite Tools can do for us."
   },
   {
-    "objectID": "docs/01-basics.html#footnotes",
-    "href": "docs/01-basics.html#footnotes",
-    "title": "The Basics of Pandoc Citeproc",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nThey are not, however, widely supported, so you’ll probably be stuck with BibTeX or BibLaTeX in some way or other anyway.↩︎"
-  },
-  {
-    "objectID": "docs/05-about.html",
-    "href": "docs/05-about.html",
-    "title": "About",
-    "section": "",
-    "text": "Logo image generated Dall-E using Enso-like round black and white painting with ancient greek war-ship with man tied to the mast as prompt."
-  },
-  {
-    "objectID": "docs/05-about.html#license",
-    "href": "docs/05-about.html#license",
-    "title": "About",
-    "section": "License",
-    "text": "License\nFilters published under the MIT license by Albert Krewinkel (tarleb).\n\nmultibib\nmultiple-bibliographies\ncitation-backlinks\nsection-bibliographies\n\nFilters published under the MIT license by Albert Krewinkel (tarleb) & Bernardo Vasconcelos (bcdavasconcelos).\n\ncitefield\n\nAll Pandoc Lua filters in this extension are published under the MIT license, see file LICENSE for details.\nThe Cite Tools Documentation is under a Creative Commons Attribution-NonCommercial 4.0 International License."
-  },
-  {
     "objectID": "docs/03-cite-field.html",
     "href": "docs/03-cite-field.html",
     "title": "Cite Field",
@@ -105,39 +112,11 @@
     "text": "Citation Style Language\n\n\n\n\n\n\nDid you notice that we used [@AristOp]{.issued} instead of [@AristOp]{.date}? And [@AristOp]{.publisher-place} instead of [@AristOp]{.city}?\n\n\n\nInternally, as we said, Pandoc uses the Citation Style Language to handle bibliographies. This is a standard schema for bibliographic data, which is used by some bibliography managers, such as Zotero, and JabRef. Most, however, are closer to the conventions of BibTeX (or RIS) which is why you may not see an exact correspondence between the CSL variables and BibTeX field names.\nIn CSL, there are the following variables:\n  abstract accessed annote archive archive_collection archive_location archive-place author authority available-date call-number chair chapter-number citation-key citation-label citation-number collection-editor collection-number collection-title compiler composer container-author container-title container-title-short contributor curator dimensions director division DOI edition editor editor-translator editorial-director event event-date event-place event-title executive-producer first-reference-note-number genre guest host illustrator interviewer ISBN ISSN issue issued jurisdiction keyword language license locator medium narrator note notes number number-of-pages number-of-volumes organizer original-author original-date original-publisher original-publisher-place original-title page page-first part-number part-title performer PMCID PMID printing-number producer publisher publisher-place recipient references reviewed-author reviewed-genre reviewed-title scale script-writer section series-creator source status submitted supplement-number title title-short translator URL version volume volume-title year-suffix\nHere is a quick reference, not exhaustive by any means, of where will the data end up in the conversion from BibTeX and RIS to CSL. This means that the CSL variables on the first column are the final destination and they receive the content of the second or third-column fields depending on the format it converts from. On the second tab, we map the reference types from BibTeX to the CSL types.\n\nCSL & BibTeX FieldsCSL & BibTeX Types\n\n\n\nWhere do BibTeX and RIS fields end up in CSL-YAML/CSL-JSON?\n\n\n\n\n\n\n\nCSL\nBibTeX\nRIS\n\n\n\n\nauthor\nauthors\nAU\n\n\neditor\neditors\nED\n\n\nissued\ndate\nPY\n\n\ntitle\ntitle\nT1\n\n\ntitle-short\nshorttitle\n-\n\n\ncontainer-title\nbooktitle (inproceedings incollection inbook)\nBT\n\n\ncontainer-title\njournal (article book proceedings masterthesis lexicon online booklet)\nJA\n\n\ncollection-title\nseries\n-\n\n\noriginal-title\norigtitle\nOR\n\n\npublisher\nschool, institution, organization, howpublished, publisher\nPB\n\n\npublisher-place\naddress\nPP\n\n\nabstract\nabstract\nAB\n\n\nurl\nURL\nUR\n\n\nkeywords\nkeywords\nKW\n\n\nchapter-number\nchapter\n-\n\n\nissue\nissue (article), number (article)\nIS\n\n\nnumber\nnumber (phdthesis)\nIS\n\n\ncollection-number\nnumber (book)\nIS\n\n\nvolume\nvolume\nVL\n\n\nnumber-of-volumes\nvolumes\nNV\n\n\npage\npages\nSP\n\n\nedition\nedition\nET\n\n\ngenre\ntype\n-\n\n\ncall-number\nlibrary\nID\n\n\nversion\nversion\n-\n\n\n\nSee also, the full list of CSL variables, BibTeX Fields and RIS Tags.\n\n\n\nHow do BibTeX types end up in CSL-YAML/CSL-JSON?\n\n\nCSL\nBibTeX\n\n\n\n\narticle-journal\narticle\n\n\nbook\nbook\n\n\npamphlet\nbooklet\n\n\nchapter\ninbook\n\n\nchapter\nincollection\n\n\npaper-conference\ninproceedings\n\n\nbook\nmanual\n\n\nthesis\nmastersthesis\n\n\nthesis\nmisc\n\n\nthesis\nphdthesis\n\n\nbook\nproceedings\n\n\nreport\ntechreport\n\n\nmanuscript\nunpublished\n\n\n\nSee also the full list of CSL and BibTeX types."
   },
   {
-    "objectID": "docs/03-cite-field.html#footnotes",
-    "href": "docs/03-cite-field.html#footnotes",
-    "title": "Cite Field",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nNote that [-@AristOp] would render as (1831).↩︎"
-  },
-  {
-    "objectID": "docs/04-citation-backlinks.html",
-    "href": "docs/04-citation-backlinks.html",
-    "title": "Citation Backlinks",
+    "objectID": "docs/06-multibib-in-scrivener.html",
+    "href": "docs/06-multibib-in-scrivener.html",
+    "title": "Multiple Bibliographies in Scrivener",
     "section": "",
-    "text": "In the vanilla Pandoc Citeproc, you can use link-citations to control whether citations in the body of the text should be clickable links to the reference in the bibliography (e.g. EN). This is a very useful feature, especially when you want to quickly check the source of a citation without having to scroll through the whole text.\nThis allows the reader to easily arrive at sections of the text where the same reference was discussed, quickly seeing with the array of backlinks, how many times each reference was used in the text (see reference at the bottom of the text)."
-  },
-  {
-    "objectID": "docs/04-citation-backlinks.html#how-to-avoid-an-excess-of-undesired-links",
-    "href": "docs/04-citation-backlinks.html#how-to-avoid-an-excess-of-undesired-links",
-    "title": "Citation Backlinks",
-    "section": "How to avoid an excess of undesired links",
-    "text": "How to avoid an excess of undesired links\nIn citetools there are options to avoid undesired linking and anomalies caused by citing individual fields, such as repeated links to the same entry in a single phrase or section.\n\nTurning off links in individual citations\nFirst, there is the option to force a citation to not be a link by adding a simple dot at the end of the .csl_field.\n\n\n\nDefault\nLink-suppresion\n\n\n\n\n[@EN]{.title}\n[@EN]{.title.}\n\n\nEthica nicomachea\nEthica nicomachea\n\n\n\n\n\nGlobal options\nThen, there is also the global link-fields option, which allows the user to turn off links in citations that target individual fields. It can be used in conjunction with other options that target the bibliography, such as link-citations and link-bibliography.\n1link-citations: true\n2link-fields: true\n3link-bibliography: true\n4lang: en-ZA\n\n1\n\nHyperlink citations to the corresponding bibliography entries. Defaults to false.\n\n2\n\nHyperlink citations that target specific CSL fields to the corresponding entries in the bibliography. If link-citations is true, this defaults to true.\n\n3\n\nHyperlink DOIs, PMCIDs, PMID, and URLs in bibliographies. Defaults to true.\n\n4\n\nAffects the bibliography tags. Defaults to en-US."
-  },
-  {
-    "objectID": "docs/04-citation-backlinks.html#references",
-    "href": "docs/04-citation-backlinks.html#references",
-    "title": "Citation Backlinks",
-    "section": "References",
-    "text": "References\n\n\nAristotle. 1831. “Ethica Nicomachea.” In Aristotelis Opera, edited by Immanuel Bekker, 1094a01–1181b23. Berlim: Reimer. [1, 2]"
-  },
-  {
-    "objectID": "docs/04-citation-backlinks.html#footnotes",
-    "href": "docs/04-citation-backlinks.html#footnotes",
-    "title": "Citation Backlinks",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nIn other output formats, such as PDF, the reader will see the page number instead of a crescent ordinal number.↩︎"
+    "text": "In Scrivener, you can add multiple bibliographies to your project using the strategy below. Once this is done, the only task to add new bibliography files to your project will be to paste the path to one of the files in the metadata of your document. This is a very simple task, and it can be done in a few seconds.\n\n\nFirst of all, create a new meta data field called path.\nCreate a Section Type called Multibib.\nCreate a new Section in your project, and set its Section Type to Multibib.\nPaste the path to the bibliography file in the path metadata field.\nIn the Compile formats Section Layout, add the following code to the Title Sufix of the Multibib Section:\n\n {.appendix}\n\n---\nbibliography_multibib<$linkID>: \"<$custom:Path>\"\n---\n\n::: {#refs_multibib<$linkID>}\n:::\n\n\n\nCitationBibTeX citation:@online{vasconcelos2023,\n  author = {BCDA Vasconcelos},\n  title = {Multiple {Bibliographies} in {Scrivener}},\n  date = {2023},\n  url = {https://bcdavasconcelos.github.io/citetools/06-multibib-in-scrivener.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBCDA Vasconcelos. 2023. “Multiple Bibliographies in\nScrivener.” 2023. https://bcdavasconcelos.github.io/citetools/06-multibib-in-scrivener.html."
   },
   {
     "objectID": "docs/11-bibtex-to-csl.html",
@@ -165,20 +144,6 @@
     "href": "index.html",
     "title": "Cite Tools",
     "section": "",
-    "text": "This extension bundles together several Lua filters 🌙 that will work with any Pandoc version above 2.17.\nThis extension allows for:"
-  },
-  {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "Cite Tools",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nIn the official nomenclature, CSL has variables, BibTeX has fields, and RIS has tags. As a general rule, we have stuck to the term fields.↩︎\nIf link-citations is false then link-fields will also default to false.↩︎"
-  },
-  {
-    "objectID": "sample.html",
-    "href": "sample.html",
-    "title": "Example of Citetools in action",
-    "section": "",
-    "text": "Introduction\nThis very concise sample ilustrates the use of multiple-bibliographies to separate primary (refs/primary.json) and secondary (refs/secondary.json) sources for the document; the use of citation-backlinks to turn the bibliography into an index of citations with links back to the text; and the use of citefield to print in the body of the text useful information from the bibliographic references.\nOptionally, section-bibliographies can be used to separate the bibliography into sections. For this, you must uncomment the apropriate line in the _extension.yaml file.\n\n\nThe Works of Aristotle\nThis is an example of complex use of bibliographic references. We are relying on the bibliography to print in the text the correct names of the authors, editors, and translators & title of the works.\nThe works of [@AristOp]{.author} were first edited by\n[@AristOp]{.editor} in [@AristOp]{.issued}.\nThe works of Aristotle were first edited by Bekker in 1831.\nLater, the [@DA]{.title} was edited by [@DABiehl1896]{.editor}\nin [@DABiehl1896]{.issued} [repr. in [@DATheiler]{.translator}'s\n[@DATheiler]{.issued} translation]; by [@DAForster]{.editor} in\n[@DAForster]{.issued} [repr. in [@DACorcilius]{.translator}'s\n[@DACorcilius]{.issued} translation]; and by [@DARoss]{.editor}\nin [@DARoss]{.issued}.\nLater, the De anima was edited by Biehl in 1896 [repr. in Seidl’s 1995 translation]; by Förster in 1912 [repr. in Corcilius’s 2017 translation]; and by Ross in 1961.\n\n\n\n\nPrimary Sources\n\n\n\nAristotle. 1831a. Aristotelis Opera. Edited by Immanuel Bekker. 1st ed. 4 vols. Berlim: Reimer. [1, 2]\n\n\n———. 1831b. “De Anima.” In Aristotelis Opera, edited by Immanuel Bekker, 402a01–435b25. Berlim: Reimer. [1]\n\n\n———. 1896. De Anima. Edited by Wilhelm Biehl. Leipzig: Teubner. [1, 2]\n\n\n———. 1912. Aristotelis de Anima Libri III. Edited by Aurél Förster. Budapeste: Hungarian Academy of Sciences. [1, 2]\n\n\n———. 1961. De Anima. Edited by William David Ross. Oxford: Clarendon. [1, 2]\n\n\nSecondary Sources\n\n\n\nAristoteles. 2017. Über Die Seele. De Anima. Translated by Klaus Corcilius. Hamburg: Felix Meiner. [1, 2]\n\n\nAristotelis. 1995. De Anima. Translated by H. Seidl and W. Theiler. Hamburg: Felix Meiner. [1]\n\n\n\n\nCitationBibTeX citation:@online{vasconcelos2023,\n  author = {Vasconcelos, BCDA},\n  title = {Example of {Citetools} in Action},\n  date = {2023},\n  url = {https://bcdavasconcelos.github.io/citetools/sample.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nVasconcelos, BCDA. 2023. “Example of Citetools in Action.”\n2023. https://bcdavasconcelos.github.io/citetools/sample.html."
+    "text": "Cite Tools is an extension of the Quarto Publishing System that is built upon Pandoc, and that introduces advanced bibliography features (that will work with any Pandoc version above 2.17). It does this by bundling together several Lua filters 🌙 that allow for:\n\nThe creation of multiple bibliographies (or bibliographies with multiple sections, such as primary and secondary sources).\nThe citation of arbitrary fields1 of the references, such as author, editor, and translator names, or title and original-title of works.\nThe creation of linked indexes of citations.\n\n\n\n\n\n\n\nWhy make a Quarto Extension? 🤔\n\n\n\n\n\n\n\n\n\n\n\nLack of common LaTeX bibliography features\n\n\n\n\n\nBibLaTeX users trying out Citeproc would probably be exceptionally pleased with its speed and reliability, and the fact that one can convert bibliography consistently into all formats supported by Pandoc (including HTML, LaTeX, Word, and dozens of others).\nSome limitations, however, would inevitably become apparent. First, there is the inability to split the bibliography into multiple sections. Then, there is the lack of commands familiar to BibTeX users, such as \\citetitle, \\citeauthor, \\citefield. Finally, it is missing the interesting backref option afforded by BibTeX and HyperRef, which allows for the creation of linked indexes of citations.\nThis extension aims to provide a solution to these limitations and, hopefully, allow Pandoc and Quarto users to completely replace BibTeX/BibLaTeX with Citeproc.\n\n\n\n\n\n\n\n\n\nEase of use\n\n\n\n\n\nThe advent of Quarto means that even people not well-versed in Pandoc or Lua can use this extension with incredible ease. If opening the command line and installing the extension is too much, is it possible to download the repository  and simply open it using VSCode.\n\n\n\n\n\n\n\n\n\n\n\n\nNew to Quarto ?\n\n\n\n\n\nVisit the getting started guide to download and install Quarto. Once installed, you can use it to create, build, and preview your documents. Quarto is built on top of Pandoc, and it is compatible with all of Pandoc’s features.\nI highly recommend visiting the Tutorial: Hello, Quarto to learn how to create your first document with Quarto. You’ll learn how to create a document, build it, and preview it; and will learn more about the excellent extensions for VS Code and RStudio that will make your life easier.\nJumpstart:\n\nOn macOS (), use Homebrew to brew install quarto.\nOn Windows (), use Chocolatey to choco install quarto.\nOn Linux (), use your package manager to install quarto.\n\nGo deeper: Awesome Quarto, Quarto Extensions, Quarto on Github, RStudio Community, Stack Overflow, Twitter.\n\n\n\n\n\n\n\n\n\nNew to Pandoc ?\n\n\n\n\n\nAt the core of Quarto lies Pandoc, the universal document converter developed by John MacFarlane, professor of philosophy. You can learn more about Pandoc here. In particular, see the Pandoc User’s Guide . You can install Pandoc independently, but if you install Quarto, Pandoc will be installed automatically.\nMake sure to check Pandoc-Discuss in case you have unsolved questions. You can also ask questions on Pandoc at Stack Overflow.\n\n\n\n\n\n\n\n\n\nInstallation 📦\n\n\n\n\n\nInstall using:\nquarto install extension bcdavasconcelos/citetools\nActivate it by adding citetools to the _quarto.yml file in the filters section.\nfilters:\n  - citetools\nIf you need a sample project to test it out, you can download the citetools repository \n\n\n\n\n\n\n\n\n\nQuickstart 🚀\n\n\n\n\n\nAdd the path to the bibliography files to the document YAML header or to _quarto.yml 📁\n---\nbibliography_bib-name: path/to/bibfile.bib\nbibliography_other-bib-name: path/to/otherbibfile.bib\n---\nPlace the corresponding placeholders where they should be printed in the document body 🖨️\n::: {#refs_bib-name}\n:::\n\n::: {#refs_other-bib-name}\n:::\nCite references as you normally do in Pandoc and they will be linked 🔗 and backlinked 🔗 to the bibliography 📚\n[@citekey]\nUse [@Citekey]{.csl_field} to arbitrarily print specific fields instead of the usual Author-Date 💪\n[@citekey]{.author}\n[@citekey]{.title}\n[@citekey]{.original-title}\nAppend the field name with a dot (.) to avoid creating a link to the bibliography in this particular citation📍\n[@citekey]{.author.}\nThis can also be done globally by setting link-fields: false in the metadata2 🌐\n---\nlink-fields: false\n---\nYou’re ready to rock. 🤘\n\n\n\n\n\n\n\n\n\nDocumentation 📚\n\n\n\n\n\nThis Quarto-powered website documents the following filters:\n\n multiple-bibliographies\n cite-field\n citation-backlinks\n\nIn the future, we plan to add documentation for the following filters:\n\nsection-bibliographies\nrecursive citeproc\n\n\n\n\n\n\n\n\n\n\nContributing 🤝\n\n\n\n\n\nIf you have suggestions for other filters, improvements to the existing ones, or bug reports, please open an issue at the citetools repository .\n\n\n\n\n\n\n\n\n\nAcknowledgments 🙏\n\n\n\n\n\n\nAlbert Krewinkel, for creating Pandoc filters.\nJohn MacFarlane, for creating Pandoc.\nThe community of Quarto and Pandoc developers and users.\n\n\n\n\n\n\n\n\nFootnotes\n\n\nIn the official nomenclature, CSL has variables, BibTeX has fields, and RIS has tags. As a general rule, we have stuck to the term fields.↩︎\nIf link-citations is false then link-fields will also default to false.↩︎\n\nCitationBibTeX citation:@online{vasconcelos2023,\n  author = {BCDA Vasconcelos},\n  title = {Cite {Tools}},\n  date = {2023},\n  url = {https://bcdavasconcelos.github.io/citetools/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBCDA Vasconcelos. 2023. “Cite Tools .” 2023. https://bcdavasconcelos.github.io/citetools/."
   }
 ]
