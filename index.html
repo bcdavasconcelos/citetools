@@ -220,7 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-a-bibliography-extension" id="toc-why-a-bibliography-extension" class="nav-link active" data-scroll-target="#why-a-bibliography-extension">Why a bibliography extension? 🤔</a></li>
+  <li><a href="#why-a-bibliography" id="toc-why-a-bibliography" class="nav-link active" data-scroll-target="#why-a-bibliography">Why a bibliography 🔌?</a></li>
   <li><a href="#new-to-quarto" id="toc-new-to-quarto" class="nav-link" data-scroll-target="#new-to-quarto">New to Quarto <img src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;">?</a></li>
   <li><a href="#new-to-pandoc" id="toc-new-to-pandoc" class="nav-link" data-scroll-target="#new-to-pandoc">New to Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&amp;v=4" style="object-fit: cover;width:1em;height:1em;">?</a></li>
   <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation 📦</a></li>
@@ -238,7 +238,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block"><p>Cite Tools</p></h1>
-<p class="subtitle lead"></p><p>Extension 🔌 with advanced bibliography 📚 for Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&amp;v=4" style="object-fit: cover;width:1em;height:1em;"> and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;"></p><p></p>
+<p class="subtitle lead"></p><p>Extension with advanced bibliography for Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&amp;v=4" style="object-fit: cover;width:1em;height:1em;"> and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;"></p><p></p>
 </div>
 
 
@@ -266,8 +266,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p>Cite Tools is an extension of the Quarto Open-Source Scientific and Technical Publishing System, built upon Pandoc and compatible with any version above <code>2.17</code>, that bundles together <a href="./docs/05-about.html">several Lua filters</a> 🌙 to introduce advanced bibliography features.</p>
-<section id="why-a-bibliography-extension" class="level2">
-<h2 class="anchored" data-anchor-id="why-a-bibliography-extension">Why a bibliography extension? 🤔</h2>
+<section id="why-a-bibliography" class="level2">
+<h2 class="anchored" data-anchor-id="why-a-bibliography">Why a bibliography 🔌?</h2>
 <p>Users of the jurasic <a href="https://en.wikipedia.org/wiki/BibTeX">BibTeX</a> would probably be exceptionally pleased with the speed and reliability of Pandoc Citeproc, and the fact that it converts documents to over 60 different formats (including HTML, LaTeX, Word).</p>
 <p>Out-of-the-box, however, Citeproc does not provide common BibTeX functionalities, such as the ability to split the bibliography into multiple sections, or the ability to cite arbitrary fields of the references (<em>e.g.</em> <code>citetitle</code>, <code>citeauthor</code>, <code>citefield</code>). It also lacks the interesting <strong>backref</strong> option afforded by BibTeX and <a href="http://www.ctan.org/pkg/hyperref">HyperRef</a>, which allows for the creation of linked indexes of citations.</p>
 <p>Luckely, Citeproc is extensible, and this extension aims to provide a solution to these limitations and, <em>hopefully</em>, allow Pandoc and Quarto users to <strong>completely</strong> replace BibTeX/BibLaTeX with Citeproc. It will allow the user to <em>easily</em> create multiple bibliographies (or bibliographies with multiple sections, such as <em>primary</em> and <em>secondary sources</em>), cite arbitrary fields of the references<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, and create linked indexes of citations<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. All of this with very little configuration needed.</p>
