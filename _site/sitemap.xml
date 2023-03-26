@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/test/input.html</loc>
+    <lastmod>2023-03-26T17:20:45.233Z</lastmod>
+  </url>
+  <url>
     <loc>https://bcdavasconcelos.github.io/citetools/changelog.html</loc>
-    <lastmod>2023-03-26T16:28:49.275Z</lastmod>
+    <lastmod>2023-03-26T17:20:46.204Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/docs/06-multibib-in-scrivener.html</loc>
-    <lastmod>2023-03-26T16:28:50.177Z</lastmod>
+    <lastmod>2023-03-26T17:20:47.072Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/docs/02-multibib.html</loc>
-    <lastmod>2023-03-26T16:28:51.249Z</lastmod>
+    <lastmod>2023-03-26T17:20:48.356Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/docs/01-basics.html</loc>
-    <lastmod>2023-03-26T16:28:52.369Z</lastmod>
+    <lastmod>2023-03-26T17:20:49.644Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/docs/05-about.html</loc>
-    <lastmod>2023-03-26T16:28:53.148Z</lastmod>
+    <lastmod>2023-03-26T17:20:50.564Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/docs/03-cite-field.html</loc>
-    <lastmod>2023-03-26T16:28:55.391Z</lastmod>
+    <lastmod>2023-03-26T17:20:53.302Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/docs/04-citation-backlinks.html</loc>
-    <lastmod>2023-03-26T16:28:56.952Z</lastmod>
+    <lastmod>2023-03-26T17:20:54.965Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/docs/11-bibtex-to-csl.html</loc>
-    <lastmod>2023-03-26T16:28:57.791Z</lastmod>
+    <lastmod>2023-03-26T17:20:55.950Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/index.html</loc>
-    <lastmod>2023-03-26T17:03:53.902Z</lastmod>
+    <lastmod>2023-03-26T17:20:57.167Z</lastmod>
   </url>
   <url>
-    <loc>https://bcdavasconcelos.github.io/citetools/sample.html</loc>
-    <lastmod>2023-03-26T16:28:59.781Z</lastmod>
+    <loc>https://bcdavasconcelos.github.io/citetools/input.html</loc>
+    <lastmod>2023-03-26T17:20:58.228Z</lastmod>
   </url>
 </urlset>

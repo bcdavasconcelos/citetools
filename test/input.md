@@ -1,0 +1,148 @@
+---
+title: |
+  Cite Tools
+subtitle: |
+  Extension with advanced bibliography for Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&v=4" style="object-fit: cover;width:1em;height:1em;" /> and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
+author: "Bernardo Vasconcelos"
+date: 2023-03-26
+filters:
+  - citetools
+#listing:
+#  id: lua-filters
+#  contents:
+#    - docs/cite-field.qmd
+#    - docs/multibib.qmd
+#    - docs/citation-backlinks.qmd
+#  type: grid
+#  grid-columns: 2
+---
+
+Cite Tools is an extension of the Quarto Open-Source Scientific and Technical Publishing System, built upon Pandoc and compatible with any version above `2.17`, that bundles together [several Lua filters](/docs/05-about.qmd) 🌙 to introduce advanced bibliography features.
+
+## Why a bibliography 🔌?
+
+Users of the jurasic [BibTeX](https://en.wikipedia.org/wiki/BibTeX) would probably be exceptionally pleased with the speed and reliability of Pandoc Citeproc, and the fact that it converts documents to over 60 different formats (including HTML, LaTeX, Word).
+
+Out-of-the-box, however, Citeproc does not provide common BibTeX functionalities, such as the ability to split the bibliography into multiple sections, or the ability to cite arbitrary fields of the references (*e.g.* `citetitle`, `citeauthor`, `citefield`). It also lacks the interesting **backref** option afforded by BibTeX and [HyperRef](http://www.ctan.org/pkg/hyperref), which allows for the creation of linked indexes of citations.
+
+Luckely, Citeproc is extensible, and this extension aims to provide a solution to these limitations and, *hopefully*, allow Pandoc and Quarto users to **completely** replace BibTeX/BibLaTeX with Citeproc. It will allow the user to *easily* create multiple bibliographies (or bibliographies with multiple sections, such as *primary* and *secondary sources*), cite arbitrary fields of the references^[In the official nomenclature, CSL has *variables*, BibTeX has *fields*, and RIS has *tags*. As a general rule, we have stuck to the term *fields*.], and create linked indexes of citations^[Linked glossaries can also easily be created by dressing it as bibiography]. All of this with very little configuration needed.
+
+Also, with the advent of Quarto, it has become easier for those not well-versed Lua or Pandoc to use extensions such as this one! So, why not?!
+
+## New to Quarto <img src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />?
+Quarto is an open-source scientific and technical publishing system. Visit the [getting started](https://quarto.org/docs/get-started/) guide to download and install. Once installed, you can use it to create, build, and preview your documents.
+
+::: {.callout-tip appearance="simple"}
+**I highly recommend visiting the [Tutorial: Hello, Quarto](https://quarto.org/docs/get-started/hello/vscode.html).** You'll learn how to create a document, build it, and preview it. You will also be taken to the excellent extensions for [VS Code](https://quarto.org/docs/get-started/#quarto-for-vs-code) and [RStudio](https://quarto.org/docs/get-started/#quarto-for-rstudio) that will make your life easier.
+:::
+
+::: {.callout-note collapse="true"}
+## Quarto Quickstart 🚀
+
+- On macOS ({{< fa brands apple >}}), use [Homebrew](https://brew.sh/) to `brew install quarto`.
+- On Windows ({{< fa brands windows >}}), use [Chocolatey](https://chocolatey.org/) to `choco install quarto`.
+- On Linux ({{< fa brands linux >}}), use your package manager to install `quarto`.
+
+Find out more at [Awesome Quarto](https://github.com/mcanouil/awesome-quarto), [Quarto Extensions](https://github.com/quarto-ext?type=source), [Quarto on Github](https://github.com/search?q=topic%3Aquarto&type=repositories), [RStudio Community](https://community.rstudio.com/tags/quarto), [Stack Overflow](https://stackoverflow.com/questions/tagged/quarto), [Twitter](https://twitter.com/quarto_pub).
+:::
+
+
+
+## New to Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&v=4" style="object-fit: cover;width:1em;height:1em;" />?
+[Pandoc](https://pandoc.org/) is a universal document converter developed by John MacFarlane, professor of philosophy, that is at the core of Quarto. To learn more about it, see the [Pandoc User's Guide](https://pandoc.org/MANUAL.html) [{{< fa regular file-pdf >}}](https://pandoc.org/MANUAL.pdf). You can install Pandoc as a standalone application, but it will also inevitably be included in any Quarto instalation.
+
+Make sure to check [Pandoc-Discuss](https://groups.google.com/g/pandoc-discuss) in case you have unsolved questions. You can also ask questions on [Pandoc at Stack Overflow](https://stackoverflow.com/questions/tagged/pandoc).
+
+## Installation 📦
+
+If the prospect of typing something on the command line seems daunting, or if you simply need a sample, you can download the [citetools repository](https://github.com/bcdavasconcelos/citetools/archive/refs/heads/main.zip) {{< fa brands github >}}  directly and open it in VSCode to see a working example.
+
+Otherwise, create a new project and install it using:
+
+```bash
+quarto install extension bcdavasconcelos/citetools
+```
+
+Activate it by adding `citetools` to the `_quarto.yml` file in the filters section.
+
+```yaml
+filters:
+  - citetools
+```
+
+## Quickstart 🚀
+
+Add the path to the bibliography files to the document YAML header or to `_quarto.yml` 📁
+
+```yaml
+---
+bibliography_bib-name: path/to/bibfile.bib
+bibliography_other-bib-name: path/to/otherbibfile.bib
+---
+```
+
+Place the corresponding placeholders where they should be printed in the document body 🖨️
+
+ ```markdown
+ ::: {#refs_bib-name}
+ :::
+
+ ::: {#refs_other-bib-name}
+ :::
+ ```
+
+ You're ready to rock. 🤘
+
+## Usage 📖
+
+ Cite references [as you normally do in Pandoc](/docs/01-basics.qmd) and they will be linked 🔗 and backlinked 🔗 to the bibliography 📚
+
+ ```markdown
+ [@citekey]
+ ```
+
+ Use `[@Citekey]{.csl_field}` to arbitrarily 🎯🥋 print specific fields instead of the usual Author-Date.
+
+  ```markdown
+  [@citekey]{.author}
+  [@citekey]{.title}
+  [@citekey]{.original-title}
+  ```
+ Append the field name with a dot (`.`) to avoid creating a link to the bibliography in this particular citation📍
+
+  ```markdown
+  [@citekey]{.author.}
+  ```
+ This can also be done globally 🌐 by setting `link-fields: false` in the metadata^[If `link-citations` is `false` then `link-fields` will also default to `false`.]
+
+  ```yaml
+  ---
+  link-fields: false
+  ---
+  ```
+
+## Documentation 📚
+
+This [Quarto-powered website](https://quarto.org/docs/websites/) provides documentation for the following filters:
+
+- [{{< fa solid file-code >}}](https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/multiple-bibliographies.lua) [multiple-bibliographies](/docs/02-multibib.qmd)
+- [{{< fa solid file-code >}}](https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/cite-field.lua) [cite-field](/docs/03-cite-field.qmd)
+- [{{< fa solid file-code >}}](https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/citation-backlinks.lua) [citation-backlinks](/docs/04-citation-backlinks.qmd)
+
+In the future, we plan to add documentation for the following filters:
+
+- [section-bibliographies](https://github.com/pandoc-ext/section-bibliographies)
+- [recursive citeproc](https://github.com/dialoa/recursive-citeproc)
+
+
+## Contributing 🤝
+If you have suggestions for other filters, improvements to the existing ones, or bug reports, please open an issue at the [citetools repository](https://github.com/bcdavasconcelos/citetools/issues) {{< fa brands github >}}.
+
+
+## Acknowledgments 🙏
+
+- Albert Krewinkel, for creating Pandoc filters.
+- John MacFarlane, for creating Pandoc.
+- The community of Quarto and Pandoc developers and users.
+
+

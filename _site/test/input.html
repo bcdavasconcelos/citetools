@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Bernardo César Diniz Athayde Vasconcelos">
+<meta name="author" content="Bernardo Vasconcelos">
+<meta name="dcterms.date" content="2023-03-26">
 
-<title>Cite Tools - Example of Citetools in action</title>
+<title>Cite Tools - Cite Tools</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,45 +56,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -123,11 +105,6 @@ div.csl-indent {
     background-color: transparent!important;
   }
 </style>
-<style>
-  code span.co {
-    font-style: normal!important;
-  }
-</style>
 
 
 </head>
@@ -141,7 +118,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Example of Citetools in action</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><p>Cite Tools</p></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -155,11 +132,11 @@ div.csl-indent {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/greek-ship.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/greek-ship.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
-    <a href="./index.html" title="Cite Tools" class="quarto-navigation-tool px-1" aria-label="Cite Tools"><i class="bi bi-globe"></i></a>
+    <a href="../index.html" title="Cite Tools" class="quarto-navigation-tool px-1" aria-label="Cite Tools"><i class="bi bi-globe"></i></a>
     <a href="https://github.com/bcdavasconcelos/citetools" title="Cite Tools GitHub" class="quarto-navigation-tool px-1" aria-label="Cite Tools GitHub"><i class="bi bi-github"></i></a>
     <a href="https://twitter.com/bcdavasconcelos" title="Twitter" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -174,7 +151,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./index.html" class="sidebar-item-text sidebar-link">
+            <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cite Tools</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -183,28 +160,28 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/01-basics.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
+  <a href="../docs/01-basics.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">The Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/02-multibib.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
+  <a href="../docs/02-multibib.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">Multiple Bibliographies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/03-cite-field.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
+  <a href="../docs/03-cite-field.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">Cite Field</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/04-citation-backlinks.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
+  <a href="../docs/04-citation-backlinks.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">Citation Backlinks</span></a>
   </div>
@@ -213,7 +190,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/05-about.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
+  <a href="../docs/05-about.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">About</span></a>
   </div>
@@ -228,19 +205,25 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#the-works-of-aristotle" id="toc-the-works-of-aristotle" class="nav-link" data-scroll-target="#the-works-of-aristotle">The Works of Aristotle</a></li>
-  
-  
+  <li><a href="#why-a-bibliography" id="toc-why-a-bibliography" class="nav-link active" data-scroll-target="#why-a-bibliography">Why a bibliography 🔌?</a></li>
+  <li><a href="#new-to-quarto" id="toc-new-to-quarto" class="nav-link" data-scroll-target="#new-to-quarto">New to Quarto <img src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;">?</a></li>
+  <li><a href="#new-to-pandoc" id="toc-new-to-pandoc" class="nav-link" data-scroll-target="#new-to-pandoc">New to Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&amp;v=4" style="object-fit: cover;width:1em;height:1em;">?</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation 📦</a></li>
+  <li><a href="#quickstart" id="toc-quickstart" class="nav-link" data-scroll-target="#quickstart">Quickstart 🚀</a></li>
+  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage 📖</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation 📚</a></li>
+  <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing">Contributing 🤝</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments 🙏</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/bcdavasconcelos/citetools/edit/main/sample.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/bcdavasconcelos/citetools/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/bcdavasconcelos/citetools/edit/main/test/input.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/bcdavasconcelos/citetools/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Example of Citetools in action</h1>
+<h1 class="title"><p>Cite Tools</p></h1>
+<p class="subtitle lead"></p><p>Extension with advanced bibliography for Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&amp;v=4" style="object-fit: cover;width:1em;height:1em;"> and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;"></p><p></p>
 </div>
 
 
@@ -250,10 +233,16 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Bernardo César Diniz Athayde Vasconcelos </p>
+             <p>Bernardo Vasconcelos </p>
           </div>
   </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 26, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -261,69 +250,139 @@ div.csl-indent {
 
 </header>
 
-<section id="introduction" class="level1 unnumbered">
-<h1 class="unnumbered">Introduction</h1>
-<p>This very concise sample ilustrates the use of <code>multiple-bibliographies</code> to separate primary (<code>refs/primary.json</code>) and secondary (<code>refs/secondary.json</code>) sources for the document; the use of <code>citation-backlinks</code> to turn the bibliography into an index of citations with links back to the text; and the use of <code>citefield</code> to print in the body of the text useful information from the bibliographic references.</p>
-<p><em>Optionally</em>, <code>section-bibliographies</code> can be used to separate the bibliography into sections. For this, you must uncomment the apropriate line in the <code>_extension.yaml</code> file.</p>
+<p>Cite Tools is an extension of the Quarto Open-Source Scientific and Technical Publishing System, built upon Pandoc and compatible with any version above <code>2.17</code>, that bundles together <a href="../docs/05-about.html">several Lua filters</a> 🌙 to introduce advanced bibliography features.</p>
+<section id="why-a-bibliography" class="level2">
+<h2 class="anchored" data-anchor-id="why-a-bibliography">Why a bibliography 🔌?</h2>
+<p>Users of the jurasic <a href="https://en.wikipedia.org/wiki/BibTeX">BibTeX</a> would probably be exceptionally pleased with the speed and reliability of Pandoc Citeproc, and the fact that it converts documents to over 60 different formats (including HTML, LaTeX, Word).</p>
+<p>Out-of-the-box, however, Citeproc does not provide common BibTeX functionalities, such as the ability to split the bibliography into multiple sections, or the ability to cite arbitrary fields of the references (<em>e.g.</em> <code>citetitle</code>, <code>citeauthor</code>, <code>citefield</code>). It also lacks the interesting <strong>backref</strong> option afforded by BibTeX and <a href="http://www.ctan.org/pkg/hyperref">HyperRef</a>, which allows for the creation of linked indexes of citations.</p>
+<p>Luckely, Citeproc is extensible, and this extension aims to provide a solution to these limitations and, <em>hopefully</em>, allow Pandoc and Quarto users to <strong>completely</strong> replace BibTeX/BibLaTeX with Citeproc. It will allow the user to <em>easily</em> create multiple bibliographies (or bibliographies with multiple sections, such as <em>primary</em> and <em>secondary sources</em>), cite arbitrary fields of the references<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, and create linked indexes of citations<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. All of this with very little configuration needed.</p>
+<p>Also, with the advent of Quarto, it has become easier for those not well-versed Lua or Pandoc to use extensions such as this one! So, why not?!</p>
 </section>
-<section id="the-works-of-aristotle" class="level1">
-<h1>The Works of Aristotle</h1>
-<p>This is an example of complex use of bibliographic references. We are relying on the bibliography to print in the text the correct names of the authors, editors, and translators &amp; title of the works.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>The works of <span class="co">[</span><span class="ot">@AristOp</span><span class="co">]</span>{.author} were first edited by</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@AristOp</span><span class="co">]</span>{.editor} in <span class="co">[</span><span class="ot">@AristOp</span><span class="co">]</span>{.issued}.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The works of <span id="cite_1"><span class="citation" data-cites="AristOp"><a href="#ref-AristOp" role="doc-biblioref">Aristotle</a></span></span> were first edited by Bekker in <span id="cite_2"><span class="citation" data-cites="AristOp"><a href="#ref-AristOp" role="doc-biblioref">1831</a></span></span>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Later, the <span class="co">[</span><span class="ot">@DA</span><span class="co">]</span>{.title} was edited by <span class="co">[</span><span class="ot">@DABiehl1896</span><span class="co">]</span>{.editor}</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>in <span class="co">[</span><span class="ot">@DABiehl1896</span><span class="co">]</span>{.issued} <span class="co">[</span><span class="ot">repr. in [@DATheiler</span><span class="co">]</span>{.translator}'s</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@DATheiler</span><span class="co">]</span>{.issued} translation]; by <span class="co">[</span><span class="ot">@DAForster</span><span class="co">]</span>{.editor} in</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@DAForster</span><span class="co">]</span>{.issued} <span class="co">[</span><span class="ot">repr. in [@DACorcilius</span><span class="co">]</span>{.translator}'s</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@DACorcilius</span><span class="co">]</span>{.issued} translation]; and by <span class="co">[</span><span class="ot">@DARoss</span><span class="co">]</span>{.editor}</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>in <span class="co">[</span><span class="ot">@DARoss</span><span class="co">]</span>{.issued}.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Later, the <span id="cite_3"><span class="citation" data-cites="DA"><a href="#ref-DA" role="doc-biblioref"><em>De anima</em></a></span></span> was edited by <span id="cite_4"><span class="citation" data-cites="DABiehl1896"><a href="#ref-DABiehl1896" role="doc-biblioref">Biehl</a></span></span> in <span id="cite_5"><span class="citation" data-cites="DABiehl1896"><a href="#ref-DABiehl1896" role="doc-biblioref">1896</a></span></span> [repr. in Seidl’s <span id="cite_6"><span class="citation" data-cites="DATheiler"><a href="#ref-DATheiler" role="doc-biblioref">1995</a></span></span> translation]; by <span id="cite_7"><span class="citation" data-cites="DAForster"><a href="#ref-DAForster" role="doc-biblioref">Förster</a></span></span> in <span id="cite_8"><span class="citation" data-cites="DAForster"><a href="#ref-DAForster" role="doc-biblioref">1912</a></span></span> [repr. in <span id="cite_9"><span class="citation" data-cites="DACorcilius"><a href="#ref-DACorcilius" role="doc-biblioref">Corcilius</a></span></span>’s <span id="cite_10"><span class="citation" data-cites="DACorcilius"><a href="#ref-DACorcilius" role="doc-biblioref">2017</a></span></span> translation]; and by <span id="cite_11"><span class="citation" data-cites="DARoss"><a href="#ref-DARoss" role="doc-biblioref">Ross</a></span></span> in <span id="cite_12"><span class="citation" data-cites="DARoss"><a href="#ref-DARoss" role="doc-biblioref">1961</a></span></span>.</p>
+<section id="new-to-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="new-to-quarto">New to Quarto <img src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;">?</h2>
+<p>Quarto is an open-source scientific and technical publishing system. Visit the <a href="https://quarto.org/docs/get-started/">getting started</a> guide to download and install. Once installed, you can use it to create, build, and preview your documents.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>I highly recommend visiting the <a href="https://quarto.org/docs/get-started/hello/vscode.html">Tutorial: Hello, Quarto</a>.</strong> You’ll learn how to create a document, build it, and preview it. You will also be taken to the excellent extensions for <a href="https://quarto.org/docs/get-started/#quarto-for-vs-code">VS Code</a> and <a href="https://quarto.org/docs/get-started/#quarto-for-rstudio">RStudio</a> that will make your life easier.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Quarto Quickstart 🚀
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>On macOS (), use <a href="https://brew.sh/">Homebrew</a> to <code>brew install quarto</code>.</li>
+<li>On Windows (), use <a href="https://chocolatey.org/">Chocolatey</a> to <code>choco install quarto</code>.</li>
+<li>On Linux (), use your package manager to install <code>quarto</code>.</li>
+</ul>
+<p>Find out more at <a href="https://github.com/mcanouil/awesome-quarto">Awesome Quarto</a>, <a href="https://github.com/quarto-ext?type=source">Quarto Extensions</a>, <a href="https://github.com/search?q=topic%3Aquarto&amp;type=repositories">Quarto on Github</a>, <a href="https://community.rstudio.com/tags/quarto">RStudio Community</a>, <a href="https://stackoverflow.com/questions/tagged/quarto">Stack Overflow</a>, <a href="https://twitter.com/quarto_pub">Twitter</a>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="new-to-pandoc" class="level2">
+<h2 class="anchored" data-anchor-id="new-to-pandoc">New to Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&amp;v=4" style="object-fit: cover;width:1em;height:1em;">?</h2>
+<p><a href="https://pandoc.org/">Pandoc</a> is a universal document converter developed by John MacFarlane, professor of philosophy, that is at the core of Quarto. To learn more about it, see the <a href="https://pandoc.org/MANUAL.html">Pandoc User’s Guide</a> <a href="https://pandoc.org/MANUAL.pdf"></a>. You can install Pandoc as a standalone application, but it will also inevitably be included in any Quarto instalation.</p>
+<p>Make sure to check <a href="https://groups.google.com/g/pandoc-discuss">Pandoc-Discuss</a> in case you have unsolved questions. You can also ask questions on <a href="https://stackoverflow.com/questions/tagged/pandoc">Pandoc at Stack Overflow</a>.</p>
+</section>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation 📦</h2>
+<p>If the prospect of typing something on the command line seems daunting, or if you simply need a sample, you can download the <a href="https://github.com/bcdavasconcelos/citetools/archive/refs/heads/main.zip">citetools repository</a> directly and open it in VSCode to see a working example.</p>
+<p>Otherwise, create a new project and install it using:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension bcdavasconcelos/citetools</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Activate it by adding <code>citetools</code> to the <code>_quarto.yml</code> file in the filters section.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filters</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> citetools</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="quickstart" class="level2">
+<h2 class="anchored" data-anchor-id="quickstart">Quickstart 🚀</h2>
+<p>Add the path to the bibliography files to the document YAML header or to <code>_quarto.yml</code> 📁</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography_bib-name</span><span class="kw">:</span><span class="at"> path/to/bibfile.bib</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography_other-bib-name</span><span class="kw">:</span><span class="at"> path/to/otherbibfile.bib</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Place the corresponding placeholders where they should be printed in the document body 🖨️</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>::: {#refs_bib-name}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>::: {#refs_other-bib-name}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You’re ready to rock. 🤘</p>
+</section>
+<section id="usage" class="level2">
+<h2 class="anchored" data-anchor-id="usage">Usage 📖</h2>
+<p>Cite references <a href="../docs/01-basics.html">as you normally do in Pandoc</a> and they will be linked 🔗 and backlinked 🔗 to the bibliography 📚</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@citekey</span><span class="co">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Use <code>[@Citekey]{.csl_field}</code> to arbitrarily 🎯🥋 print specific fields instead of the usual Author-Date.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@citekey</span><span class="co">]</span>{.author}</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@citekey</span><span class="co">]</span>{.title}</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@citekey</span><span class="co">]</span>{.original-title}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Append the field name with a dot (<code>.</code>) to avoid creating a link to the bibliography in this particular citation📍</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@citekey</span><span class="co">]</span>{.author.}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This can also be done globally 🌐 by setting <code>link-fields: false</code> in the metadata<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">link-fields</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="documentation" class="level2">
+<h2 class="anchored" data-anchor-id="documentation">Documentation 📚</h2>
+<p>This <a href="https://quarto.org/docs/websites/">Quarto-powered website</a> provides documentation for the following filters:</p>
+<ul>
+<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/multiple-bibliographies.lua"></a> <a href="../docs/02-multibib.html">multiple-bibliographies</a></li>
+<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/cite-field.lua"></a> <a href="../docs/03-cite-field.html">cite-field</a></li>
+<li><a href="https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/citation-backlinks.lua"></a> <a href="../docs/04-citation-backlinks.html">citation-backlinks</a></li>
+</ul>
+<p>In the future, we plan to add documentation for the following filters:</p>
+<ul>
+<li><a href="https://github.com/pandoc-ext/section-bibliographies">section-bibliographies</a></li>
+<li><a href="https://github.com/dialoa/recursive-citeproc">recursive citeproc</a></li>
+</ul>
+</section>
+<section id="contributing" class="level2">
+<h2 class="anchored" data-anchor-id="contributing">Contributing 🤝</h2>
+<p>If you have suggestions for other filters, improvements to the existing ones, or bug reports, please open an issue at the <a href="https://github.com/bcdavasconcelos/citetools/issues">citetools repository</a> .</p>
+</section>
+<section id="acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments 🙏</h2>
+<ul>
+<li>Albert Krewinkel, for creating Pandoc filters.</li>
+<li>John MacFarlane, for creating Pandoc.</li>
+<li>The community of Quarto and Pandoc developers and users.</li>
+</ul>
+
+
 </section>
 
 
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
-<div id="quarto-appendix" class="default"><section id="primary-sources" class="level1 appendix"><h2 class="anchored quarto-appendix-heading">Primary Sources</h2><div class="quarto-appendix-contents">
-
-<div id="refs_primary" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-AristOp" class="csl-entry" role="listitem">
-Aristotle. 1831a. <em>Aristotelis Opera</em>. Edited by Immanuel Bekker. 1st ed. 4 vols. Berlim: Reimer. [<a href="#cite_1">1</a>, <a href="#cite_2">2</a>]
-</div>
-<div id="ref-DA" class="csl-entry" role="listitem">
-———. 1831b. <span>“De Anima.”</span> In <em>Aristotelis Opera</em>, edited by Immanuel Bekker, 402a01–435b25. Berlim: Reimer. [<a href="#cite_3">1</a>]
-</div>
-<div id="ref-DABiehl1896" class="csl-entry" role="listitem">
-———. 1896. <em>De Anima</em>. Edited by Wilhelm Biehl. Leipzig: Teubner. [<a href="#cite_4">1</a>, <a href="#cite_5">2</a>]
-</div>
-<div id="ref-DAForster" class="csl-entry" role="listitem">
-———. 1912. <em>Aristotelis de Anima Libri III</em>. Edited by Aurél Förster. Budapeste: Hungarian Academy of Sciences. [<a href="#cite_7">1</a>, <a href="#cite_8">2</a>]
-</div>
-<div id="ref-DARoss" class="csl-entry" role="listitem">
-———. 1961. <em>De Anima</em>. Edited by William David Ross. Oxford: Clarendon. [<a href="#cite_11">1</a>, <a href="#cite_12">2</a>]
-</div>
-</div>
-</div></section><section id="secondary-sources" class="level1 appendix"><h2 class="anchored quarto-appendix-heading">Secondary Sources</h2><div class="quarto-appendix-contents">
-
-<div id="refs_secondary" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-DACorcilius" class="csl-entry" role="listitem">
-Aristoteles. 2017. <em>Über Die Seele. De Anima</em>. Translated by Klaus Corcilius. Hamburg: Felix Meiner. [<a href="#cite_9">1</a>, <a href="#cite_10">2</a>]
-</div>
-<div id="ref-DATheiler" class="csl-entry" role="listitem">
-Aristotelis. 1995. <em>De Anima</em>. Translated by H. Seidl and W. Theiler. Hamburg: Felix Meiner. [<a href="#cite_6">1</a>]
-</div>
-</div>
-
-
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{vasconcelos2023,
+<ol>
+<li id="fn1"><p>In the official nomenclature, CSL has <em>variables</em>, BibTeX has <em>fields</em>, and RIS has <em>tags</em>. As a general rule, we have stuck to the term <em>fields</em>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Linked glossaries can also easily be created by dressing it as bibiography<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>If <code>link-citations</code> is <code>false</code> then <code>link-fields</code> will also default to <code>false</code>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{vasconcelos2023,
   author = {Vasconcelos, BCDA},
-  title = {Example of {Citetools} in Action},
+  title = {Cite {Tools}},
   date = {2023},
-  url = {https://bcdavasconcelos.github.io/citetools/sample.html},
+  url = {https://bcdavasconcelos.github.io/citetools/test/input.html},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-vasconcelos2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-Vasconcelos, BCDA. 2023. <span>“Example of Citetools in Action.”</span>
-2023. <a href="https://bcdavasconcelos.github.io/citetools/sample.html">https://bcdavasconcelos.github.io/citetools/sample.html</a>.
+Vasconcelos, BCDA. 2023. <span>“Cite Tools .”</span> 2023. <a href="https://bcdavasconcelos.github.io/citetools/test/input.html">https://bcdavasconcelos.github.io/citetools/test/input.html</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
