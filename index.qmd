@@ -2,9 +2,9 @@
 title: |
   Cite Tools
 subtitle: |
-  Extension 🔌 with advanced bibliography 📚 for Pandoc and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
+  Extension 🔌 with advanced bibliography 📚 for Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&v=4" style="object-fit: cover;width:1em;height:1em;" /> and Quarto <img id="top" src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />
 author: "Bernardo Vasconcelos"
-date: "2021-09-01"
+date: 2023-03-26
 filters:
   - citetools
 #listing:
@@ -17,13 +17,32 @@ filters:
 #  grid-columns: 2
 ---
 
-This extension bundles together [several Lua filters](/docs/05-about.qmd) 🌙 that will work with any Pandoc version above `2.17`.
-
-This extension allows for:
+Cite Tools is an extension of the Quarto Publishing System that is built upon Pandoc, and that introduces advanced bibliography features (that will work with any Pandoc version above `2.17`). It does this by bundling together [several Lua filters](/docs/05-about.qmd) 🌙 that allow for:
 
 - The creation of multiple bibliographies (or bibliographies with multiple sections, such as *primary* and *secondary sources*).
 - The citation of arbitrary fields^[In the official nomenclature, CSL has *variables*, BibTeX has *fields*, and RIS has *tags*. As a general rule, we have stuck to the term *fields*.] of the references, such as *author*, *editor*, and *translator* names, or *title* and *original-title* of works.
 - The creation of linked indexes of citations.
+
+
+::: {.callout-note collapse="true"}
+## Why make a Quarto Extension? 🤔
+
+::: {.callout-note collapse="true"}
+### Lack of common LaTeX bibliography features
+
+BibLaTeX users trying out Citeproc would probably be exceptionally pleased with its speed and reliability, and the fact that one can convert bibliography consistently into all formats supported by Pandoc (including HTML, LaTeX, Word, and dozens of others).
+
+Some limitations, however, would inevitably become apparent. First, there is the inability to split the bibliography into multiple sections. Then, there is the lack of commands familiar to BibTeX users, such as `\citetitle`, `\citeauthor`, `\citefield`. Finally, it is missing the interesting `backref ` option afforded by BibTeX and HyperRef, which allows for the creation of linked indexes of citations.
+
+This extension aims to provide a solution to these limitations and, *hopefully*, allow Pandoc and Quarto users to **completely** replace BibTeX/BibLaTeX with Citeproc.
+
+:::
+::: {.callout-tip collapse="true"}
+### Ease of use
+The advent of Quarto means that even people not well-versed in Pandoc or Lua can use this extension with incredible ease. If opening the command line and installing the extension is too much, is it possible to download the repository [{{< fa brands github >}}](https://github.com/bcdavasconcelos/citetools/archive/refs/heads/main.zip) and simply open it using VSCode.
+:::
+
+:::
 
 ::: {.callout-note collapse="true"}
 ## New to Quarto <img src="https://quarto.org/favicon.png" style="object-fit: cover;width:1em;height:1em;" />?
@@ -42,19 +61,9 @@ I **highly recommend** visiting the [Tutorial: Hello, Quarto](https://quarto.org
 
 ::: {.callout-note collapse="true"}
 ## New to Pandoc <img src="https://avatars.githubusercontent.com/u/110831952?s=200&v=4" style="object-fit: cover;width:1em;height:1em;" />?
-At the core of Quarto lies Pandoc, the universal document converter developed by John MacFarlane, professor of philosophy. You can learn more about Pandoc [here](https://pandoc.org/). In particular, see the [Pandoc User's Guide](https://pandoc.org/MANUAL.html) [{{< fa regular file-pdf >}}](https://pandoc.org/MANUAL.pdf). You can install Pandoc indenpendently, but if you install Quarto, Pandoc will be installed automatically.
+At the core of Quarto lies Pandoc, the universal document converter developed by John MacFarlane, professor of philosophy. You can learn more about Pandoc [here](https://pandoc.org/). In particular, see the [Pandoc User's Guide](https://pandoc.org/MANUAL.html) [{{< fa regular file-pdf >}}](https://pandoc.org/MANUAL.pdf). You can install Pandoc independently, but if you install Quarto, Pandoc will be installed automatically.
 
 Make sure to check [Pandoc-Discuss](https://groups.google.com/g/pandoc-discuss) in case you have unsolved questions. You can also ask questions on [Pandoc at Stack Overflow](https://stackoverflow.com/questions/tagged/pandoc).
-:::
-
-::: {.callout-note collapse="true"}
-## Justification 🤔
-
-BibLaTeX users trying out Citeproc would probably be exceptionally pleased with its speed and reliability, and the fact that one can convert bibliography consistently into all formats supported by Pandoc (including HTML, LaTeX, Word, and dozens of others).
-
-Some limitations, however, would inevitably become apparent. First, there is the inability to split the bibliography into multiple sections. Then, there is the lack of commands familiar to BibTeX users, such as `\citetitle`, `\citeauthor`, `\citefield`. Finally, there is the lack of the interesting `backref ` option afforded by bibtex and hyperref, which allows for the creation of linked indexes of citations.
-
-This extension aims to provide a solution to these limitations and, *hopefully*, allow Pandoc and Quarto users to *completely* replace BibTeX/BibLaTeX with Citeproc.
 :::
 
 
@@ -130,6 +139,8 @@ Place the corresponding placeholders where they should be printed in the documen
 :::
 
 
+
+
 ::: {.callout-note collapse="true"}
 ## Documentation 📚
 This [Quarto-powered website](https://quarto.org/docs/websites/) documents the following filters:
@@ -142,10 +153,7 @@ In the future, we plan to add documentation for the following filters:
 
 - [section-bibliographies](https://github.com/pandoc-ext/section-bibliographies)
 - [recursive citeproc](https://github.com/dialoa/recursive-citeproc)
-
 :::
-
-
 
 
 
@@ -158,9 +166,9 @@ If you have suggestions for other filters, improvements to the existing ones, or
 ::: {.callout-note collapse="true"}
 ## Acknowledgments 🙏
 
-- John MacFarlane, for creating Pandoc and Quarto.
 - Albert Krewinkel, for creating Pandoc filters.
-- The community of Quarto and Pandoc users.
+- John MacFarlane, for creating Pandoc.
+- The community of Quarto and Pandoc developers and users.
 
 :::
 
