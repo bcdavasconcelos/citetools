@@ -6,7 +6,7 @@ link-citations: false
 link-fields: false
 ---
 
-In many areas we are frequently invited to comment on different editions and translations of the same work. In such cases, we refer not only the authors and dates of the publications, but also to their editors, translators, publishers, and their original-titles and editions. But how to do this? If `citetools` is enabled, then the answer lies in a small variation of [Pandoc's vanilla syntax for citations](01-basics.qmd).
+In many areas, we are frequently invited to comment on different editions and translations of the same work. In such cases, we refer not only to the authors and dates of the publications, but also to their editors, translators, publishers, and their original titles and editions. But how to do this? If `citetools` is enabled, then the answer lies in a small variation of [Pandoc's vanilla syntax for citations](01-basics.qmd).
 
 
 ::: {.callout-note appearance="simple"}
@@ -124,13 +124,6 @@ ER  -
 :::
 :::
 
-
-
-
-<!-- Now, let us see that in practice with the following snippet: 
-
-> The works of `[@AristOp]{.author}` were first edited by `[@AristOp]{.editor}` under the title `[@AristOp]{.title}` in `[@AristOp]{.issued}`. -->
-
 With this knowledge, we could state the following in our text:
 
 > The works of \[\@AristOp]{.author} were first edited by \[\@AristOp]{.editor} under the title \[\@AristOp]{.title} in \[\@AristOp]{.issued}.
@@ -153,9 +146,9 @@ Did you notice that we used `[@AristOp]{.issued}` instead of ~~`[@AristOp]{.date
 Internally, as we said, Pandoc uses the [Citation Style Language](https://docs.citationstyles.org/en/stable/specification.html) to handle bibliographies. This is a standard schema for bibliographic data, which is used by some bibliography managers, such as Zotero, and JabRef. Most, however, are closer to 
 the conventions of [BibTeX](https://en.wikipedia.org/wiki/BibTeX#Field_types) (or [RIS](https://en.wikipedia.org/wiki/RIS_(file_format)#Tags)) which is why you may not see an exact correspondence between the CSL variables and BibTeX field names. 
 
-In CSL, there are following variables:
+In CSL, there are the following variables:
 
-```ruby
+```
   abstract accessed annote archive archive_collection archive_location archive-place author authority available-date call-number chair chapter-number citation-key citation-label citation-number collection-editor collection-number collection-title compiler composer container-author container-title container-title-short contributor curator dimensions director division DOI edition editor editor-translator editorial-director event event-date event-place event-title executive-producer first-reference-note-number genre guest host illustrator interviewer ISBN ISSN issue issued jurisdiction keyword language license locator medium narrator note notes number number-of-pages number-of-volumes organizer original-author original-date original-publisher original-publisher-place original-title page page-first part-number part-title performer PMCID PMID printing-number producer publisher publisher-place recipient references reviewed-author reviewed-genre reviewed-title scale script-writer section series-creator source status submitted supplement-number title title-short translator URL version volume volume-title year-suffix
   ```
   
@@ -165,7 +158,7 @@ In CSL, there are following variables:
 
 
 
-Here is a quick reference, not exaustive by any means, of where will the data end up in the conversion from BibTeX and RIS to CSL. This menas that the CSL variables on the first column is the final destination and it receives the content of the second or third column fields depending on the format it converts from. On the second tab, we map the references types from BibTeX to the CSL types.
+Here is a quick reference, not exhaustive by any means, of where will the data end up in the conversion from BibTeX and RIS to CSL. This means that the CSL variables on the first column are the final destination and they receive the content of the second or third-column fields depending on the format it converts from. On the second tab, we map the reference types from BibTeX to the CSL types.
 
 ::: {.panel-tabset}
 ## CSL & BibTeX Fields
@@ -233,7 +226,4 @@ See also the full list of [CSL](https://docs.citationstyles.org/en/stable/specif
 ::: {#refs_primary}
 :::
 
-
-
-[^1]: In fact, we can get any field from the reference, as long as it is defined in the [CSL](https://docs.citationstyles.org/en/stable/specification.html) schema. These include:
   

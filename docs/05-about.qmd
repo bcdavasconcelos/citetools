@@ -17,8 +17,6 @@ Filters published under the MIT license by Albert Krewinkel ([tarleb](https://gi
 
 - [citefield](https://github.com/bcdavasconcelos/citefield)
 
+All Pandoc Lua filters in this extension are published under the MIT license, see file `LICENSE` for details.
 
-All Pandoc Lua filters in this extension are published under the MIT license, see
-file `LICENSE` for details.
-
-[Back to top](#top)
+The Cite Tools Documentation is under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.<br />

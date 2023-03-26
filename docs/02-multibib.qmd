@@ -25,7 +25,7 @@ Or download it at [Github](bcdavasconcelos/citetools).
 
 ::: {.callout-note collapse="true"}
 ## `multiple-bibliographies` or `multibib`?
-There are two versions of the multilple bibliographies filter by Albert Krewinkel. The first one is called `multiple-bibliographies` and it can be found in the Pandoc Lua Filters [repository](https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies). The second one is called `multibib` and it can be found in its own [repository](https://github.com/pandoc-ext/multibib). We are using the first one due to [small issues](https://github.com/pandoc-ext/multibib/issues/4#issue-1623925814) with he second. The differences between them are boderline inexistent, but there are some. <!-- [^2] -->
+There are two versions of the multilple bibliographies filter by Albert Krewinkel. The first one is called `multiple-bibliographies` and it can be found in the Pandoc Lua Filters [repository](https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies). The second one is called `multibib` and it can be found in its own [repository](https://github.com/pandoc-ext/multibib). We are using the first one due to a [minute issue](https://github.com/pandoc-ext/multibib/issues/4#issue-1623925814) with he second. The differences between them are boderline inexistent, but there are some.
 
 Both filters are included in the bundle, but only `multiple bibliographies` is being used by default. You are, however, free to experiment with both editing the content of the `_quarto.yaml` file in the `_extension` folder. They have both been [tweaked to work](https://github.com/bcdavasconcelos/citetools/blob/7ac1c6fd8c1d39db56ac5a41c037853cd76ac301/_extensions/citetools/multiple-bibliographies.lua#L66) with the `citetools` extension.
 :::
@@ -41,10 +41,10 @@ bibliography_secondary: refs/secondary.json
 
 ::: {.callout-warning collapse="true"}
 ## `multibib`
-With `multibib`, you should add all of them to the `bibliography` entry instead, in the form of a dictionary.  
-```yaml  
-bibliography:  
-  primary: refs/primary.json  
+With `multibib`, you should add all of them to the `bibliography` entry instead, in the form of a dictionary.
+```yaml
+bibliography:
+  primary: refs/primary.json
   secondary: refs/secondary.json
 ```
 ::: {.callout-important collapse="true"}
@@ -82,7 +82,7 @@ Each `refs_bib_name` `div` should have a matching entry `bibliography_bib_name` 
 if you have a bibliography named `bibliography_primary`, the placeholder **must** be named `refs-primary` or `refs_primary`. That is, the name of the placeholder must match the name of the `bibliography_` entry (without the prefix) *otherwise nothing will print*.
 
 
-Also, please note that if the placeholder doesn't make its way into the document, the references in that file will not be printed. 
+Also, please note that if the placeholder doesn't make its way into the document, the references in that file will not be printed.
 :::
 
 
@@ -99,7 +99,7 @@ title: Multiple Bibliographies
 [@EN] [@Aubenque1961a]
 
 
-## Primary Sources
+## Primary Sources {.appendix}
 
 ---
 bibliography_primary: refs/primary.json
@@ -108,7 +108,7 @@ bibliography_primary: refs/primary.json
 ::: {#refs_primary}
 :::
 
-## Secondary Sources
+## Secondary Sources  {.appendix}
 
 ---
 bibliography_secondary: refs/secondary.json
@@ -123,9 +123,9 @@ You should have a working document with multiple bibliographies:
 
 [@EN] [@Aubenque1961a]
 
-### Primary Sources
+### Primary Sources  {.appendix}
 ::: {#refs_primary}
 :::
-### Secondary Sources
+### Secondary Sources  {.appendix}
 ::: {#refs_secondary}
 :::

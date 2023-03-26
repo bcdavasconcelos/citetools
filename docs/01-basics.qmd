@@ -1,5 +1,5 @@
 ---
-title: The Basics of Pandoc's Citeproc
+title: The Basics of Pandoc Citeproc
 bibliography: ../refs/primary.json
 citeproc: true
 ---
@@ -13,9 +13,9 @@ See the official documentation on citations at [Pandoc](https://pandoc.org/MANUA
 
 ::: {.callout-warning collapse="true"}
 ## Creating a bibliography file
-Before you can use Cite Tool, you will need a bibliography file. Although nothing stops you from keeping bibliography files manually, this is not advisible for anything other than very small scale projects. For everything else, consider using a software such as [Zotero](http://www.zotero.org), [JabRef](https://www.jabref.org), [Bookends](https://www.sonnysoftware.com), [Bibdesk](https://bibdesk.sourceforge.io), [Endnote](https://endnote.com) (and see also [this comparison on Wikipedia](https://en.wikipedia.org/wiki/Comparison_of_reference_management_software)). These programs allows you to edit your bibliography and easily export it in the desired format.
+Before you can use Cite Tool, you will need a bibliography file. Although nothing stops you from keeping bibliography files manually, this is not advisable for anything other than very small-scale projects. For everything else, consider using software such as [Zotero](http://www.zotero.org), [JabRef](https://www.jabref.org), [Bookends](https://www.sonnysoftware.com), [Bibdesk](https://bibdesk.sourceforge.io), [Endnote](https://endnote.com) (and see also [this comparison on Wikipedia](https://en.wikipedia.org/wiki/Comparison_of_reference_management_software)). These programs allow you to edit your bibliography and easily export it in the desired format.
 
-The most common format, and one of the oldest, is called `BibTeX` (or `BibLaTeX`); others, more recent, include `CSL-JSON` and `CSL-YAML`. These latter are *preferable* since they perform much faster on **Pandoc** and **Quarto** (being, in fact, the format used to represent the bibliography internally)^[They are not, however, widely supported, so you'll probably be stuck with `BibTeX` or `BibLaTeX` anyway.].
+The most common format, and one of the oldest, is called `BibTeX` (or `BibLaTeX`); others, more recent, include `CSL-JSON` and `CSL-YAML`. These latter are *preferable* since they perform much faster on **Pandoc** and **Quarto** (being the format used to represent the bibliography internally)^[They are not, however, widely supported, so you'll probably be stuck with `BibTeX` or `BibLaTeX` in some way or other anyway.].
 
 You can also use shared bibliographies on Github (just provide Pandoc with the URL to the raw file) or shared Zotero libraries, which can be downloaded using the API by accessing the link below, where `LibraryID` should be replaced by the 7-digit code in the middle of the library URL.
 
@@ -25,7 +25,7 @@ You can also use shared bibliographies on Github (just provide Pandoc with the U
 
 ## How to Setup a Simple Bibliography
 
-To set up the bibliography of a document, include the  the path to the bibliography file in the YAML header. 
+Set up the bibliography of a document by including the path to the bibliography file in the YAML header.
 
 ```yaml
 bibliography: path/to/bibfile.bib
@@ -39,7 +39,7 @@ If no CSL file is supplied, Pandoc will default to the Chicago Author-Date style
 :::
 
 
-It is also advisable keeping the bibliography and CSL style files in the default Pandoc folder:
+It is also advisable to keep the bibliography and CSL style files in the default Pandoc folder:
 
 -  {{< fa brands apple >}} macOS: `~/.local/share/pandoc`
  - {{< fa brands linux >}} Linux: `~/.local/share/pandoc`
@@ -51,14 +51,14 @@ You can find the path to your Pandoc folder by running the following command in 
 pandoc --version
 ```
 
-This way, you can use the same bibliography and CSL style files in all your documents. Alternatively, you can keep the files in the same folder as your document, which  is the approach favored by [Quarto](https://quarto.org/docs/projects/quarto-projects.html).
+This way, you can use the same bibliography and CSL-style files in all your documents. Alternatively, you can keep the files in the same folder as your document, which is the approach favored by [Quarto](https://quarto.org/docs/projects/quarto-projects.html).
 
 
 
 
 ::: {.callout-tip collapse=true}
 ## How to share the Pandoc folder
-If the Pandoc folder needs to me shared among multiple devices, you can use a cloud service like Dropbox or Google Drive to store the files and use a `symbolic link` to place the files in the Pandoc folder. For example, if you are using Dropbox, you can run the following command in your terminal:
+If the Pandoc folder needs to be shared among multiple devices, you can use a cloud service like Dropbox or Google Drive to store the files and use a `symbolic link` to place the files in the Pandoc folder. For example, if you are using Dropbox, you can run the following command in your terminal:
 
 ```bash
 ln -s ~/Dropbox/Pandoc ~/.local/share/pandoc
@@ -68,7 +68,7 @@ The symbolic link will appear as a shortcut pointing to the Dropbox folder and a
 :::
 
 
-If the files are in Pandoc's default folder or in the same folder as the document, you can simply supply the file name:
+If the files are in the default Pandoc folder or the same folder as the document, you can simply supply the file name:
 
 ```yaml
 bibliography: bibfile.bib
@@ -93,7 +93,7 @@ You can, but you don't have to, place a div at the end of the document or where 
 The vanilla Pandoc and Quarto's Citeproc environment is powerful and its syntax is simple. It uses `@Citekey` for `Author (Date)`and `[-@Citekey]` for `(Date)`.
 
 ::: {.callout-tip appearance="simple"}
-The advantage of this markup syntax lies in its simplicity and the compatibility with all formats supported by Pandoc, a universal document converter.
+The advantage of this markup syntax lies in its simplicity and compatibility with all formats supported by Pandoc, a universal document converter.
 :::
 
 Here are some examples:

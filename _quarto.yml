@@ -1,4 +1,13 @@
+project:
+  type: website
+  output-dir: _site
+
 website:
+  title: "Cite Tools"
+  page-navigation: true
+  site-url: "https://bcdavasconcelos.github.io/citetools"
+  repo-url: https://github.com/bcdavasconcelos/citetools
+  repo-actions: [edit, issue]
   sidebar:
     contents:
       - section: "Cite Tools"
@@ -6,7 +15,7 @@ website:
         contents:
           - text: "The Basics"
             href: docs/01-basics.qmd
-            icon: book              
+            icon: book
           - text: "Multiple Bibliographies"
             icon: book
             href: docs/02-multibib.qmd
@@ -38,18 +47,11 @@ website:
     search: true
     # background: "#453bcd"
     collapse-level: 2
-  page-navigation: true
-  title: "Cite Tools"
-  site-url: "https://bcdavasconcelos.github.io/citetools"
-  repo-url: https://github.com/bcdavasconcelos/citetools
-  repo-actions: [edit, issue]
 
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    left: "&copy; CC-By BCDAV, 2023"
-
-project:
-  type: website
+    left: |
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> BCDAV, 2023
 
 # cache: true
 # freeze: auto
@@ -87,9 +89,11 @@ filters:
   # - quarto
 
 
-# author: Bernardo César Diniz Athayde Vasconcelos
 citeproc: false
 bibliography_primary: refs/primary.json
 bibliography_secondary: refs/secondary.json
 verbosity: ERROR
 # csl: https://raw.githubusercontent.com/bcdavasconcelos/ABNT-Phi/main/abnt-phi-sc.csl
+citation:
+  author: BCDA Vasconcelos
+  issued: 2023

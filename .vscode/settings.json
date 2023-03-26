@@ -1,5 +1,11 @@
 {
   "[markdown]": {
     "editor.cursorSurroundingLines": 0
-  }
+  },
+  "grammarly.selectors": [
+    {
+      "language": "markdown",
+      "scheme": "file"
+    }
+  ]
 }
