@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: _site
+  output-dir: site
 
 website:
   title: "Cite Tools"
