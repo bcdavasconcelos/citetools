@@ -7,7 +7,7 @@ In the vanilla Pandoc Citeproc, you can use `link-citations` to control whether 
 
 
 ::: {.callout-tip appearance="simple"}
-The `citetools` extension will take this one step further and adds to the entries in the bibliography -- in a crescent ordinal fashion `[1, 2, 3, 4]`^[In other output formats, such as PDF, the reader will see the page number instead of a crescent ordinal number.] --  a backlink to every citation they have received in the document.
+The `citetools` extension will take this one step further and add, in a crescent ordinal fashion `[1, 2, 3, 4]`^[In other output formats, such as PDF, the reader will see the page number instead of a crescent ordinal number.], a backlink to each citation an entry has received in the document.
 :::
 
 This allows the reader to easily arrive at sections of the text where the same reference was discussed, quickly seeing with the array of backlinks, how many times each reference was used in the text (_see reference at the bottom of the text_).
