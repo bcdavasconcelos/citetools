@@ -1,0 +1,12 @@
+verbosity: ERROR
+citeproc: false
+filters:
+  - citeproc
+  - ${.}/_extensions/bcdavasconcelos/citetools/multiple-bibliographies.lua
+  - ${.}/_extensions/bcdavasconcelos/citetools/citefield.lua
+  - ${.}/_extensions/bcdavasconcelos/citetools/citation-backlinks.lua
+#   - ${.}/_extensions/bcdavasconcelos/citetools/section-bibliographies.lua
+metadata:
+  link-citations: true
+  link-fields: true
+#   link-bibliography: true

@@ -9,6 +9,25 @@ website:
   repo-url: https://github.com/bcdavasconcelos/citetools
   repo-actions: [edit, issue]
   sidebar:
+    logo: "images/greek-ship.png"
+    # logo: "images/ulysses.png"
+    pinned: true
+    search: true
+    style: "floating" # docked floating
+    collapse-level: 2
+    # background: "#453bcd"
+    sort: [title, order]
+    align: center
+    tools:
+      - icon: globe
+        href: index.qmd
+        text: "Cite Tools"
+      - icon: github
+        href: https://github.com/bcdavasconcelos/citetools
+        text: "Cite Tools GitHub"
+      - icon: twitter
+        href: https://twitter.com/bcdavasconcelos
+        text: "Twitter"
     contents:
       - section: "Cite Tools"
         href: index.qmd
@@ -28,25 +47,6 @@ website:
       - text: "About"
         href: docs_qmd/05-about.qmd
         icon: book
-    sort: [title, order]
-    logo: "images/greek-ship.png"
-    # logo: "images/ulysses.png"
-    pinned: true
-    align: center
-    tools:
-      - icon: globe
-        href: index.qmd
-        text: "Cite Tools"
-      - icon: github
-        href: https://github.com/bcdavasconcelos/citetools
-        text: "Cite Tools GitHub"
-      - icon: twitter
-        href: https://twitter.com/bcdavasconcelos
-        text: "Twitter"
-    style: "floating" # docked floating
-    search: true
-    # background: "#453bcd"
-    collapse-level: 2
 
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
@@ -60,9 +60,6 @@ format-links: [pdf,docx]
 mainfont: Source Serif Pro
 sansfont: Source Sans Pro
 monofont: Source Code Pro
-
-
-
 format: # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
   html:
     theme: # Slate e
@@ -89,8 +86,8 @@ format: # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
     reference-location: document # `block`, `section`, `margin`, `document`
 
 filters:
-  - fontawesome
-  - include-code-files
+#   - fontawesome
+#   - include-code-files
   - citetools
 
 citeproc: false
