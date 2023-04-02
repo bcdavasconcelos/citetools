@@ -123,7 +123,14 @@
     "href": "changelog.html",
     "title": "citetools",
     "section": "",
-    "text": "Released 2023-03-18."
+    "text": "Released 2023-04-02. - Added title-field-emphasis option (default: true).\n\n\n\nReleased 2023-03-18."
+  },
+  {
+    "objectID": "changelog.html#v1.0.1",
+    "href": "changelog.html#v1.0.1",
+    "title": "citetools",
+    "section": "",
+    "text": "Released 2023-04-02. - Added title-field-emphasis option (default: true)."
   },
   {
     "objectID": "changelog.html#v1.0.0",
