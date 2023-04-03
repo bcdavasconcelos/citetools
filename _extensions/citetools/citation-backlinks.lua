@@ -18,7 +18,8 @@ local cite_number = 1
 
 local function with_latex_label(s, el)
   if FORMAT == "latex" then
-    return {pandoc.RawInline("latex", "\\pagelabel{" .. s .. "}"), el}
+    -- return {pandoc.RawInline("latex", "\\pagelabel{" .. s .. "}"), el}
+    return {pandoc.RawInline("latex", "\\label{" .. s .. "}"), el}
   else
     return {el}
   end
@@ -56,7 +57,7 @@ function Div(el)
   if citation_id then
     local backlinks = pandoc.Inlines{pandoc.Space(), pandoc.Str("[")}
     if FORMAT == "latex" then
-      quarto.doc.include_text("in-header", [[ \newcommand\pagelabel{\phantomsection\label} ]])
+      -- quarto.doc.include_text("in-header", [[ \newcommand\pagelabel{\phantomsection\label} ]])
       table.insert(backlinks, tex_return_link)
     end
 
