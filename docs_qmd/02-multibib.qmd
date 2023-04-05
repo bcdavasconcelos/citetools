@@ -3,7 +3,7 @@ title: Multiple Bibliographies
 ---
 
 
-In many areas of research, the ability to split the bibliography into sections is *conditio sine qua non* for publishing. In the humanities, for example, it is common to have a bibliography for primary sources and another for secondary sources. In philosophy, even, they can be very nuanced with sections dedicated to original sources, translations, commentaries, and so on.
+In many areas of research, the ability to split the bibliography into sections is *conditio sine qua non* for publishing.^[In Citetools, we are using a [modified version](https://github.com/bcdavasconcelos/citetools/blob/7ac1c6fd8c1d39db56ac5a41c037853cd76ac301/_extensions/citetools/multiple-bibliographies.lua#L66) of the [multiple-bibliographies](https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies) filter instead of the similar [multibib](https://github.com/pandoc-ext/multibib) one.] In the humanities, for example, it is common to have a bibliography for primary sources and another for secondary sources. In philosophy, even, they can be very nuanced with sections dedicated to original sources, translations, commentaries, and so on.
 
 ::: {.callout-tip collapse="false"}
 ## Installation
@@ -17,19 +17,7 @@ quarto install extension bcdavasconcelos/citetools
 Or download it at [Github](bcdavasconcelos/citetools).
 :::
 
-
-
-
-## How to Setup Multiple Bibliographies
-
-
-::: {.callout-note collapse="true"}
-## `multiple-bibliographies` or `multibib`?
-There are two versions of the multilple bibliographies filter by Albert Krewinkel. The first one is called `multiple-bibliographies` and it can be found in the Pandoc Lua Filters [repository](https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies). The second one is called `multibib` and it can be found in its own [repository](https://github.com/pandoc-ext/multibib). We are using the first one due to a [minute issue](https://github.com/pandoc-ext/multibib/issues/4#issue-1623925814) with he second. The differences between them are boderline inexistent, but there are some.
-
-Both filters are included in the bundle, but only `multiple bibliographies` is being used by default. You are, however, free to experiment with both editing the content of the `_quarto.yaml` file in the `_extension` folder. They have both been [tweaked to work](https://github.com/bcdavasconcelos/citetools/blob/7ac1c6fd8c1d39db56ac5a41c037853cd76ac301/_extensions/citetools/multiple-bibliographies.lua#L66) with the `citetools` extension.
-:::
-
+## How to setup multiple bibliographies
 
 If you are using Quarto, chances are you have a project folder. In this case, add bibliography files to the project folder (it is advisible adding them to a `refs` folder to prevent cluter in the root folder). Then, add the path to the files to the YAML metadata of your document in this way:
 
@@ -37,27 +25,6 @@ If you are using Quarto, chances are you have a project folder. In this case, ad
 bibliography_primary: refs/primary.json
 bibliography_secondary: refs/secondary.json
 ```
-
-
-::: {.callout-warning collapse="true"}
-## `multibib`
-With `multibib`, you should add all of them to the `bibliography` entry instead, in the form of a dictionary.
-```yaml
-bibliography:
-  primary: refs/primary.json
-  secondary: refs/secondary.json
-```
-::: {.callout-important collapse="true"}
-## YAML validation error cause by `multibib`
-If you are using `multibib`, which requires a `dictionary` of key-value pairs in the `bibliography` field, Quarto will complain that the content of this field should be a `string` instead. To prevent an error, we should tell it to ignore the YAML validation:
-
-```yaml
-validate-yaml: false
-```
-:::
-:::
-
-
 
 The path should be relative to the project's root folder. The name of the bibliography should (but doesn't *have to*) be the same as the name of the file, without the extension.
 
@@ -86,7 +53,7 @@ Also, please note that if the placeholder doesn't make its way into the document
 :::
 
 
-## Working example of multiple bibliographies
+## Working example
 
 To ensure sure ids match, it can be a good strategy placing the bibliography file close to the div placeholder.
 
@@ -128,3 +95,9 @@ With this, you should have a working document with multiple bibliographies that 
 ### Secondary Sources  {.appendix}
 ::: {#refs_secondary}
 :::
+
+
+
+
+
+

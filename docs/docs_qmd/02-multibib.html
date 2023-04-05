@@ -226,8 +226,8 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#how-to-setup-multiple-bibliographies" id="toc-how-to-setup-multiple-bibliographies" class="nav-link active" data-scroll-target="#how-to-setup-multiple-bibliographies">How to Setup Multiple Bibliographies</a></li>
-  <li><a href="#working-example-of-multiple-bibliographies" id="toc-working-example-of-multiple-bibliographies" class="nav-link" data-scroll-target="#working-example-of-multiple-bibliographies">Working example of multiple bibliographies</a>
+  <li><a href="#how-to-setup-multiple-bibliographies" id="toc-how-to-setup-multiple-bibliographies" class="nav-link active" data-scroll-target="#how-to-setup-multiple-bibliographies">How to setup multiple bibliographies</a></li>
+  <li><a href="#working-example" id="toc-working-example" class="nav-link" data-scroll-target="#working-example">Working example</a>
   <ul class="collapse">
   
   
@@ -255,7 +255,7 @@ div.csl-indent {
 
 </header>
 
-<p>In many areas of research, the ability to split the bibliography into sections is <em>conditio sine qua non</em> for publishing. In the humanities, for example, it is common to have a bibliography for primary sources and another for secondary sources. In philosophy, even, they can be very nuanced with sections dedicated to original sources, translations, commentaries, and so on.</p>
+<p>In many areas of research, the ability to split the bibliography into sections is <em>conditio sine qua non</em> for publishing.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> In the humanities, for example, it is common to have a bibliography for primary sources and another for secondary sources. In philosophy, even, they can be very nuanced with sections dedicated to original sources, translations, commentaries, and so on.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -275,77 +275,24 @@ Installation
 </div>
 </div>
 <section id="how-to-setup-multiple-bibliographies" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-setup-multiple-bibliographies">How to Setup Multiple Bibliographies</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<code>multiple-bibliographies</code> or <code>multibib</code>?
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>There are two versions of the multilple bibliographies filter by Albert Krewinkel. The first one is called <code>multiple-bibliographies</code> and it can be found in the Pandoc Lua Filters <a href="https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies">repository</a>. The second one is called <code>multibib</code> and it can be found in its own <a href="https://github.com/pandoc-ext/multibib">repository</a>. We are using the first one due to a <a href="https://github.com/pandoc-ext/multibib/issues/4#issue-1623925814">minute issue</a> with he second. The differences between them are boderline inexistent, but there are some.</p>
-<p>Both filters are included in the bundle, but only <code>multiple bibliographies</code> is being used by default. You are, however, free to experiment with both editing the content of the <code>_quarto.yaml</code> file in the <code>_extension</code> folder. They have both been <a href="https://github.com/bcdavasconcelos/citetools/blob/7ac1c6fd8c1d39db56ac5a41c037853cd76ac301/_extensions/citetools/multiple-bibliographies.lua#L66">tweaked to work</a> with the <code>citetools</code> extension.</p>
-</div>
-</div>
-</div>
+<h2 class="anchored" data-anchor-id="how-to-setup-multiple-bibliographies">How to setup multiple bibliographies</h2>
 <p>If you are using Quarto, chances are you have a project folder. In this case, add bibliography files to the project folder (it is advisible adding them to a <code>refs</code> folder to prevent cluter in the root folder). Then, add the path to the files to the YAML metadata of your document in this way:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography_primary</span><span class="kw">:</span><span class="at"> refs/primary.json</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography_secondary</span><span class="kw">:</span><span class="at"> refs/secondary.json</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<code>multibib</code>
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>With <code>multibib</code>, you should add all of them to the <code>bibliography</code> entry instead, in the form of a dictionary.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at"> refs/primary.json</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">secondary</span><span class="kw">:</span><span class="at"> refs/secondary.json</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-YAML validation error cause by <code>multibib</code>
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>If you are using <code>multibib</code>, which requires a <code>dictionary</code> of key-value pairs in the <code>bibliography</code> field, Quarto will complain that the content of this field should be a <code>string</code> instead. To prevent an error, we should tell it to ignore the YAML validation:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">validate-yaml</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <p>The path should be relative to the project’s root folder. The name of the bibliography should (but doesn’t <em>have to</em>) be the same as the name of the file, without the extension.</p>
 <p>Then, finally, place the bibliographies placeholders in the document where you want the bibliographies to appear.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Primary Sources</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>::: {#refs_primary}</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># Secondary Sources</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>::: {#refs_secondary}</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Primary Sources</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>::: {#refs_primary}</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># Secondary Sources</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>::: {#refs_secondary}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Each <code>refs_bib_name</code> <code>div</code> should have a matching entry <code>bibliography_bib_name</code> in the metadata. They will be filled with the citations from the respective bibliography files.</p>
 <div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -354,7 +301,7 @@ Div names
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>if you have a bibliography named <code>bibliography_primary</code>, the placeholder <strong>must</strong> be named <code>refs-primary</code> or <code>refs_primary</code>. That is, the name of the placeholder must match the name of the <code>bibliography_</code> entry (without the prefix) <em>otherwise nothing will print</em>.</p>
 <p>Also, please note that if the placeholder doesn’t make its way into the document, the references in that file will not be printed.</p>
@@ -362,38 +309,39 @@ Div names
 </div>
 </div>
 </section>
-<section id="working-example-of-multiple-bibliographies" class="level2">
-<h2 class="anchored" data-anchor-id="working-example-of-multiple-bibliographies">Working example of multiple bibliographies</h2>
+<section id="working-example" class="level2">
+<h2 class="anchored" data-anchor-id="working-example">Working example</h2>
 <p>To ensure sure ids match, it can be a good strategy placing the bibliography file close to the div placeholder.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Multiple Bibliographies</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@EN</span><span class="co">] [@Aubenque1961a]</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Primary Sources</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>bibliography_primary: refs/primary.json</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>::: {#refs_primary}</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Secondary Sources</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>bibliography_secondary: refs/secondary.json</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>::: {#refs_secondary}</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Multiple Bibliographies</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@EN</span><span class="co">] [@Aubenque1961a]</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Primary Sources</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>bibliography_primary: refs/primary.json</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>::: {#refs_primary}</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Secondary Sources</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>bibliography_secondary: refs/secondary.json</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>::: {#refs_secondary}</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>With this, you should have a working document with multiple bibliographies that would render in the following way:</p>
 <p><span id="cite_1"><span class="citation" data-cites="EN">(<a href="#ref-EN" role="doc-biblioref">Aristotle 1831</a>)</span></span> <span id="cite_2"><span class="citation" data-cites="Aubenque1961a">(<a href="#ref-Aubenque1961a" role="doc-biblioref">Aubenque 1961</a>)</span></span></p>
 
 
 </section>
+
 
 <div id="quarto-appendix" class="default"><section id="primary-sources" class="level3 appendix"><h2 class="anchored quarto-appendix-heading">Primary Sources</h2><div class="quarto-appendix-contents">
 
@@ -411,7 +359,12 @@ Aubenque, Pierre. 1961. <span>“Sur La Notion Aristotélicienne d’aporie.”<
 </div>
 
 
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{vasconcelos2023,
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>In Citetools, we are using a <a href="https://github.com/bcdavasconcelos/citetools/blob/7ac1c6fd8c1d39db56ac5a41c037853cd76ac301/_extensions/citetools/multiple-bibliographies.lua#L66">modified version</a> of the <a href="https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies">multiple-bibliographies</a> filter instead of the similar <a href="https://github.com/pandoc-ext/multibib">multibib</a> one.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{vasconcelos2023,
   author = {Vasconcelos, BCDA},
   title = {Multiple {Bibliographies}},
   date = {2023},

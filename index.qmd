@@ -7,7 +7,7 @@ author: "Bernardo Vasconcelos"
 date: 2023-03-26
 filters:
   - citetools
-  - fontawesome
+  # - fontawesome
 ---
 
 Cite Tools is an extension of the Quarto Open-Source Scientific and Technical Publishing System, built upon Pandoc and compatible with any version above `2.17`, that bundles together [several Lua filters](/docs_qmd/05-about.qmd) 🌙 to introduce advanced bibliography features.
@@ -137,5 +137,3 @@ If you have suggestions for other filters, improvements to the existing ones, or
 - Albert Krewinkel, for creating Pandoc filters.
 - John MacFarlane, for creating Pandoc.
 - The community of Quarto and Pandoc developers and users.
-
-
