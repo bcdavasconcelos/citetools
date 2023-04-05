@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Bernardo César Diniz Athayde Vasconcelos">
 
-<title>Cite Tools - Example of Citetools in action</title>
+<title>Cite Tools - Multiple Bibliographies</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,23 +105,25 @@ div.csl-indent {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../docs_qmd/03-cite-field.html" rel="next">
+<link href="../docs_qmd/01-basics.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -164,7 +165,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Example of Citetools in action</h1>
+      <h1 class="quarto-secondary-nav-title">Multiple Bibliographies</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -176,11 +177,11 @@ div.csl-indent {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/greek-ship.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/greek-ship.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
-    <a href="./index.html" title="Cite Tools" class="sidebar-tool px-1"><i class="bi bi-globe"></i></a>
+    <a href="../index.html" title="Cite Tools" class="sidebar-tool px-1"><i class="bi bi-globe"></i></a>
     <a href="https://github.com/bcdavasconcelos/citetools" title="Cite Tools GitHub" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
     <a href="https://twitter.com/bcdavasconcelos" title="Twitter" class="sidebar-tool px-1"><i class="bi bi-twitter"></i></a>
   <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -195,7 +196,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./index.html" class="sidebar-item-text sidebar-link">Cite Tools</a>
+            <a href="../index.html" class="sidebar-item-text sidebar-link">Cite Tools</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -203,29 +204,29 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs_qmd/01-basics.html" class="sidebar-item-text sidebar-link">The Basics</a>
+  <a href="../docs_qmd/01-basics.html" class="sidebar-item-text sidebar-link">The Basics</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs_qmd/02-multibib.html" class="sidebar-item-text sidebar-link">Multiple Bibliographies</a>
+  <a href="../docs_qmd/02-multibib.html" class="sidebar-item-text sidebar-link active">Multiple Bibliographies</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs_qmd/03-cite-field.html" class="sidebar-item-text sidebar-link">Cite Field</a>
+  <a href="../docs_qmd/03-cite-field.html" class="sidebar-item-text sidebar-link">Cite Field</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs_qmd/04-citation-backlinks.html" class="sidebar-item-text sidebar-link">Citation Backlinks</a>
+  <a href="../docs_qmd/04-citation-backlinks.html" class="sidebar-item-text sidebar-link">Citation Backlinks</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs_qmd/05-about.html" class="sidebar-item-text sidebar-link">About</a>
+  <a href="../docs_qmd/05-about.html" class="sidebar-item-text sidebar-link">About</a>
   </div>
 </li>
     </ul>
@@ -237,31 +238,27 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#the-works-of-aristotle" id="toc-the-works-of-aristotle" class="nav-link" data-scroll-target="#the-works-of-aristotle">The Works of Aristotle</a></li>
+  <li><a href="#how-to-setup-multiple-bibliographies" id="toc-how-to-setup-multiple-bibliographies" class="nav-link active" data-scroll-target="#how-to-setup-multiple-bibliographies">How to setup multiple bibliographies</a></li>
+  <li><a href="#working-example" id="toc-working-example" class="nav-link" data-scroll-target="#working-example">Working example</a>
+  <ul class="collapse">
   <li><a href="#primary-sources" id="toc-primary-sources" class="nav-link" data-scroll-target="#primary-sources">Primary Sources</a></li>
   <li><a href="#secondary-sources" id="toc-secondary-sources" class="nav-link" data-scroll-target="#secondary-sources">Secondary Sources</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/bcdavasconcelos/citetools/edit/main/input.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/bcdavasconcelos/citetools/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/bcdavasconcelos/citetools/edit/main/docs_qmd/02-multibib.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/bcdavasconcelos/citetools/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Example of Citetools in action</h1>
+<h1 class="title d-none d-lg-block">Multiple Bibliographies</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Bernardo César Diniz Athayde Vasconcelos </p>
-          </div>
-  </div>
     
   
     
@@ -270,69 +267,124 @@ div.csl-indent {
 
 </header>
 
-<section id="introduction" class="level1 unnumbered">
-<h1 class="unnumbered">Introduction</h1>
-<p>This very concise sample ilustrates the use of <code>multiple-bibliographies</code> to separate primary (<code>refs/primary.json</code>) and secondary (<code>refs/secondary.json</code>) sources for the document; the use of <code>citation-backlinks</code> to turn the bibliography into an index of citations with links back to the text; and the use of <code>citefield</code> to print in the body of the text useful information from the bibliographic references.</p>
-<p><em>Optionally</em>, <code>section-bibliographies</code> can be used to separate the bibliography into sections. For this, you must uncomment the apropriate line in the <code>_extension.yaml</code> file.</p>
+<p>In many areas of research, the ability to split the bibliography into sections is <em>conditio sine qua non</em> for publishing.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> In the humanities, for example, it is common to have a bibliography for primary sources and another for secondary sources. In philosophy, even, they can be very nuanced with sections dedicated to original sources, translations, commentaries, and so on.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Installation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>In case you have not done it yet, install the extension using the following command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension bcdavasconcelos/citetools</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Or download it at <a href="bcdavasconcelos/citetools">Github</a>.</p>
+</div>
+</div>
+</div>
+<section id="how-to-setup-multiple-bibliographies" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-setup-multiple-bibliographies">How to setup multiple bibliographies</h2>
+<p>If you are using Quarto, chances are you have a project folder. In this case, add bibliography files to the project folder (it is advisible adding them to a <code>refs</code> folder to prevent cluter in the root folder). Then, add the path to the files to the YAML metadata of your document in this way:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography_primary</span><span class="kw">:</span><span class="at"> refs/primary.json</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography_secondary</span><span class="kw">:</span><span class="at"> refs/secondary.json</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The path should be relative to the project’s root folder. The name of the bibliography should (but doesn’t <em>have to</em>) be the same as the name of the file, without the extension.</p>
+<p>Then, finally, place the bibliographies placeholders in the document where you want the bibliographies to appear.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Primary Sources</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>::: {#refs_primary}</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># Secondary Sources</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>::: {#refs_secondary}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Each <code>refs_bib_name</code> <code>div</code> should have a matching entry <code>bibliography_bib_name</code> in the metadata. They will be filled with the citations from the respective bibliography files.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Div names
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>if you have a bibliography named <code>bibliography_primary</code>, the placeholder <strong>must</strong> be named <code>refs-primary</code> or <code>refs_primary</code>. That is, the name of the placeholder must match the name of the <code>bibliography_</code> entry (without the prefix) <em>otherwise nothing will print</em>.</p>
+<p>Also, please note that if the placeholder doesn’t make its way into the document, the references in that file will not be printed.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="the-works-of-aristotle" class="level1">
-<h1>The Works of Aristotle</h1>
-<p>This is an example of complex use of bibliographic references. We are relying on the bibliography to print in the text the correct names of the authors, editors, and translators &amp; title of the works.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>The works of <span class="co">[</span><span class="ot">@AristOp</span><span class="co">]</span>{.author} were first edited by</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@AristOp</span><span class="co">]</span>{.editor} in <span class="co">[</span><span class="ot">@AristOp</span><span class="co">]</span>{.issued}.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The works of <span id="cite_1"><span class="citation" data-cites="AristOp"><a href="#ref-AristOp" role="doc-biblioref">Aristotle</a></span></span> were first edited by Bekker in <span id="cite_2"><span class="citation" data-cites="AristOp"><a href="#ref-AristOp" role="doc-biblioref">1831</a></span></span>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Later, the <span class="co">[</span><span class="ot">@DA</span><span class="co">]</span>{.title} was edited by <span class="co">[</span><span class="ot">@DABiehl1896</span><span class="co">]</span>{.editor}</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>in <span class="co">[</span><span class="ot">@DABiehl1896</span><span class="co">]</span>{.issued} <span class="co">[</span><span class="ot">repr. in [@DATheiler</span><span class="co">]</span>{.translator}'s</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@DATheiler</span><span class="co">]</span>{.issued} translation]; by <span class="co">[</span><span class="ot">@DAForster</span><span class="co">]</span>{.editor} in</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@DAForster</span><span class="co">]</span>{.issued} <span class="co">[</span><span class="ot">repr. in [@DACorcilius</span><span class="co">]</span>{.translator}'s</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@DACorcilius</span><span class="co">]</span>{.issued} translation]; and by <span class="co">[</span><span class="ot">@DARoss</span><span class="co">]</span>{.editor}</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>in <span class="co">[</span><span class="ot">@DARoss</span><span class="co">]</span>{.issued}.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Later, the <span id="cite_3"><span class="citation" data-cites="DA"><a href="#ref-DA" role="doc-biblioref"><em>De anima</em></a></span></span> was edited by <span id="cite_4"><span class="citation" data-cites="DABiehl1896"><a href="#ref-DABiehl1896" role="doc-biblioref">Biehl</a></span></span> in <span id="cite_5"><span class="citation" data-cites="DABiehl1896"><a href="#ref-DABiehl1896" role="doc-biblioref">1896</a></span></span> [repr. in Seidl’s <span id="cite_6"><span class="citation" data-cites="DATheiler"><a href="#ref-DATheiler" role="doc-biblioref">1995</a></span></span> translation]; by <span id="cite_7"><span class="citation" data-cites="DAForster"><a href="#ref-DAForster" role="doc-biblioref">Förster</a></span></span> in <span id="cite_8"><span class="citation" data-cites="DAForster"><a href="#ref-DAForster" role="doc-biblioref">1912</a></span></span> [repr. in <span id="cite_9"><span class="citation" data-cites="DACorcilius"><a href="#ref-DACorcilius" role="doc-biblioref">Corcilius</a></span></span>’s <span id="cite_10"><span class="citation" data-cites="DACorcilius"><a href="#ref-DACorcilius" role="doc-biblioref">2017</a></span></span> translation]; and by <span id="cite_11"><span class="citation" data-cites="DARoss"><a href="#ref-DARoss" role="doc-biblioref">Ross</a></span></span> in <span id="cite_12"><span class="citation" data-cites="DARoss"><a href="#ref-DARoss" role="doc-biblioref">1961</a></span></span>.</p>
+<section id="working-example" class="level2">
+<h2 class="anchored" data-anchor-id="working-example">Working example</h2>
+<p>To ensure sure ids match, it can be a good strategy placing the bibliography file close to the div placeholder.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Multiple Bibliographies</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@EN</span><span class="co">] [@Aubenque1961a]</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Primary Sources</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>bibliography_primary: refs/primary.json</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>::: {#refs_primary}</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Secondary Sources</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>bibliography_secondary: refs/secondary.json</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>::: {#refs_secondary}</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>With this, you should have a working document with multiple bibliographies that would render in the following way:</p>
+<p><span id="cite_1"><span class="citation" data-cites="EN">(<a href="#ref-EN" role="doc-biblioref">Aristotle 1831</a>)</span></span> <span id="cite_2"><span class="citation" data-cites="Aubenque1961a">(<a href="#ref-Aubenque1961a" role="doc-biblioref">Aubenque 1961</a>)</span></span></p>
+
+
 </section>
 
 
-
-<div id="quarto-appendix" class="default"><section id="primary-sources" class="level1 appendix"><h2 class="quarto-appendix-heading">Primary Sources</h2><div class="quarto-appendix-contents">
+<div id="quarto-appendix" class="default"><section id="primary-sources" class="level3 appendix"><h2 class="quarto-appendix-heading">Primary Sources</h2><div class="quarto-appendix-contents">
 
 <div id="refs_primary" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-AristOp" class="csl-entry" role="doc-biblioentry">
-Aristotle. 1831a. <em>Aristotelis Opera</em>. Edited by Immanuel Bekker. 1st ed. 4 vols. Berlim: Reimer. [<a href="#cite_1">1</a>, <a href="#cite_2">2</a>]
-</div>
-<div id="ref-DA" class="csl-entry" role="doc-biblioentry">
-———. 1831b. <span>“De Anima.”</span> In <em>Aristotelis Opera</em>, edited by Immanuel Bekker, 402a01–435b25. Berlim: Reimer. [<a href="#cite_3">1</a>]
-</div>
-<div id="ref-DABiehl1896" class="csl-entry" role="doc-biblioentry">
-———. 1896. <em>De Anima</em>. Edited by Wilhelm Biehl. Leipzig: Teubner. [<a href="#cite_4">1</a>, <a href="#cite_5">2</a>]
-</div>
-<div id="ref-DAForster" class="csl-entry" role="doc-biblioentry">
-———. 1912. <em>Aristotelis de Anima Libri III</em>. Edited by Aurél Förster. Budapeste: Hungarian Academy of Sciences. [<a href="#cite_7">1</a>, <a href="#cite_8">2</a>]
-</div>
-<div id="ref-DARoss" class="csl-entry" role="doc-biblioentry">
-———. 1961. <em>De Anima</em>. Edited by William David Ross. Oxford: Clarendon. [<a href="#cite_11">1</a>, <a href="#cite_12">2</a>]
+<div id="ref-EN" class="csl-entry" role="doc-biblioentry">
+Aristotle. 1831. <span>“Ethica Nicomachea.”</span> In <em>Aristotelis Opera</em>, edited by Immanuel Bekker, 1094a01–1181b23. Berlim: Reimer. [<a href="#cite_1">1</a>]
 </div>
 </div>
-</div></section><section id="secondary-sources" class="level1 appendix"><h2 class="quarto-appendix-heading">Secondary Sources</h2><div class="quarto-appendix-contents">
+</div></section><section id="secondary-sources" class="level3 appendix"><h2 class="quarto-appendix-heading">Secondary Sources</h2><div class="quarto-appendix-contents">
 
 <div id="refs_secondary" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-DACorcilius" class="csl-entry" role="doc-biblioentry">
-Aristoteles. 2017. <em>Über Die Seele. De Anima</em>. Translated by Klaus Corcilius. Hamburg: Felix Meiner. [<a href="#cite_9">1</a>, <a href="#cite_10">2</a>]
-</div>
-<div id="ref-DATheiler" class="csl-entry" role="doc-biblioentry">
-Aristotelis. 1995. <em>De Anima</em>. Translated by H. Seidl and W. Theiler. Hamburg: Felix Meiner. [<a href="#cite_6">1</a>]
+<div id="ref-Aubenque1961a" class="csl-entry" role="doc-biblioentry">
+Aubenque, Pierre. 1961. <span>“Sur La Notion Aristotélicienne d’aporie.”</span> In <em>Aristote Et Les Problèmes de Méthode</em>, edited by S. Mansion. Louvain: Publications Universitaires. [<a href="#cite_2">1</a>]
 </div>
 </div>
 
 
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{vasconcelos2023,
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>In Citetools, we are using a <a href="https://github.com/bcdavasconcelos/citetools/blob/7ac1c6fd8c1d39db56ac5a41c037853cd76ac301/_extensions/citetools/multiple-bibliographies.lua#L66">modified version</a> of the <a href="https://github.com/pandoc/lua-filters/tree/master/multiple-bibliographies">multiple-bibliographies</a> filter instead of the similar <a href="https://github.com/pandoc-ext/multibib">multibib</a> one.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{vasconcelos2023,
   author = {BCDA Vasconcelos},
-  title = {Example of {Citetools} in Action},
+  title = {Multiple {Bibliographies}},
   date = {2023},
-  url = {https://bcdavasconcelos.github.io/citetools/input.html},
+  url = {https://bcdavasconcelos.github.io/citetools/02-multibib.html},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-vasconcelos2023" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-BCDA Vasconcelos. 2023. <span>“Example of Citetools in Action.”</span>
-2023. <a href="https://bcdavasconcelos.github.io/citetools/input.html">https://bcdavasconcelos.github.io/citetools/input.html</a>.
+BCDA Vasconcelos. 2023. <span>“Multiple Bibliographies.”</span> 2023. <a href="https://bcdavasconcelos.github.io/citetools/02-multibib.html">https://bcdavasconcelos.github.io/citetools/02-multibib.html</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -582,6 +634,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../docs_qmd/01-basics.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The Basics</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../docs_qmd/03-cite-field.html" class="pagination-link">
+        <span class="nav-page-text">Cite Field</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
