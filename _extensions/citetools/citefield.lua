@@ -84,15 +84,14 @@ function Pandoc (doc)
       end -- end of error trap
 
       local cite_id = citations[1].id -- get citekey
-      local ref = doc.meta.references:find_if( -- get reference
-        function (r) return cite_id == r.id end
-      ) -- end of get reference
-
       local the_result = "" -- initialize result
-      local content = ref[the_arg] -- get field
-      local title_field_emph = get_options(doc.meta).title_field_emph
-
-      if content then -- if field is not empty
+      local ref = doc.meta.references:find_if( -- get reference
+      function (r) return cite_id == r.id end
+    ) -- end of get reference
+    
+      if ref then -- if field is not empty
+        local content = ref[the_arg] -- get field
+        local title_field_emph = get_options(doc.meta).title_field_emph
         if the_arg == "author" or the_arg == "editor" or the_arg == "translator" then -- if field contains name
           if content[ordinal] then -- if name[ord] exists
             if content[ordinal]["family"] then -- if name[ord] contains family name
@@ -137,7 +136,6 @@ function Pandoc (doc)
           return the_result
         end
       end -- end of field is to be linked
-
     end -- end of span contains only a single cite object
 
   end -- end of Span
