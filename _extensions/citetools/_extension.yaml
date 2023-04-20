@@ -1,6 +1,6 @@
 name: citetools
 author: Albert Krewinkel & Bernardo CDA Vasconcelos
-version: 1.0.1
+version: 1.0.2
 contributes:
   filters:
     - citeproc.lua
