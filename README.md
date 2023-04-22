@@ -1,5 +1,9 @@
 # 📚 Cite Tools for Pandoc and Quarto
 
+
+<!-- TODO: BUG. Conversion fails upon citing field of reference absent from the bibliography -->
+
+
 <div id="top"></div>
 
 [![Render and Publish](https://github.com/bcdavasconcelos/citetools/actions/workflows/quarto-publish.yml/badge.svg)](https://github.com/bcdavasconcelos/citetools/actions/workflows/quarto-publish.yml)

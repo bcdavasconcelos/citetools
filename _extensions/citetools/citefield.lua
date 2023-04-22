@@ -1,5 +1,6 @@
 --- https://github.com/bcdavasconcelos/citefield
 --- citefield.lua
+--- 1.0.3
 --- Copyright: © 2023 - Albert Krewinkel & Bernardo Vasconcelos
 --- License: MIT – see LICENSE for details
 
@@ -89,7 +90,7 @@ function Pandoc (doc)
       function (r) return cite_id == r.id end
     ) -- end of get reference
     
-      if ref then -- if field is not empty
+      if ref[the_arg] then -- if field is not empty
         local content = ref[the_arg] -- get field
         local title_field_emph = get_options(doc.meta).title_field_emph
         if the_arg == "author" or the_arg == "editor" or the_arg == "translator" then -- if field contains name
