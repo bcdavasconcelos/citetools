@@ -89,8 +89,8 @@ function Pandoc (doc)
       local ref = doc.meta.references:find_if( -- get reference
       function (r) return cite_id == r.id end
     ) -- end of get reference
-    
-      if ref[the_arg] then -- if field is not empty
+
+      if ref and ref[the_arg] then -- if field is not empty
         local content = ref[the_arg] -- get field
         local title_field_emph = get_options(doc.meta).title_field_emph
         if the_arg == "author" or the_arg == "editor" or the_arg == "translator" then -- if field contains name
