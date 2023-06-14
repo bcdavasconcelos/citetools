@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/02-multibib.html</loc>
-    <lastmod>2023-05-05T00:01:04.836Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/04-citation-backlinks.html</loc>
-    <lastmod>2023-05-05T00:01:07.232Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/01-basics.html</loc>
-    <lastmod>2023-05-05T00:01:07.972Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/03-cite-field.html</loc>
-    <lastmod>2023-05-05T00:01:09.820Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/05-about.html</loc>
-    <lastmod>2023-05-05T00:01:11.004Z</lastmod>
+    <loc>https://bcdavasconcelos.github.io/citetools/input.html</loc>
+    <lastmod>2023-06-14T19:39:05.350Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/index.html</loc>
-    <lastmod>2023-05-05T00:01:11.780Z</lastmod>
+    <lastmod>2023-06-14T19:39:07.886Z</lastmod>
   </url>
   <url>
     <loc>https://bcdavasconcelos.github.io/citetools/changelog.html</loc>
-    <lastmod>2023-05-05T00:01:12.244Z</lastmod>
+    <lastmod>2023-06-14T19:39:08.366Z</lastmod>
   </url>
   <url>
-    <loc>https://bcdavasconcelos.github.io/citetools/input.html</loc>
-    <lastmod>2023-05-05T00:01:12.900Z</lastmod>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/04-citation-backlinks.html</loc>
+    <lastmod>2023-06-14T19:39:08.978Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/02-multibib.html</loc>
+    <lastmod>2023-06-14T19:39:09.666Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/01-basics.html</loc>
+    <lastmod>2023-06-14T19:39:10.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/03-cite-field.html</loc>
+    <lastmod>2023-06-14T19:39:12.294Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcdavasconcelos.github.io/citetools/docs_qmd/05-about.html</loc>
+    <lastmod>2023-06-14T19:39:13.506Z</lastmod>
   </url>
 </urlset>
