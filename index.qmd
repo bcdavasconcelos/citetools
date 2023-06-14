@@ -138,4 +138,7 @@ If you have suggestions for other filters, improvements to the existing ones, or
 - John MacFarlane, for creating Pandoc.
 - The community of Quarto and Pandoc developers and users.
 
+## See also
+
+- [ScriQ](https://github.com/bcdavasconcelos/ScrivQ/) is a Scrivener template with hundreds of built-in Quarto parameters, plus the ability to export multiple files, to handle cross-references and manage bibliography.
 
