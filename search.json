@@ -1,10 +1,108 @@
 [
   {
+    "objectID": "docs_qmd/02-multibib.html",
+    "href": "docs_qmd/02-multibib.html",
+    "title": "Multiple Bibliographies",
+    "section": "",
+    "text": "In many areas of research, the ability to split the bibliography into sections is conditio sine qua non for publishing.1 In the humanities, for example, it is common to have a bibliography for primary sources and another for secondary sources. In philosophy, even, they can be very nuanced with sections dedicated to original sources, translations, commentaries, and so on."
+  },
+  {
+    "objectID": "docs_qmd/02-multibib.html#how-to-setup-multiple-bibliographies",
+    "href": "docs_qmd/02-multibib.html#how-to-setup-multiple-bibliographies",
+    "title": "Multiple Bibliographies",
+    "section": "How to setup multiple bibliographies",
+    "text": "How to setup multiple bibliographies\nIf you are using Quarto, chances are you have a project folder. In this case, add bibliography files to the project folder (it is advisible adding them to a refs folder to prevent cluter in the root folder). Then, add the path to the files to the YAML metadata of your document in this way:\nbibliography_primary: refs/primary.json\nbibliography_secondary: refs/secondary.json\nThe path should be relative to the project’s root folder. The name of the bibliography should (but doesn’t have to) be the same as the name of the file, without the extension.\nThen, finally, place the bibliographies placeholders in the document where you want the bibliographies to appear.\n# Primary Sources\n\n::: {#refs_primary}\n:::\n\n# Secondary Sources\n\n::: {#refs_secondary}\n:::\nEach refs_bib_name div should have a matching entry bibliography_bib_name in the metadata. They will be filled with the citations from the respective bibliography files.\n\n\n\n\n\n\nDiv names\n\n\n\n\n\nif you have a bibliography named bibliography_primary, the placeholder must be named refs-primary or refs_primary. That is, the name of the placeholder must match the name of the bibliography_ entry (without the prefix) otherwise nothing will print.\nAlso, please note that if the placeholder doesn’t make its way into the document, the references in that file will not be printed."
+  },
+  {
+    "objectID": "docs_qmd/02-multibib.html#working-example",
+    "href": "docs_qmd/02-multibib.html#working-example",
+    "title": "Multiple Bibliographies",
+    "section": "Working example",
+    "text": "Working example\nTo ensure sure ids match, it can be a good strategy placing the bibliography file close to the div placeholder.\n---\ntitle: Multiple Bibliographies\n---\n\n[@EN] [@Aubenque1961a]\n\n\n## Primary Sources\n\n---\nbibliography_primary: refs/primary.json\n---\n\n::: {#refs_primary}\n:::\n\n## Secondary Sources\n\n---\nbibliography_secondary: refs/secondary.json\n---\n\n::: {#refs_secondary}\n:::\nWith this, you should have a working document with multiple bibliographies that would render in the following way:\n(Aristotle 1831) (Aubenque 1961)"
+  },
+  {
+    "objectID": "docs_qmd/02-multibib.html#footnotes",
+    "href": "docs_qmd/02-multibib.html#footnotes",
+    "title": "Multiple Bibliographies",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIn Citetools, we are using a modified version of the multiple-bibliographies filter instead of the similar multibib one.↩︎"
+  },
+  {
+    "objectID": "docs_qmd/03-cite-field.html",
+    "href": "docs_qmd/03-cite-field.html",
+    "title": "Cite Field",
+    "section": "",
+    "text": "In many areas, we are frequently invited to comment on different editions and translations of the same work. In such cases, we refer not only to the authors and dates of the publications, but also to their editors, translators, publishers, and their original titles and editions. But how to do this? If citetools is enabled, then the answer lies in a small variation of Pandoc’s vanilla syntax for citations."
+  },
+  {
+    "objectID": "docs_qmd/03-cite-field.html#citation-style-language",
+    "href": "docs_qmd/03-cite-field.html#citation-style-language",
+    "title": "Cite Field",
+    "section": "Citation Style Language",
+    "text": "Citation Style Language\n\n\n\n\n\n\nDid you notice that we used [@AristOp]{.issued} instead of [@AristOp]{.date}? And [@AristOp]{.publisher-place} instead of [@AristOp]{.city}?\n\n\n\nInternally, as we said, Pandoc uses the Citation Style Language to handle bibliographies. This is a standard schema for bibliographic data, which is used by some bibliography managers, such as Zotero, and JabRef. Most, however, are closer to the conventions of BibTeX (or RIS) which is why you may not see an exact correspondence between the CSL variables and BibTeX field names.\nIn CSL, there are the following variables:\n  abstract accessed annote archive archive_collection archive_location archive-place author authority available-date call-number chair chapter-number citation-key citation-label citation-number collection-editor collection-number collection-title compiler composer container-author container-title container-title-short contributor curator dimensions director division DOI edition editor editor-translator editorial-director event event-date event-place event-title executive-producer first-reference-note-number genre guest host illustrator interviewer ISBN ISSN issue issued jurisdiction keyword language license locator medium narrator note notes number number-of-pages number-of-volumes organizer original-author original-date original-publisher original-publisher-place original-title page page-first part-number part-title performer PMCID PMID printing-number producer publisher publisher-place recipient references reviewed-author reviewed-genre reviewed-title scale script-writer section series-creator source status submitted supplement-number title title-short translator URL version volume volume-title year-suffix\nHere is a quick reference, not exhaustive by any means, of where will the data end up in the conversion from BibTeX and RIS to CSL. This means that the CSL variables on the first column are the final destination and they receive the content of the second or third-column fields depending on the format it converts from. On the second tab, we map the reference types from BibTeX to the CSL types.\n\nCSL & BibTeX FieldsCSL & BibTeX Types\n\n\n\nWhere do BibTeX and RIS fields end up in CSL-YAML/CSL-JSON?\n\n\n\n\n\n\n\nCSL\nBibTeX\nRIS\n\n\n\n\nauthor\nauthors\nAU\n\n\neditor\neditors\nED\n\n\nissued\ndate\nPY\n\n\ntitle\ntitle\nT1\n\n\ntitle-short\nshorttitle\n-\n\n\ncontainer-title\nbooktitle (inproceedings incollection inbook)\nBT\n\n\ncontainer-title\njournal (article book proceedings masterthesis lexicon online booklet)\nJA\n\n\ncollection-title\nseries\n-\n\n\noriginal-title\norigtitle\nOR\n\n\npublisher\nschool, institution, organization, howpublished, publisher\nPB\n\n\npublisher-place\naddress\nPP\n\n\nabstract\nabstract\nAB\n\n\nurl\nURL\nUR\n\n\nkeywords\nkeywords\nKW\n\n\nchapter-number\nchapter\n-\n\n\nissue\nissue (article), number (article)\nIS\n\n\nnumber\nnumber (phdthesis)\nIS\n\n\ncollection-number\nnumber (book)\nIS\n\n\nvolume\nvolume\nVL\n\n\nnumber-of-volumes\nvolumes\nNV\n\n\npage\npages\nSP\n\n\nedition\nedition\nET\n\n\ngenre\ntype\n-\n\n\ncall-number\nlibrary\nID\n\n\nversion\nversion\n-\n\n\n\nSee also, the full list of CSL variables, BibTeX Fields and RIS Tags.\n\n\n\nHow do BibTeX types end up in CSL-YAML/CSL-JSON?\n\n\nCSL\nBibTeX\n\n\n\n\narticle-journal\narticle\n\n\nbook\nbook\n\n\npamphlet\nbooklet\n\n\nchapter\ninbook\n\n\nchapter\nincollection\n\n\npaper-conference\ninproceedings\n\n\nbook\nmanual\n\n\nthesis\nmastersthesis\n\n\nthesis\nmisc\n\n\nthesis\nphdthesis\n\n\nbook\nproceedings\n\n\nreport\ntechreport\n\n\nmanuscript\nunpublished\n\n\n\nSee also the full list of CSL and BibTeX types."
+  },
+  {
+    "objectID": "docs_qmd/03-cite-field.html#footnotes",
+    "href": "docs_qmd/03-cite-field.html#footnotes",
+    "title": "Cite Field",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nNote that [-@AristOp] would render as (1831).↩︎"
+  },
+  {
+    "objectID": "docs_qmd/04-citation-backlinks.html",
+    "href": "docs_qmd/04-citation-backlinks.html",
+    "title": "Citation Backlinks",
+    "section": "",
+    "text": "In the vanilla Pandoc Citeproc, you can use link-citations to control whether citations in the body of the text should be clickable links to the reference in the bibliography (e.g. EN). This is a very useful feature, especially when you want to quickly check the source of a citation without having to scroll through the whole text.\nThis allows the reader to easily arrive at sections of the text where the same reference was discussed, quickly seeing with the array of backlinks, how many times each reference was used in the text (see reference at the bottom of the text)."
+  },
+  {
+    "objectID": "docs_qmd/04-citation-backlinks.html#how-to-avoid-an-excess-of-undesired-links",
+    "href": "docs_qmd/04-citation-backlinks.html#how-to-avoid-an-excess-of-undesired-links",
+    "title": "Citation Backlinks",
+    "section": "How to avoid an excess of undesired links",
+    "text": "How to avoid an excess of undesired links\nIn citetools there are options to avoid undesired linking and anomalies caused by citing individual fields, such as repeated links to the same entry in a single phrase or section.\n\nTurning off links in individual citations\nFirst, there is the option to force a citation to not be a link by adding a simple dot at the end of the .csl_field.\n\n\n\nDefault\nLink-suppresion\n\n\n\n\n[@EN]{.title}\n[@EN]{.title.}\n\n\nEthica nicomachea\nEthica nicomachea\n\n\n\n\n\nGlobal options\nThen, there is also the global link-fields option, which allows the user to turn off links in citations that target individual fields. It can be used in conjunction with other options that target the bibliography, such as link-citations and link-bibliography.\n1link-citations: true\n2link-fields: true\n3link-bibliography: true\n4lang: en-ZA\n\n1\n\nHyperlink citations to the corresponding bibliography entries. Defaults to false.\n\n2\n\nHyperlink citations that target specific CSL fields to the corresponding entries in the bibliography. If link-citations is true, this defaults to true.\n\n3\n\nHyperlink DOIs, PMCIDs, PMID, and URLs in bibliographies. Defaults to true.\n\n4\n\nAffects the bibliography tags. Defaults to en-US."
+  },
+  {
+    "objectID": "docs_qmd/04-citation-backlinks.html#references",
+    "href": "docs_qmd/04-citation-backlinks.html#references",
+    "title": "Citation Backlinks",
+    "section": "References",
+    "text": "References\n\n\n\nAristotle. 1831. “Ethica Nicomachea.” In Aristotelis Opera, edited by Immanuel Bekker, 1094a01–1181b23. Berlim: Reimer. [1, 2]"
+  },
+  {
+    "objectID": "docs_qmd/04-citation-backlinks.html#footnotes",
+    "href": "docs_qmd/04-citation-backlinks.html#footnotes",
+    "title": "Citation Backlinks",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIn other output formats, such as PDF, the reader will see the page number instead of a crescent ordinal number.↩︎"
+  },
+  {
     "objectID": "input.html",
     "href": "input.html",
     "title": "Example of Citetools in action",
     "section": "",
     "text": "Introduction\nThis very concise sample ilustrates the use of multiple-bibliographies to separate primary (refs/primary.json) and secondary (refs/secondary.json) sources for the document; the use of citation-backlinks to turn the bibliography into an index of citations with links back to the text; and the use of citefield to print in the body of the text useful information from the bibliographic references.\nOptionally, section-bibliographies can be used to separate the bibliography into sections. For this, you must uncomment the apropriate line in the _extension.yaml file.\n\n\nThe Works of Aristotle\nThis is an example of complex use of bibliographic references. We are relying on the bibliography to print in the text the correct names of the authors, editors, and translators & title of the works.\nThe works of [@AristOp]{.author} were first edited by\n[@AristOp]{.editor} in [@AristOp]{.issued}.\nThe works of Aristotle were first edited by Bekker in 1831.\nLater, the [@DA]{.title} was edited by [@DABiehl1896]{.editor}\nin [@DABiehl1896]{.issued} [repr. in [@DATheiler]{.translator}'s\n[@DATheiler]{.issued} translation]; by [@DAForster]{.editor} in\n[@DAForster]{.issued} [repr. in [@DACorcilius]{.translator}'s\n[@DACorcilius]{.issued} translation]; and by [@DARoss]{.editor}\nin [@DARoss]{.issued}.\nLater, the De anima was edited by Biehl in 1896 [repr. in Seidl’s 1995 translation]; by Förster in 1912 [repr. in Corcilius’s 2017 translation]; and by Ross in 1961.\n\n\n\n\nPrimary Sources\n\n\n\nAristotle. 1831a. Aristotelis Opera. Edited by Immanuel Bekker. 1st ed. 4 vols. Berlim: Reimer. [1, 2]\n\n\n———. 1831b. “De Anima.” In Aristotelis Opera, edited by Immanuel Bekker, 402a01–435b25. Berlim: Reimer. [1]\n\n\n———. 1896. De Anima. Edited by Wilhelm Biehl. Leipzig: Teubner. [1, 2]\n\n\n———. 1912. Aristotelis de Anima Libri III. Edited by Aurél Förster. Budapeste: Hungarian Academy of Sciences. [1, 2]\n\n\n———. 1961. De Anima. Edited by William David Ross. Oxford: Clarendon. [1, 2]\n\n\nSecondary Sources\n\n\n\nAristoteles. 2017. Über Die Seele. De Anima. Translated by Klaus Corcilius. Hamburg: Felix Meiner. [1, 2]\n\n\nAristotelis. 1995. De Anima. Translated by H. Seidl and W. Theiler. Hamburg: Felix Meiner. [1]\n\n\n\n\nCitationBibTeX citation:@online{vasconcelos2023,\n  author = {Vasconcelos, BCDA},\n  title = {Example of {Citetools} in Action},\n  date = {2023},\n  url = {https://bcdavasconcelos.github.io/citetools/input.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nVasconcelos, BCDA. 2023. “Example of Citetools in Action.”\n2023. https://bcdavasconcelos.github.io/citetools/input.html."
+  },
+  {
+    "objectID": "changelog.html",
+    "href": "changelog.html",
+    "title": "citetools",
+    "section": "",
+    "text": "Released 2023-04-02. - Added title-field-emphasis option (default: true).\n\n\n\nReleased 2023-03-18."
+  },
+  {
+    "objectID": "changelog.html#v1.0.1",
+    "href": "changelog.html#v1.0.1",
+    "title": "citetools",
+    "section": "",
+    "text": "Released 2023-04-02. - Added title-field-emphasis option (default: true)."
+  },
+  {
+    "objectID": "changelog.html#v1.0.0",
+    "href": "changelog.html#v1.0.0",
+    "title": "citetools",
+    "section": "",
+    "text": "Released 2023-03-18."
   },
   {
     "objectID": "index.html",
@@ -91,81 +189,18 @@
     "text": "Footnotes\n\n\nIn the official nomenclature, CSL has variables, BibTeX has fields, and RIS has tags. As a general rule, we have stuck to the term fields.↩︎\nLinked glossaries can also easily be created by dressing it as bibiography↩︎\nIf link-citations is false then link-fields will also default to false.↩︎"
   },
   {
-    "objectID": "changelog.html",
-    "href": "changelog.html",
-    "title": "citetools",
+    "objectID": "docs_qmd/05-about.html",
+    "href": "docs_qmd/05-about.html",
+    "title": "About",
     "section": "",
-    "text": "Released 2023-04-02. - Added title-field-emphasis option (default: true).\n\n\n\nReleased 2023-03-18."
+    "text": "Logo image generated Dall-E using Enso-like round black and white painting with ancient greek war-ship with man tied to the mast as prompt."
   },
   {
-    "objectID": "changelog.html#v1.0.1",
-    "href": "changelog.html#v1.0.1",
-    "title": "citetools",
-    "section": "",
-    "text": "Released 2023-04-02. - Added title-field-emphasis option (default: true)."
-  },
-  {
-    "objectID": "changelog.html#v1.0.0",
-    "href": "changelog.html#v1.0.0",
-    "title": "citetools",
-    "section": "",
-    "text": "Released 2023-03-18."
-  },
-  {
-    "objectID": "docs_qmd/04-citation-backlinks.html",
-    "href": "docs_qmd/04-citation-backlinks.html",
-    "title": "Citation Backlinks",
-    "section": "",
-    "text": "In the vanilla Pandoc Citeproc, you can use link-citations to control whether citations in the body of the text should be clickable links to the reference in the bibliography (e.g. EN). This is a very useful feature, especially when you want to quickly check the source of a citation without having to scroll through the whole text.\nThis allows the reader to easily arrive at sections of the text where the same reference was discussed, quickly seeing with the array of backlinks, how many times each reference was used in the text (see reference at the bottom of the text)."
-  },
-  {
-    "objectID": "docs_qmd/04-citation-backlinks.html#how-to-avoid-an-excess-of-undesired-links",
-    "href": "docs_qmd/04-citation-backlinks.html#how-to-avoid-an-excess-of-undesired-links",
-    "title": "Citation Backlinks",
-    "section": "How to avoid an excess of undesired links",
-    "text": "How to avoid an excess of undesired links\nIn citetools there are options to avoid undesired linking and anomalies caused by citing individual fields, such as repeated links to the same entry in a single phrase or section.\n\nTurning off links in individual citations\nFirst, there is the option to force a citation to not be a link by adding a simple dot at the end of the .csl_field.\n\n\n\nDefault\nLink-suppresion\n\n\n\n\n[@EN]{.title}\n[@EN]{.title.}\n\n\nEthica nicomachea\nEthica nicomachea\n\n\n\n\n\nGlobal options\nThen, there is also the global link-fields option, which allows the user to turn off links in citations that target individual fields. It can be used in conjunction with other options that target the bibliography, such as link-citations and link-bibliography.\n1link-citations: true\n2link-fields: true\n3link-bibliography: true\n4lang: en-ZA\n\n1\n\nHyperlink citations to the corresponding bibliography entries. Defaults to false.\n\n2\n\nHyperlink citations that target specific CSL fields to the corresponding entries in the bibliography. If link-citations is true, this defaults to true.\n\n3\n\nHyperlink DOIs, PMCIDs, PMID, and URLs in bibliographies. Defaults to true.\n\n4\n\nAffects the bibliography tags. Defaults to en-US."
-  },
-  {
-    "objectID": "docs_qmd/04-citation-backlinks.html#references",
-    "href": "docs_qmd/04-citation-backlinks.html#references",
-    "title": "Citation Backlinks",
-    "section": "References",
-    "text": "References\n\n\n\nAristotle. 1831. “Ethica Nicomachea.” In Aristotelis Opera, edited by Immanuel Bekker, 1094a01–1181b23. Berlim: Reimer. [1, 2]"
-  },
-  {
-    "objectID": "docs_qmd/04-citation-backlinks.html#footnotes",
-    "href": "docs_qmd/04-citation-backlinks.html#footnotes",
-    "title": "Citation Backlinks",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nIn other output formats, such as PDF, the reader will see the page number instead of a crescent ordinal number.↩︎"
-  },
-  {
-    "objectID": "docs_qmd/02-multibib.html",
-    "href": "docs_qmd/02-multibib.html",
-    "title": "Multiple Bibliographies",
-    "section": "",
-    "text": "In many areas of research, the ability to split the bibliography into sections is conditio sine qua non for publishing.1 In the humanities, for example, it is common to have a bibliography for primary sources and another for secondary sources. In philosophy, even, they can be very nuanced with sections dedicated to original sources, translations, commentaries, and so on."
-  },
-  {
-    "objectID": "docs_qmd/02-multibib.html#how-to-setup-multiple-bibliographies",
-    "href": "docs_qmd/02-multibib.html#how-to-setup-multiple-bibliographies",
-    "title": "Multiple Bibliographies",
-    "section": "How to setup multiple bibliographies",
-    "text": "How to setup multiple bibliographies\nIf you are using Quarto, chances are you have a project folder. In this case, add bibliography files to the project folder (it is advisible adding them to a refs folder to prevent cluter in the root folder). Then, add the path to the files to the YAML metadata of your document in this way:\nbibliography_primary: refs/primary.json\nbibliography_secondary: refs/secondary.json\nThe path should be relative to the project’s root folder. The name of the bibliography should (but doesn’t have to) be the same as the name of the file, without the extension.\nThen, finally, place the bibliographies placeholders in the document where you want the bibliographies to appear.\n# Primary Sources\n\n::: {#refs_primary}\n:::\n\n# Secondary Sources\n\n::: {#refs_secondary}\n:::\nEach refs_bib_name div should have a matching entry bibliography_bib_name in the metadata. They will be filled with the citations from the respective bibliography files.\n\n\n\n\n\n\nDiv names\n\n\n\n\n\nif you have a bibliography named bibliography_primary, the placeholder must be named refs-primary or refs_primary. That is, the name of the placeholder must match the name of the bibliography_ entry (without the prefix) otherwise nothing will print.\nAlso, please note that if the placeholder doesn’t make its way into the document, the references in that file will not be printed."
-  },
-  {
-    "objectID": "docs_qmd/02-multibib.html#working-example",
-    "href": "docs_qmd/02-multibib.html#working-example",
-    "title": "Multiple Bibliographies",
-    "section": "Working example",
-    "text": "Working example\nTo ensure sure ids match, it can be a good strategy placing the bibliography file close to the div placeholder.\n---\ntitle: Multiple Bibliographies\n---\n\n[@EN] [@Aubenque1961a]\n\n\n## Primary Sources\n\n---\nbibliography_primary: refs/primary.json\n---\n\n::: {#refs_primary}\n:::\n\n## Secondary Sources\n\n---\nbibliography_secondary: refs/secondary.json\n---\n\n::: {#refs_secondary}\n:::\nWith this, you should have a working document with multiple bibliographies that would render in the following way:\n(Aristotle 1831) (Aubenque 1961)"
-  },
-  {
-    "objectID": "docs_qmd/02-multibib.html#footnotes",
-    "href": "docs_qmd/02-multibib.html#footnotes",
-    "title": "Multiple Bibliographies",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nIn Citetools, we are using a modified version of the multiple-bibliographies filter instead of the similar multibib one.↩︎"
+    "objectID": "docs_qmd/05-about.html#license",
+    "href": "docs_qmd/05-about.html#license",
+    "title": "About",
+    "section": "License",
+    "text": "License\nFilters published under the MIT license by Albert Krewinkel (tarleb).\n\nmultibib\nmultiple-bibliographies\ncitation-backlinks\nsection-bibliographies\n\nFilters published under the MIT license by Albert Krewinkel (tarleb) & Bernardo Vasconcelos (bcdavasconcelos).\n\ncitefield\n\nAll Pandoc Lua filters in this extension are published under the MIT license, see file LICENSE for details.\nThe Cite Tools Documentation is under a Creative Commons Attribution-NonCommercial 4.0 International License."
   },
   {
     "objectID": "docs_qmd/01-basics.html",
@@ -201,40 +236,5 @@
     "title": "The Basics of Pandoc Citeproc",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nThey are not, however, widely supported, so you’ll probably be stuck with BibTeX or BibLaTeX in some way or other anyway.↩︎"
-  },
-  {
-    "objectID": "docs_qmd/03-cite-field.html",
-    "href": "docs_qmd/03-cite-field.html",
-    "title": "Cite Field",
-    "section": "",
-    "text": "In many areas, we are frequently invited to comment on different editions and translations of the same work. In such cases, we refer not only to the authors and dates of the publications, but also to their editors, translators, publishers, and their original titles and editions. But how to do this? If citetools is enabled, then the answer lies in a small variation of Pandoc’s vanilla syntax for citations."
-  },
-  {
-    "objectID": "docs_qmd/03-cite-field.html#citation-style-language",
-    "href": "docs_qmd/03-cite-field.html#citation-style-language",
-    "title": "Cite Field",
-    "section": "Citation Style Language",
-    "text": "Citation Style Language\n\n\n\n\n\n\nDid you notice that we used [@AristOp]{.issued} instead of [@AristOp]{.date}? And [@AristOp]{.publisher-place} instead of [@AristOp]{.city}?\n\n\n\nInternally, as we said, Pandoc uses the Citation Style Language to handle bibliographies. This is a standard schema for bibliographic data, which is used by some bibliography managers, such as Zotero, and JabRef. Most, however, are closer to the conventions of BibTeX (or RIS) which is why you may not see an exact correspondence between the CSL variables and BibTeX field names.\nIn CSL, there are the following variables:\n  abstract accessed annote archive archive_collection archive_location archive-place author authority available-date call-number chair chapter-number citation-key citation-label citation-number collection-editor collection-number collection-title compiler composer container-author container-title container-title-short contributor curator dimensions director division DOI edition editor editor-translator editorial-director event event-date event-place event-title executive-producer first-reference-note-number genre guest host illustrator interviewer ISBN ISSN issue issued jurisdiction keyword language license locator medium narrator note notes number number-of-pages number-of-volumes organizer original-author original-date original-publisher original-publisher-place original-title page page-first part-number part-title performer PMCID PMID printing-number producer publisher publisher-place recipient references reviewed-author reviewed-genre reviewed-title scale script-writer section series-creator source status submitted supplement-number title title-short translator URL version volume volume-title year-suffix\nHere is a quick reference, not exhaustive by any means, of where will the data end up in the conversion from BibTeX and RIS to CSL. This means that the CSL variables on the first column are the final destination and they receive the content of the second or third-column fields depending on the format it converts from. On the second tab, we map the reference types from BibTeX to the CSL types.\n\nCSL & BibTeX FieldsCSL & BibTeX Types\n\n\n\nWhere do BibTeX and RIS fields end up in CSL-YAML/CSL-JSON?\n\n\n\n\n\n\n\nCSL\nBibTeX\nRIS\n\n\n\n\nauthor\nauthors\nAU\n\n\neditor\neditors\nED\n\n\nissued\ndate\nPY\n\n\ntitle\ntitle\nT1\n\n\ntitle-short\nshorttitle\n-\n\n\ncontainer-title\nbooktitle (inproceedings incollection inbook)\nBT\n\n\ncontainer-title\njournal (article book proceedings masterthesis lexicon online booklet)\nJA\n\n\ncollection-title\nseries\n-\n\n\noriginal-title\norigtitle\nOR\n\n\npublisher\nschool, institution, organization, howpublished, publisher\nPB\n\n\npublisher-place\naddress\nPP\n\n\nabstract\nabstract\nAB\n\n\nurl\nURL\nUR\n\n\nkeywords\nkeywords\nKW\n\n\nchapter-number\nchapter\n-\n\n\nissue\nissue (article), number (article)\nIS\n\n\nnumber\nnumber (phdthesis)\nIS\n\n\ncollection-number\nnumber (book)\nIS\n\n\nvolume\nvolume\nVL\n\n\nnumber-of-volumes\nvolumes\nNV\n\n\npage\npages\nSP\n\n\nedition\nedition\nET\n\n\ngenre\ntype\n-\n\n\ncall-number\nlibrary\nID\n\n\nversion\nversion\n-\n\n\n\nSee also, the full list of CSL variables, BibTeX Fields and RIS Tags.\n\n\n\nHow do BibTeX types end up in CSL-YAML/CSL-JSON?\n\n\nCSL\nBibTeX\n\n\n\n\narticle-journal\narticle\n\n\nbook\nbook\n\n\npamphlet\nbooklet\n\n\nchapter\ninbook\n\n\nchapter\nincollection\n\n\npaper-conference\ninproceedings\n\n\nbook\nmanual\n\n\nthesis\nmastersthesis\n\n\nthesis\nmisc\n\n\nthesis\nphdthesis\n\n\nbook\nproceedings\n\n\nreport\ntechreport\n\n\nmanuscript\nunpublished\n\n\n\nSee also the full list of CSL and BibTeX types."
-  },
-  {
-    "objectID": "docs_qmd/03-cite-field.html#footnotes",
-    "href": "docs_qmd/03-cite-field.html#footnotes",
-    "title": "Cite Field",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nNote that [-@AristOp] would render as (1831).↩︎"
-  },
-  {
-    "objectID": "docs_qmd/05-about.html",
-    "href": "docs_qmd/05-about.html",
-    "title": "About",
-    "section": "",
-    "text": "Logo image generated Dall-E using Enso-like round black and white painting with ancient greek war-ship with man tied to the mast as prompt."
-  },
-  {
-    "objectID": "docs_qmd/05-about.html#license",
-    "href": "docs_qmd/05-about.html#license",
-    "title": "About",
-    "section": "License",
-    "text": "License\nFilters published under the MIT license by Albert Krewinkel (tarleb).\n\nmultibib\nmultiple-bibliographies\ncitation-backlinks\nsection-bibliographies\n\nFilters published under the MIT license by Albert Krewinkel (tarleb) & Bernardo Vasconcelos (bcdavasconcelos).\n\ncitefield\n\nAll Pandoc Lua filters in this extension are published under the MIT license, see file LICENSE for details.\nThe Cite Tools Documentation is under a Creative Commons Attribution-NonCommercial 4.0 International License."
   }
 ]
