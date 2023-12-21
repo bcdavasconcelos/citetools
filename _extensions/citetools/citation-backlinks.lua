@@ -2,7 +2,7 @@
 
 --- citation-backlinks.lua – adds citation backlinks to the bibliography
 ---
---- Copyright: © 2022 John MacFarlane and Albert Krewinkel
+--- Copyright: © 2023 John MacFarlane and Albert Krewinkel and Bernardo Vasconcelos
 --- License: MIT – see LICENSE for details
 
 -- Makes sure users know if their pandoc version is too old for this
@@ -16,11 +16,15 @@ local cites = {}
 -- counter for cite identifiers
 local cite_number = 1
 
-local function with_latex_label(s, el)
+local function with_label(s, el)
   if FORMAT == "latex" then
     -- return {pandoc.RawInline("latex", "\\pagelabel{" .. s .. "}"), el}
     return {pandoc.RawInline("latex", "\\label{" .. s .. "}"), el}
-  else
+  end
+  if FORMAT == "typst" then
+    return {el, pandoc.RawInline("typst", " #label(\"" .. s .. "\")")}
+  end
+  if FORMAT == "docx" or FORMAT == "html" then
     return {el}
   end
 end
@@ -35,7 +39,11 @@ function Cite(el)
       cites[citation.id] = {cite_id}
     end
   end
-  return pandoc.Span(with_latex_label(cite_id, el), pandoc.Attr(cite_id))
+  if FORMAT == "typst" then
+    return pandoc.Span(with_label(cite_id, el))
+  else
+    return pandoc.Span(with_label(cite_id, el), pandoc.Attr(cite_id))
+  end
 end
 
 function append_inline(blocks, inlines)
@@ -63,7 +71,6 @@ function Div(el)
 
     for i,cite_id in ipairs(cites[citation_id] or {}) do
       local marker = pandoc.Str(i)
-
       if FORMAT == "latex" then
         marker = pandoc.RawInline("latex", "\\pageref{" .. cite_id .. "}")
       end
